@@ -1,0 +1,175 @@
+{
+  "$schema": "https://claude.ai/schemas/claude-code-settings.json",
+  "description": "BIDFLOW Core MCP 서버 - Opus 4.5 최적화 설정",
+
+  "model": {
+    "default": "opus",
+    "agents": {
+      "bid-strategy-opus": "opus",
+      "stofo-predictor": "opus",
+      "market-analyzer": "opus",
+      "code-reviewer": "sonnet",
+      "test-generator": "sonnet"
+    },
+    "skills": {
+      "bid-strategy": "opus",
+      "bid-batch": "opus",
+      "stofo-optimize": "opus"
+    }
+  },
+
+  "autonomy": {
+    "level": "high",
+    "autoApprove": {
+      "read": true,
+      "edit": true,
+      "bash": ["npm run", "node", "npx", "git status", "git diff"],
+      "mcp": ["bidflow-core", "sequential-thinking", "github"]
+    },
+    "requireApproval": {
+      "git": ["push", "force", "reset --hard"],
+      "bash": ["rm -rf", "sudo"],
+      "database": ["DROP", "TRUNCATE", "DELETE FROM"]
+    }
+  },
+
+  "mcpServers": {
+    "primary": ["bidflow-core"],
+    "secondary": ["sequential-thinking", "supabase"],
+    "optional": ["github", "brave-search"]
+  },
+
+  "bidflowCore": {
+    "description": "입찰 자동화 MCP 서버 설정",
+    "tools": {
+      "search_bids": { "enabled": true, "cache": "5m" },
+      "get_bid_detail": { "enabled": true, "cache": "1h" },
+      "match_products": { "enabled": true, "cache": "1h" },
+      "set_bid_action": { "enabled": true },
+      "get_matches": { "enabled": true, "cache": "5m" },
+      "get_stats": { "enabled": true, "cache": "15m" },
+      "crawl_g2b": { "enabled": true, "rateLimit": "10/min" },
+      "get_stofo_prediction": { "enabled": true, "cache": "1h" }
+    },
+    "defaultTenant": "11111111-1111-1111-1111-111111111111",
+    "defaultCreditRating": "A0"
+  },
+
+  "strategyEngine": {
+    "description": "입찰 전략 엔진 v2.0 설정",
+    "version": "2.0.0",
+    "parameters": {
+      "lowerLimitRates": {
+        "goods": {
+          "qualification_under_threshold": 0.84245,
+          "qualification_over_threshold": 0.80495,
+          "sme_competition": 0.87995
+        },
+        "service": {
+          "qualification_under_threshold": 0.87745,
+          "qualification_over_threshold": 0.84825
+        }
+      },
+      "assessmentRate": {
+        "mean": 100.0,
+        "std": 0.15,
+        "confidence": 0.65
+      },
+      "competition": {
+        "defaultCompetitors": 15,
+        "bidDistributionSigma": 0.02
+      }
+    },
+    "strategies": {
+      "aggressive": { "offset": 0.005, "riskLevel": "HIGH" },
+      "balanced": { "offset": 0.015, "riskLevel": "MEDIUM" },
+      "conservative": { "offset": 0.025, "riskLevel": "LOW" }
+    }
+  },
+
+  "agents": {
+    "bid-strategy-opus": {
+      "description": "Opus 4.5 기반 입찰 전략 최적화",
+      "model": "opus",
+      "temperature": 0.3,
+      "maxTokens": 8000,
+      "tools": ["bidflow-core", "sequential-thinking"]
+    },
+    "stofo-predictor": {
+      "description": "낙찰 예측 전문 에이전트",
+      "model": "opus",
+      "temperature": 0.2,
+      "maxTokens": 4000,
+      "tools": ["bidflow-core"]
+    },
+    "market-analyzer": {
+      "description": "시장 분석 에이전트",
+      "model": "opus",
+      "temperature": 0.4,
+      "maxTokens": 6000,
+      "tools": ["bidflow-core", "brave-search"]
+    }
+  },
+
+  "skills": {
+    "bid-strategy": {
+      "trigger": ["/strategy", "/bid-strategy"],
+      "model": "opus",
+      "workflow": ["get_bid_detail", "match_products", "get_stofo_prediction"]
+    },
+    "bid-batch": {
+      "trigger": ["/batch", "/bid-batch"],
+      "model": "opus",
+      "parallelExecution": true,
+      "maxConcurrent": 5
+    },
+    "stofo-optimize": {
+      "trigger": ["/stofo", "/optimize"],
+      "model": "opus",
+      "subcommands": ["tune", "validate", "backtest"]
+    }
+  },
+
+  "hooks": {
+    "preToolUse": {
+      "bidflow-core": {
+        "validateTenantId": true,
+        "logUsage": true
+      }
+    },
+    "postToolUse": {
+      "get_stofo_prediction": {
+        "cacheResult": true,
+        "notifyHighProbability": true,
+        "threshold": 0.15
+      }
+    }
+  },
+
+  "performance": {
+    "caching": {
+      "enabled": true,
+      "ttl": {
+        "bids": "5m",
+        "predictions": "1h",
+        "stats": "15m"
+      }
+    },
+    "parallelization": {
+      "maxConcurrentTools": 5,
+      "batchSize": 10
+    },
+    "extendedThinking": {
+      "enabled": true,
+      "budget": "medium",
+      "triggers": ["complex_analysis", "strategy_optimization"]
+    }
+  },
+
+  "logging": {
+    "level": "info",
+    "includeTimestamp": true,
+    "logToolCalls": true,
+    "logPredictions": true
+  }
+}

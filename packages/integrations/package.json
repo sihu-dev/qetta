@@ -1,0 +1,28 @@
+{
+  "name": "@qetta/integrations",
+  "version": "1.0.0",
+  "description": "FORGE LABS - External API Integration Clients (Persana, Apollo, Attio, n8n)",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "test": "echo 'No tests yet' && exit 0",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@qetta/types": "workspace:*",
+    "@qetta/utils": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}

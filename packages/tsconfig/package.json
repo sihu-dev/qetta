@@ -1,0 +1,11 @@
+{
+  "name": "@qetta/tsconfig",
+  "version": "1.0.0",
+  "description": "Shared TypeScript configuration for FORGE LABS monorepo",
+  "private": true,
+  "files": [
+    "base.json",
+    "nextjs.json",
+    "library.json"
+  ]
+}
