@@ -121,7 +121,7 @@ export function FeaturesV2() {
               <div className="h-3 w-3 rounded-full bg-neutral-600" />
               <div className="h-3 w-3 rounded-full bg-neutral-500" />
               <div className="h-3 w-3 rounded-full bg-neutral-400" />
-              <span className="ml-2 font-mono text-xs text-neutral-500">BIDFLOW Spreadsheet</span>
+              <span className="ml-2 font-mono text-xs text-neutral-500">Qetta Spreadsheet</span>
             </div>
             <div className="font-mono text-sm">
               <div className="flex">

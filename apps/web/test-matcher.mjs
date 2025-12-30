@@ -12,7 +12,7 @@ import {
 } from './src/lib/matching/enhanced-matcher.ts';
 
 console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
-console.log('  BIDFLOW Enhanced Matcher 테스트');
+console.log('  Qetta Enhanced Matcher 테스트');
 console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n');
 
 // 개별 공고 테스트

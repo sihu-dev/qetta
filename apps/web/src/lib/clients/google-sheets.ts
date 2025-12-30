@@ -1,5 +1,5 @@
 /**
- * BIDFLOW Google Sheets API Client
+ * Qetta Google Sheets API Client
  *
  * 입찰 데이터를 Google Sheets로 내보내기/가져오기
  * - 서비스 계정 인증 (Service Account)

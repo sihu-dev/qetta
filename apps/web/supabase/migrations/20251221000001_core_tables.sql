@@ -1,5 +1,5 @@
 -- =========================================
--- BIDFLOW V2 Migration: Core Tables
+-- Qetta V2 Migration: Core Tables
 -- =========================================
 
 -- 1. TENANTS (고객사)

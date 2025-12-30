@@ -61,7 +61,7 @@ describe('excel-export', () => {
       expect(saveAs).toHaveBeenCalledTimes(1);
       expect(saveAs).toHaveBeenCalledWith(
         expect.any(Blob),
-        expect.stringMatching(/^BIDFLOW_\d{4}-\d{2}-\d{2}\.csv$/)
+        expect.stringMatching(/^Qetta_\d{4}-\d{2}-\d{2}\.csv$/)
       );
     });
 
@@ -98,7 +98,7 @@ describe('excel-export', () => {
       expect(saveAs).toHaveBeenCalledTimes(1);
       expect(saveAs).toHaveBeenCalledWith(
         expect.any(Blob),
-        expect.stringMatching(/^BIDFLOW_\d{4}-\d{2}-\d{2}\.json$/)
+        expect.stringMatching(/^Qetta_\d{4}-\d{2}-\d{2}\.json$/)
       );
     });
 

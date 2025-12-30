@@ -15,7 +15,7 @@ const contactInfo = [
   {
     icon: Mail,
     label: '이메일',
-    value: 'contact@bidflow.io',
+    value: 'contact@qetta.io',
     description: '24시간 접수',
   },
   {
@@ -28,7 +28,7 @@ const contactInfo = [
     icon: MapPin,
     label: '주소',
     value: '서울특별시 강남구 테헤란로 123',
-    description: 'BIDFLOW 빌딩 5층',
+    description: 'Qetta 빌딩 5층',
   },
   {
     icon: Clock,

@@ -1,5 +1,5 @@
 /**
- * BIDFLOW 백테스트 프레임워크 v1.0
+ * Qetta 백테스트 프레임워크 v1.0
  *
  * 과거 입찰 데이터를 기반으로 v2.1 엔진 성능 검증
  * - 예측 정확도 분석
@@ -784,7 +784,7 @@ export class BacktestReporter {
    */
   public static printReport(result: BacktestResult): void {
     console.log('\n' + '='.repeat(70));
-    console.log('BIDFLOW v2.1 백테스트 리포트');
+    console.log('Qetta v2.1 백테스트 리포트');
     console.log('='.repeat(70));
 
     console.log(`\n분석 기간: ${result.dateRange.start} ~ ${result.dateRange.end}`);
@@ -867,7 +867,7 @@ export class BacktestReporter {
    * 마크다운 리포트 생성
    */
   public static toMarkdown(result: BacktestResult): string {
-    let md = '# BIDFLOW v2.1 백테스트 리포트\n\n';
+    let md = '# Qetta v2.1 백테스트 리포트\n\n';
 
     md += '## 개요\n\n';
     md += `| 항목 | 값 |\n|------|------|\n`;

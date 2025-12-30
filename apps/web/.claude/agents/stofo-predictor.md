@@ -197,7 +197,7 @@ LOW (신뢰도 60% 미만):
 @stofo-predictor 공고ID: 7d049fe8-... 낙찰확률 분석
 
 # MCP 도구 통해 호출
-bidflow-core/get_stofo_prediction
+qetta-core/get_stofo_prediction
 
 # 배치 분석
 @stofo-predictor 이번 주 BID 액션 공고 전체 분석

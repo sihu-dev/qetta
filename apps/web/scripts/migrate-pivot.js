@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * BIDFLOW 2026 Pivot 마이그레이션
+ * Qetta 2026 Pivot 마이그레이션
  * 보증 연계 플랫폼용 테이블 추가
  */
 
@@ -47,7 +47,7 @@ async function runSQL(sql, name) {
 }
 
 async function runMigrations() {
-  console.log('🚀 BIDFLOW 2026 Pivot 마이그레이션 시작...\n');
+  console.log('🚀 Qetta 2026 Pivot 마이그레이션 시작...\n');
 
   const migrationsDir = path.join(__dirname, '../supabase/migrations');
   let successCount = 0;

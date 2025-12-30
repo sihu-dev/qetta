@@ -15,7 +15,7 @@ test.describe('AI Dashboard Page', () => {
 
   test('should load AI dashboard page', async ({ page }) => {
     // 페이지 로드 확인
-    await expect(page).toHaveTitle(/BIDFLOW|AI|Dashboard/i);
+    await expect(page).toHaveTitle(/Qetta|AI|Dashboard/i);
 
     // 메인 컨테이너 존재
     await expect(page.locator('main')).toBeVisible();

@@ -26,7 +26,7 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
         {/* Simple Footer */}
         <footer className="text-muted-foreground px-4 py-6 text-center text-sm">
           <p>
-            &copy; {new Date().getFullYear()} BIDFLOW.{' '}
+            &copy; {new Date().getFullYear()} Qetta.{' '}
             <Link href="/privacy" className="hover:underline">
               개인정보처리방침
             </Link>

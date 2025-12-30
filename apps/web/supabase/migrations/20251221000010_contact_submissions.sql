@@ -1,5 +1,5 @@
 -- =========================================
--- BIDFLOW V2 Migration: Contact Submissions
+-- Qetta V2 Migration: Contact Submissions
 -- =========================================
 
 -- 문의 제출 테이블

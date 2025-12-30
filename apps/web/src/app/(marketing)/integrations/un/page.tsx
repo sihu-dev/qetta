@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
 export const metadata: Metadata = {
-  title: 'UN Procurement 연동 | BIDFLOW',
+  title: 'UN Procurement 연동 | Qetta',
   description: '유엔 조달 입찰 공고 자동 수집 및 분석',
 };
 
@@ -105,7 +105,7 @@ export default function UNPage() {
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="mb-4 text-2xl font-bold">글로벌 시장 진출</h2>
             <p className="mb-8 text-slate-400">
-              UN 조달 시장은 한국 기업의 글로벌 진출 첫 단계입니다. BIDFLOW로 국제 입찰에 체계적으로
+              UN 조달 시장은 한국 기업의 글로벌 진출 첫 단계입니다. Qetta로 국제 입찰에 체계적으로
               접근하세요.
             </p>
             <div className="grid grid-cols-3 gap-4">

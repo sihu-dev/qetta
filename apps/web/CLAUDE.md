@@ -1,4 +1,4 @@
-# BIDFLOW 입찰 자동화 시스템 (IO block)
+# Qetta 입찰 자동화 시스템 (IO block)
 
 > **목적**: 제조업 SME를 위한 입찰 자동화
 > **기술 스택**: Next.js 15 + Supabase + TailwindCSS
@@ -42,8 +42,8 @@ pnpm dev
 ## 프로젝트 구조
 
 ```
-bidflow-standalone/
-├── bidflow/                    # Next.js 앱
+qetta-standalone/
+├── qetta/                    # Next.js 앱
 │   ├── src/
 │   │   ├── app/api/v1/        # API v1 버저닝
 │   │   ├── lib/
@@ -196,4 +196,4 @@ Chrome Claude          Claude Code
 
 ---
 
-*BIDFLOW v0.2.0 - Chrome Claude Integration*
+*Qetta v0.2.0 - Chrome Claude Integration*

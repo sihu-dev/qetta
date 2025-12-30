@@ -1,5 +1,5 @@
 -- =========================================
--- BIDFLOW V2 Migration: Reset Existing Tables
+-- Qetta V2 Migration: Reset Existing Tables
 -- WARNING: This will drop all existing data!
 -- =========================================
 

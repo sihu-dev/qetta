@@ -1,5 +1,5 @@
 /**
- * BIDFLOW AI Pipeline Types
+ * Qetta AI Pipeline Types
  *
  * Claude AI 기반 입찰 분석 파이프라인 타입 정의
  */

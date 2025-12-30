@@ -30,7 +30,7 @@ const nextConfig: NextConfig = {
   },
 
   // 정적 생성 제외 페이지
-  generateBuildId: async () => 'bidflow-build',
+  generateBuildId: async () => 'qetta-build',
 
   // 정적 페이지 생성 건너뛰기
   skipTrailingSlashRedirect: true,
@@ -80,7 +80,7 @@ const nextConfig: NextConfig = {
   },
 
   env: {
-    NEXT_PUBLIC_APP_NAME: 'BIDFLOW',
+    NEXT_PUBLIC_APP_NAME: 'Qetta',
     NEXT_PUBLIC_APP_VERSION: '0.1.0',
   },
 };

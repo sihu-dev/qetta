@@ -1,5 +1,5 @@
 -- =========================================
--- BIDFLOW V2 Migration: Org Scores Table (기관 점수 50점)
+-- Qetta V2 Migration: Org Scores Table (기관 점수 50점)
 -- =========================================
 
 CREATE TABLE IF NOT EXISTS org_scores (

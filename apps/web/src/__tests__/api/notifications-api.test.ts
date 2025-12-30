@@ -95,12 +95,12 @@ describe('Notifications API', () => {
         slack: {
           enabled: true,
           webhookUrl: 'https://hooks.slack.com/services/xxx',
-          channel: '#bidflow-alerts',
+          channel: '#qetta-alerts',
         },
       });
 
       expect(result.slack?.enabled).toBe(true);
-      expect(result.slack?.channel).toBe('#bidflow-alerts');
+      expect(result.slack?.channel).toBe('#qetta-alerts');
     });
 
     it('필터 설정', () => {

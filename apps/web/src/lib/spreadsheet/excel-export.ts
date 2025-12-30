@@ -30,7 +30,7 @@ export interface ColumnConfig {
   style?: Partial<ExcelJS.Style>;
 }
 
-// BIDFLOW 입찰 컬럼 기본 설정
+// Qetta 입찰 컬럼 기본 설정
 export const BID_COLUMNS: ColumnConfig[] = [
   { key: 'id', header: 'ID', width: 10 },
   { key: 'source', header: '출처', width: 12 },
@@ -84,8 +84,8 @@ export async function exportToExcel(
   options: ExportOptions = {}
 ): Promise<void> {
   const {
-    filename = `BIDFLOW_${new Date().toISOString().split('T')[0]}`,
-    sheetName = 'BIDFLOW 입찰목록',
+    filename = `Qetta_${new Date().toISOString().split('T')[0]}`,
+    sheetName = 'Qetta 입찰목록',
     includeHeaders = true,
     autoWidth = true,
     freezeHeader = true,
@@ -95,7 +95,7 @@ export async function exportToExcel(
   } = options;
 
   const workbook = new ExcelJS.Workbook();
-  workbook.creator = 'BIDFLOW';
+  workbook.creator = 'Qetta';
   workbook.created = new Date();
   workbook.modified = new Date();
 
@@ -141,7 +141,7 @@ export async function exportToExcel(
     headerRow.fill = {
       type: 'pattern',
       pattern: 'solid',
-      fgColor: { argb: 'FF2563EB' }, // BIDFLOW 브랜드 컬러
+      fgColor: { argb: 'FF2563EB' }, // Qetta 브랜드 컬러
     };
     headerRow.alignment = { vertical: 'middle', horizontal: 'center' };
     headerRow.height = 25;
@@ -242,7 +242,7 @@ export async function importFromExcel(file: File): Promise<Record<string, unknow
  */
 export function exportToCSV(
   data: Record<string, unknown>[],
-  filename = `BIDFLOW_${new Date().toISOString().split('T')[0]}`
+  filename = `Qetta_${new Date().toISOString().split('T')[0]}`
 ): void {
   const headers = BID_COLUMNS.map((col) => col.header);
   const rows = data.map((row) =>
@@ -280,7 +280,7 @@ export function exportToCSV(
  */
 export function exportToJSON(
   data: Record<string, unknown>[],
-  filename = `BIDFLOW_${new Date().toISOString().split('T')[0]}`
+  filename = `Qetta_${new Date().toISOString().split('T')[0]}`
 ): void {
   const json = JSON.stringify(data, null, 2);
   const blob = new Blob([json], { type: 'application/json;charset=utf-8' });

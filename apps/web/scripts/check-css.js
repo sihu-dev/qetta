@@ -111,7 +111,7 @@ async function checkPageCSS(path) {
 
 async function main() {
   console.log('='.repeat(60));
-  console.log('BIDFLOW CSS Validation Report');
+  console.log('Qetta CSS Validation Report');
   console.log('='.repeat(60));
   console.log('');
 

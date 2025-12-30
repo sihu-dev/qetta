@@ -34,7 +34,7 @@ export interface OrganizationSearchResult {
 
 /**
  * Apollo.io 서비스 래퍼
- * BIDFLOW 비즈니스 로직과 Apollo API 연동
+ * Qetta 비즈니스 로직과 Apollo API 연동
  */
 export class ApolloService {
   private client: ApolloClient;

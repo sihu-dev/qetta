@@ -1,5 +1,5 @@
 /**
- * BIDFLOW AI Pipeline
+ * Qetta AI Pipeline
  *
  * Claude AI 기반 입찰 매칭 파이프라인
  *

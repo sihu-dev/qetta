@@ -46,7 +46,7 @@ const caseStudy = {
   company: '한성건설',
   industry: '토목 건설',
   quote:
-    '이전에는 공고 검토에만 하루 4시간을 썼는데, BIDFLOW 덕분에 30분이면 충분합니다. 실적 관리 기능이 특히 유용해요.',
+    '이전에는 공고 검토에만 하루 4시간을 썼는데, Qetta 덕분에 30분이면 충분합니다. 실적 관리 기능이 특히 유용해요.',
   person: '박진수 이사',
   results: [
     '공고 검토 시간 87% 단축',
@@ -131,7 +131,7 @@ export default function ConstructionPage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
-            <h2 className="mb-4 text-center text-3xl font-bold">BIDFLOW 솔루션</h2>
+            <h2 className="mb-4 text-center text-3xl font-bold">Qetta 솔루션</h2>
             <p className="text-muted-foreground mb-12 text-center">
               건설업 특화 기능으로 입찰 업무를 혁신합니다
             </p>
@@ -223,7 +223,7 @@ export default function ConstructionPage() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="mb-4 text-2xl font-bold md:text-3xl">건설업 입찰 자동화를 시작하세요</h2>
           <p className="text-muted-foreground mb-8">
-            14일 무료 체험으로 BIDFLOW의 가치를 직접 확인해보세요.
+            14일 무료 체험으로 Qetta의 가치를 직접 확인해보세요.
           </p>
           <div className="flex flex-col justify-center gap-4 sm:flex-row">
             <Button size="lg" asChild>

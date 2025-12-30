@@ -19,11 +19,11 @@ const ibmPlexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3010'),
   title: {
-    default: 'BIDFLOW - AI 입찰 자동화 플랫폼',
-    template: '%s | BIDFLOW',
+    default: 'Qetta - AI 입찰 자동화 플랫폼',
+    template: '%s | Qetta',
   },
   description:
-    '45개 플랫폼 실시간 모니터링, AI 매칭, 자동 제안서 생성. 제조업 SME를 위한 스마트 입찰 플랫폼 BIDFLOW',
+    '45개 플랫폼 실시간 모니터링, AI 매칭, 자동 제안서 생성. 제조업 SME를 위한 스마트 입찰 플랫폼 Qetta',
   keywords: [
     '입찰',
     '자동화',
@@ -39,9 +39,9 @@ export const metadata: Metadata = {
     '입찰공고',
     '스마트조달',
   ],
-  authors: [{ name: 'BIDFLOW Team' }],
-  creator: 'BIDFLOW',
-  publisher: 'BIDFLOW',
+  authors: [{ name: 'Qetta Team' }],
+  creator: 'Qetta',
+  publisher: 'Qetta',
   formatDetection: {
     email: false,
     address: false,
@@ -51,13 +51,13 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'ko_KR',
     url: '/',
-    siteName: 'BIDFLOW',
-    title: 'BIDFLOW - AI 입찰 자동화 플랫폼',
+    siteName: 'Qetta',
+    title: 'Qetta - AI 입찰 자동화 플랫폼',
     description: '45개 플랫폼 실시간 모니터링, AI 매칭, 자동 제안서 생성',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'BIDFLOW - AI 입찰 자동화 플랫폼',
+    title: 'Qetta - AI 입찰 자동화 플랫폼',
     description: '45개 플랫폼 실시간 모니터링, AI 매칭, 자동 제안서 생성',
   },
   robots: {

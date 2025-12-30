@@ -68,7 +68,7 @@ export default function UseCasesPage() {
               활용되고 있습니다
             </h1>
             <p className="text-muted-foreground mt-6 text-lg">
-              제조업부터 IT 서비스까지, BIDFLOW는 다양한 산업의
+              제조업부터 IT 서비스까지, Qetta는 다양한 산업의
               <br />
               입찰 프로세스를 혁신하고 있습니다.
             </p>

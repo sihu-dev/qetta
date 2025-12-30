@@ -1,5 +1,5 @@
 -- =========================================
--- BIDFLOW V2 Migration: Products Table
+-- Qetta V2 Migration: Products Table
 -- =========================================
 
 CREATE TABLE IF NOT EXISTS products (

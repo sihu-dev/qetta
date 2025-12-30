@@ -1,5 +1,5 @@
 /**
- * Health Check Endpoint for BIDFLOW
+ * Health Check Endpoint for Qetta
  * Monitors: Supabase, System
  */
 

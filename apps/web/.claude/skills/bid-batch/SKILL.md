@@ -26,7 +26,7 @@ trigger: /batch, /bid-batch
 ### 1단계: 대상 공고 수집
 
 ```yaml
-도구: bidflow-core/search_bids
+도구: qetta-core/search_bids
 필터:
   - deadline_from: today
   - deadline_to: +7days
@@ -36,7 +36,7 @@ trigger: /batch, /bid-batch
 ### 2단계: 제품 매칭 (병렬)
 
 ```yaml
-도구: bidflow-core/match_products
+도구: qetta-core/match_products
 각 공고에 대해 병렬 실행
 필터: score >= 50
 ```
@@ -44,7 +44,7 @@ trigger: /batch, /bid-batch
 ### 3단계: 전략 분석 (병렬)
 
 ```yaml
-도구: bidflow-core/get_stofo_prediction
+도구: qetta-core/get_stofo_prediction
 BID/REVIEW 액션 공고만 분석
 전략: balanced
 ```

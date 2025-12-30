@@ -1,4 +1,4 @@
-# BIDFLOW Core MCP 서버
+# Qetta Core MCP 서버
 
 > **역할**: 입찰 자동화를 위한 MCP (Model Context Protocol) 서버
 > **모델**: Opus 4.5 최적화
@@ -9,7 +9,7 @@
 
 ## 개요
 
-BIDFLOW Core는 Claude Code와 연동되는 MCP 서버로, 8개의 입찰 관련 도구를 제공합니다.
+Qetta Core는 Claude Code와 연동되는 MCP 서버로, 8개의 입찰 관련 도구를 제공합니다.
 
 ```yaml
 도구:
@@ -179,7 +179,7 @@ SKIP (입찰 비권장):
 ## 디렉토리 구조
 
 ```
-bidflow-core/
+qetta-core/
 ├── src/
 │   ├── index.ts              # MCP 서버 진입점
 │   ├── bidding-engine.ts     # 입찰 전략 엔진 v2.0 (레거시)
@@ -284,5 +284,5 @@ org_scores        -- 기관별 납품실적
 
 ---
 
-*BIDFLOW Core MCP Server v3.0.0*
+*Qetta Core MCP Server v3.0.0*
 *Opus 4.5 Optimized*

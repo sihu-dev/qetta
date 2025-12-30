@@ -80,7 +80,7 @@ export function SpreadsheetDemo() {
                     <div className="h-3 w-3 rounded-full bg-neutral-300" />
                     <div className="h-3 w-3 rounded-full bg-neutral-300" />
                   </div>
-                  <span className="text-sm font-medium text-neutral-700">BIDFLOW Spreadsheet</span>
+                  <span className="text-sm font-medium text-neutral-700">Qetta Spreadsheet</span>
                   <span className="hidden items-center rounded bg-neutral-200 px-2 py-0.5 text-xs font-medium text-neutral-600 sm:inline-flex">
                     Demo
                   </span>

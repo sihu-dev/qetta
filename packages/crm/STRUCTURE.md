@@ -89,7 +89,7 @@ packages/crm/
 
 ### L3 Tissues (Consumers)
 - `apps/hephaitos` - B2B2C CRM for trading platform
-- `apps/bidflow` - Vendor/supplier management
+- `apps/qetta` - Vendor/supplier management
 - Future apps using CRM functionality
 
 ## Code Statistics

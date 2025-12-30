@@ -1,4 +1,4 @@
-# BIDFLOW 입찰 자동화 로직 검수
+# Qetta 입찰 자동화 로직 검수
 # 입찰 관련 코드 변경 시 특화된 검수 실행
 
 name: Bid Automation Quality Check
@@ -27,7 +27,7 @@ jobs:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           model: claude-opus-4-5-20251101
           prompt: |
-            BIDFLOW 입찰 자동화 로직 전문 검수
+            Qetta 입찰 자동화 로직 전문 검수
 
             검토 항목:
 

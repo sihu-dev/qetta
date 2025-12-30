@@ -10,7 +10,7 @@ import { Book, Rocket, Code, Lightbulb, FileText, Video, ArrowRight } from 'luci
 export const metadata = generateMetadata(pageMetadata.resources.docs);
 
 const quickStart = [
-  { title: '계정 만들기', description: '무료로 BIDFLOW 계정을 생성하세요.', time: '2분' },
+  { title: '계정 만들기', description: '무료로 Qetta 계정을 생성하세요.', time: '2분' },
   { title: '제품 등록', description: '귀사의 제품/서비스 정보를 등록하세요.', time: '5분' },
   { title: '플랫폼 연동', description: '수집할 입찰 플랫폼을 선택하세요.', time: '3분' },
   { title: '알림 설정', description: '키워드 및 알림 조건을 설정하세요.', time: '5분' },
@@ -20,7 +20,7 @@ const guides = [
   {
     icon: Rocket,
     title: '시작하기',
-    description: 'BIDFLOW 첫 사용자를 위한 가이드',
+    description: 'Qetta 첫 사용자를 위한 가이드',
     articles: ['계정 생성', '초기 설정', '첫 공고 확인하기'],
   },
   {
@@ -74,9 +74,9 @@ export default function DocsPage() {
             <Badge variant="secondary" className="mb-6">
               문서
             </Badge>
-            <h1 className="text-4xl font-bold tracking-tight md:text-5xl">BIDFLOW 문서</h1>
+            <h1 className="text-4xl font-bold tracking-tight md:text-5xl">Qetta 문서</h1>
             <p className="text-muted-foreground mt-6 text-lg">
-              BIDFLOW를 시작하고 활용하는 데 필요한
+              Qetta를 시작하고 활용하는 데 필요한
               <br />
               모든 정보를 찾아보세요.
             </p>

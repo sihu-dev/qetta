@@ -1,6 +1,6 @@
 /**
  * @qetta/types/automation - 세일즈/마케팅 자동화 타입
- * HEPHAITOS + BIDFLOW 통합 자동화 시스템
+ * HEPHAITOS + Qetta 통합 자동화 시스템
  */
 
 // ============================================
@@ -8,7 +8,7 @@
 // ============================================
 
 export type LeadSource =
-  | 'bidflow'
+  | 'qetta'
   | 'hephaitos'
   | 'persana'
   | 'apollo'
@@ -56,9 +56,9 @@ export interface ILead {
   companySize?: string;
   industry?: string;
 
-  // BIDFLOW 연동
-  bidflowBidId?: string;
-  bidflowMatchScore?: number;
+  // Qetta 연동
+  qettaBidId?: string;
+  qettaMatchScore?: number;
   matchedProducts?: string[];
 
   // HEPHAITOS 연동
@@ -194,8 +194,8 @@ export interface ICampaign {
   // 성과
   metrics: ICampaignMetrics;
 
-  // BIDFLOW/HEPHAITOS 연동
-  bidflowRelated: boolean;
+  // Qetta/HEPHAITOS 연동
+  qettaRelated: boolean;
   hephaitosRelated: boolean;
 
   ownerId?: string;
@@ -298,7 +298,7 @@ export type ActivityType =
   | 'lead_stage_changed'
   | 'lead_won'
   | 'lead_lost'
-  // BIDFLOW
+  // Qetta
   | 'bid_matched'
   | 'bid_reviewed'
   | 'proposal_sent'
@@ -362,7 +362,7 @@ export type WorkflowCategory =
   | 'data_sync'
   | 'notification'
   | 'cross_sell'
-  | 'bidflow_integration'
+  | 'qetta_integration'
   | 'hephaitos_integration';
 
 export type WorkflowStatus = 'draft' | 'active' | 'paused' | 'error' | 'archived';
@@ -416,20 +416,20 @@ export interface IWorkflowExecution {
 // 크로스셀
 // ============================================
 
-export type CrossSellType = 'bidflow_to_hephaitos' | 'hephaitos_to_bidflow' | 'industry_match';
+export type CrossSellType = 'qetta_to_hephaitos' | 'hephaitos_to_qetta' | 'industry_match';
 
 export interface ICrossSellOpportunity {
   id: string;
   type: CrossSellType;
 
   source: {
-    platform: 'bidflow' | 'hephaitos';
+    platform: 'qetta' | 'hephaitos';
     entityType: 'bid' | 'lead' | 'enrollment';
     entityId: string;
   };
 
   target: {
-    platform: 'bidflow' | 'hephaitos';
+    platform: 'qetta' | 'hephaitos';
     opportunity: string;
   };
 

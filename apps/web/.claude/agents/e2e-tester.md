@@ -5,7 +5,7 @@ tools: Read, Grep, Glob, Bash, mcp__playwright__*
 model: sonnet
 ---
 
-# BIDFLOW E2E 테스트 전문가
+# Qetta E2E 테스트 전문가
 
 Playwright MCP를 활용하여 End-to-End 테스트를 수행합니다.
 
@@ -31,7 +31,7 @@ URL: http://localhost:3010
 const pages = ['/', '/features', '/pricing', '/login', '/signup'];
 for (const path of pages) {
   await page.goto(`http://localhost:3010${path}`);
-  await expect(page).toHaveTitle(/BIDFLOW/);
+  await expect(page).toHaveTitle(/Qetta/);
 }
 ```
 

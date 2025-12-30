@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * BIDFLOW MCP Server Test Script
+ * Qetta MCP Server Test Script
  * MCP 도구 기능 테스트
  */
 
@@ -23,7 +23,7 @@ function createMCPRequest(method, params = {}) {
 }
 
 async function testMCPServer() {
-  console.log('🚀 BIDFLOW MCP Server 테스트 시작...\n');
+  console.log('🚀 Qetta MCP Server 테스트 시작...\n');
 
   const server = spawn('node', ['dist/index.js'], {
     env: {

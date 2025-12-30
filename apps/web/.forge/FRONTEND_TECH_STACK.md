@@ -219,4 +219,4 @@ npm install -D @types/maplibre-gl
 
 ---
 
-*이 문서는 BIDFLOW AI 대시보드 개발 가이드입니다.*
+*이 문서는 Qetta AI 대시보드 개발 가이드입니다.*

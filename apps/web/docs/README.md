@@ -1,4 +1,4 @@
-# BIDFLOW 문서 센터
+# Qetta 문서 센터
 
 > **버전**: v0.1.0
 > **업데이트**: 2025-12-21
@@ -101,7 +101,7 @@ docs/
 | 디렉토리/파일 | 설명 |
 |---------------|------|
 | `.claude/CLAUDE.md` | 마스터 프롬프트 및 워크플로우 |
-| `.claude/rules/bidflow-rules.md` | 프로젝트별 규칙 |
+| `.claude/rules/qetta-rules.md` | 프로젝트별 규칙 |
 | `.claude/agents/` | 17개 전문 에이전트 정의 |
 | `.claude/commands/` | 6개 커스텀 명령어 (/audit, /review 등) |
 | `.claude/skills/` | 6개 스킬 (api-integration, bid-automation 등) |
@@ -254,12 +254,12 @@ docs/
 
 ## 📞 문의
 
-- **이메일**: support@bidflow.com
-- **GitHub Issues**: https://github.com/yourusername/bidflow/issues
+- **이메일**: support@qetta.com
+- **GitHub Issues**: https://github.com/yourusername/qetta/issues
 - **회사 연락처**: 031-702-4910 (씨엠엔텍)
 
 ---
 
 **버전**: v0.1.0
 **최종 업데이트**: 2025-12-21
-**문서 관리자**: BIDFLOW 개발팀
+**문서 관리자**: Qetta 개발팀

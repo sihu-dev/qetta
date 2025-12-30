@@ -4,7 +4,7 @@ n8n 워크플로우 정의 및 관리 시스템
 
 ## 개요
 
-BIDFLOW 및 FORGE LABS 플랫폼 전반의 자동화 워크플로우를 정의하고 실행하는 패키지입니다. n8n JSON 형식과 호환되며, 이벤트 기반 실행을 지원합니다.
+Qetta 및 FORGE LABS 플랫폼 전반의 자동화 워크플로우를 정의하고 실행하는 패키지입니다. n8n JSON 형식과 호환되며, 이벤트 기반 실행을 지원합니다.
 
 ## 워크플로우 목록
 
@@ -50,31 +50,31 @@ BIDFLOW 및 FORGE LABS 플랫폼 전반의 자동화 워크플로우를 정의�
 
 ### 4. CRM Sync (CRM 양방향 동기화)
 - **트리거**: Schedule (15분마다)
-- **기능**: BIDFLOW ↔ HubSpot 데이터 양방향 동기화
+- **기능**: Qetta ↔ HubSpot 데이터 양방향 동기화
 - **노드**:
-  - **BIDFLOW → HubSpot**:
-    1. Fetch BIDFLOW Leads
+  - **Qetta → HubSpot**:
+    1. Fetch Qetta Leads
     2. Transform to HubSpot
     3. Upsert to HubSpot
     4. Update Sync Status
-  - **HubSpot → BIDFLOW**:
+  - **HubSpot → Qetta**:
     1. Fetch HubSpot Contacts
-    2. Transform to BIDFLOW
-    3. Save to BIDFLOW
+    2. Transform to Qetta
+    3. Save to Qetta
 - **사용 사례**: CRM 데이터 실시간 동기화
 
 ### 5. Cross-Sell (크로스셀 자동화)
 - **트리거**: Schedule (매일 오후 3시)
-- **기능**: BIDFLOW ↔ HEPHAITOS 간 크로스셀 제안
+- **기능**: Qetta ↔ HEPHAITOS 간 크로스셀 제안
 - **노드**:
-  - **BIDFLOW → HEPHAITOS**:
-    1. Fetch BIDFLOW Customers
+  - **Qetta → HEPHAITOS**:
+    1. Fetch Qetta Customers
     2. Analyze Cross-Sell Fit
     3. Filter High Score
     4. Generate Cross-Sell Email (AI)
     5. Send Email
     6. Log Offer
-  - **HEPHAITOS → BIDFLOW**:
+  - **HEPHAITOS → Qetta**:
     1. Fetch HEPHAITOS Mentors
     2. Create In-App Message
     3. Save Notification
@@ -194,7 +194,7 @@ import {
 // 이벤트 발행
 await publishEvent({
   event: COMMON_EVENTS.LEAD_CREATED,
-  source: 'bidflow-api',
+  source: 'qetta-api',
   data: {
     lead_id: 'lead_123',
     company_name: 'ABC Corp',

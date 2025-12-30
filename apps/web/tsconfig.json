@@ -35,5 +35,5 @@
     "types/**/*.ts",
     ".next/types/**/*.ts"
   ],
-  "exclude": ["node_modules", "bidflow", ".bidflow_backup", ".next"]
+  "exclude": ["node_modules", "qetta", ".qetta_backup", ".next"]
 }

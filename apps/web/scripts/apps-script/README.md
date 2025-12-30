@@ -1,4 +1,4 @@
-# BIDFLOW Google Sheets AI Functions
+# Qetta Google Sheets AI Functions
 
 > Google Sheets에서 AI 기반 입찰 분석 기능 사용하기
 
@@ -10,8 +10,8 @@
 2. **확장 프로그램** > **Apps Script** 클릭
 3. `Code.gs` 내용 전체 복사-붙여넣기
 4. **프로젝트 설정** > **스크립트 속성** 추가:
-   - `BIDFLOW_API_URL`: `https://bidflow.qetta.io/api/v1`
-   - `BIDFLOW_API_KEY`: (발급받은 API 키)
+   - `Qetta_API_URL`: `https://qetta.qetta.io/api/v1`
+   - `Qetta_API_KEY`: (발급받은 API 키)
 5. 저장 후 스프레드시트 새로고침
 
 ### 2. 커스텀 함수 사용
@@ -145,9 +145,9 @@ StoFo Engine 기반 낙찰 확률 예측 (KAIST 알고리즘)
 
 ## 메뉴 기능
 
-스프레드시트 상단에 **BIDFLOW AI** 메뉴가 추가됩니다:
+스프레드시트 상단에 **Qetta AI** 메뉴가 추가됩니다:
 
-- 🔄 **Sync with BIDFLOW**: API 동기화
+- 🔄 **Sync with Qetta**: API 동기화
 - 📊 **Calculate All Scores**: 전체 점수 일괄 계산
 - 📥 **Import Today's Bids**: 오늘자 공고 가져오기
 - ⚙️ **Settings**: API 설정
@@ -182,12 +182,12 @@ StoFo Engine 기반 낙찰 확률 예측 (KAIST 알고리즘)
 
 ### API 연동 오류
 - Script Properties에 API_KEY 설정 확인
-- BIDFLOW 대시보드에서 API 키 재발급
+- Qetta 대시보드에서 API 키 재발급
 
 ---
 
 ## 지원
 
-- 문서: https://bidflow.qetta.io/docs
-- 이슈: https://github.com/qetta/bidflow/issues
+- 문서: https://qetta.qetta.io/docs
+- 이슈: https://github.com/qetta/qetta/issues
 - 이메일: support@qetta.io

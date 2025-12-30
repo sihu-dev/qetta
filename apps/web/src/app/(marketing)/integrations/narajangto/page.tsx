@@ -91,7 +91,7 @@ export default function NarajangtoPage() {
               </div>
             </div>
             <p className="text-muted-foreground mb-8 max-w-2xl text-xl">
-              대한민국 최대 공공조달 플랫폼인 나라장터의 모든 공고를 BIDFLOW에서 자동으로 수집하고
+              대한민국 최대 공공조달 플랫폼인 나라장터의 모든 공고를 Qetta에서 자동으로 수집하고
               관리할 수 있습니다.
             </p>
             <div className="flex flex-wrap gap-4">

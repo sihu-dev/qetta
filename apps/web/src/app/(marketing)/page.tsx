@@ -1,5 +1,5 @@
 /**
- * BIDFLOW 랜딩 페이지
+ * Qetta 랜딩 페이지
  * Google DeepMind-inspired Light Theme
  */
 import dynamic from 'next/dynamic';

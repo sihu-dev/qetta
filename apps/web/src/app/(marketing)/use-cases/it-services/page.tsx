@@ -127,7 +127,7 @@ export default function ItServicesPage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
-            <h2 className="mb-4 text-center text-3xl font-bold">BIDFLOW 솔루션</h2>
+            <h2 className="mb-4 text-center text-3xl font-bold">Qetta 솔루션</h2>
             <p className="text-muted-foreground mb-12 text-center">
               IT 서비스 특화 기능으로 입찰 업무를 혁신합니다
             </p>
@@ -221,7 +221,7 @@ export default function ItServicesPage() {
             IT 서비스 입찰 자동화를 시작하세요
           </h2>
           <p className="text-muted-foreground mb-8">
-            14일 무료 체험으로 BIDFLOW의 가치를 직접 확인해보세요.
+            14일 무료 체험으로 Qetta의 가치를 직접 확인해보세요.
           </p>
           <div className="flex flex-col justify-center gap-4 sm:flex-row">
             <Button size="lg" asChild>

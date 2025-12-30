@@ -85,7 +85,7 @@ npm run lint
 | **총점** | **/100** |
 ```
 
-## BIDFLOW 특수 규칙
+## Qetta 특수 규칙
 
 1. **Handsontable**: SSR 비활성화 필수 (dynamic import)
 2. **Supabase**: Row Level Security 확인

@@ -1,5 +1,5 @@
 /**
- * BIDFLOW AI Translation Module
+ * Qetta AI Translation Module
  *
  * Claude Haiku 기반 다국어 번역
  * - 입찰 공고 한국어 번역

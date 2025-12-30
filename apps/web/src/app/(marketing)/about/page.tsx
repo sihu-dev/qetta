@@ -40,7 +40,7 @@ const values = [
 ];
 
 const milestones = [
-  { year: '2023', event: 'BIDFLOW 서비스 런칭' },
+  { year: '2023', event: 'Qetta 서비스 런칭' },
   { year: '2023', event: '나라장터 연동 완료' },
   { year: '2024', event: 'TED, SAM.gov 연동' },
   { year: '2024', event: 'AI 매칭 엔진 출시' },
@@ -81,7 +81,7 @@ export default function AboutPage() {
               만들어갑니다
             </h1>
             <p className="text-muted-foreground mt-6 text-lg">
-              BIDFLOW는 AI 기술로 중소기업의 공공입찰 참여를 혁신합니다.
+              Qetta는 AI 기술로 중소기업의 공공입찰 참여를 혁신합니다.
               <br />더 많은 기업이 공정한 기회를 얻을 수 있도록 돕습니다.
             </p>
           </div>
@@ -119,7 +119,7 @@ export default function AboutPage() {
                   기술로 시간과 비용의 벽을 허물고, 실력으로 경쟁할 수 있는 환경을 만듭니다.
                 </p>
                 <p className="text-muted-foreground">
-                  2023년 설립 이후, 500개 이상의 기업이 BIDFLOW와 함께 입찰 업무를 혁신하고
+                  2023년 설립 이후, 500개 이상의 기업이 Qetta와 함께 입찰 업무를 혁신하고
                   있습니다.
                 </p>
               </div>
@@ -128,7 +128,7 @@ export default function AboutPage() {
                 <h3 className="mb-4 text-xl font-bold">글로벌 비전</h3>
                 <p className="text-muted-foreground">
                   한국에서 시작해 전 세계 공공조달 시장으로 확장합니다. EU, 미국, UN까지 - 어디서든
-                  BIDFLOW와 함께 입찰에 도전하세요.
+                  Qetta와 함께 입찰에 도전하세요.
                 </p>
               </div>
             </div>
@@ -230,7 +230,7 @@ export default function AboutPage() {
       <section className="text-primary-foreground bg-primary py-20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="mb-4 text-2xl font-bold md:text-3xl">함께 성장할 준비가 되셨나요?</h2>
-          <p className="mb-8 opacity-90">BIDFLOW와 함께 입찰의 새로운 표준을 만들어가세요.</p>
+          <p className="mb-8 opacity-90">Qetta와 함께 입찰의 새로운 표준을 만들어가세요.</p>
           <div className="flex flex-col justify-center gap-4 sm:flex-row">
             <Button size="lg" variant="secondary" asChild>
               <Link href="/signup">무료 체험 시작</Link>

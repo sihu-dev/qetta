@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * BIDFLOW MCP Server Test with Real Data
+ * Qetta MCP Server Test with Real Data
  * 모의 데이터를 Supabase에 삽입 후 MCP 도구 테스트
  */
 

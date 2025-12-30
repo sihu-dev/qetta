@@ -103,7 +103,7 @@ export default function TedPage() {
             </div>
             <p className="text-muted-foreground mb-8 max-w-2xl text-xl">
               유럽연합 공식 공공조달 플랫폼인 TED의 모든 공고를 한국어로 번역하여 제공합니다. EU
-              시장 진출의 첫 걸음을 BIDFLOW와 함께하세요.
+              시장 진출의 첫 걸음을 Qetta와 함께하세요.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" asChild>

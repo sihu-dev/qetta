@@ -29,7 +29,7 @@ export interface EmailResult {
 // ============================================================================
 
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
-const EMAIL_FROM = process.env.EMAIL_FROM || 'BIDFLOW <noreply@bidflow.io>';
+const EMAIL_FROM = process.env.EMAIL_FROM || 'Qetta <noreply@qetta.io>';
 const isDevelopment = process.env.NODE_ENV !== 'production';
 
 // ============================================================================
@@ -114,7 +114,7 @@ export function createEmailLayout(content: string, title?: string): string {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${title || 'BIDFLOW'}</title>
+  <title>${title || 'Qetta'}</title>
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -214,15 +214,15 @@ export function createEmailLayout(content: string, title?: string): string {
 <body>
   <div class="container">
     <div class="header">
-      <h1>BIDFLOW</h1>
+      <h1>Qetta</h1>
       <p>입찰 자동화 시스템</p>
     </div>
     <div class="content">
       ${content}
     </div>
     <div class="footer">
-      <p>이 메일은 BIDFLOW에서 자동으로 발송되었습니다.</p>
-      <p>© ${new Date().getFullYear()} BIDFLOW. All rights reserved.</p>
+      <p>이 메일은 Qetta에서 자동으로 발송되었습니다.</p>
+      <p>© ${new Date().getFullYear()} Qetta. All rights reserved.</p>
     </div>
   </div>
 </body>
@@ -280,7 +280,7 @@ export function createBidNotificationEmail(
     </table>
     <div style="text-align: center; margin-top: 30px;">
       <a href="${process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3010'}" class="button">
-        BIDFLOW에서 자세히 보기
+        Qetta에서 자세히 보기
       </a>
     </div>
   `;

@@ -1,7 +1,7 @@
 import type { Config } from 'tailwindcss';
 
 /**
- * BIDFLOW Tailwind Configuration
+ * Qetta Tailwind Configuration
  * Monochrome Design System
  *
  * Primary: #171717 (neutral-900)

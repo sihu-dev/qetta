@@ -1,5 +1,5 @@
 -- =========================================
--- BIDFLOW 2026 Pivot: 보증 연계 플랫폼
+-- Qetta 2026 Pivot: 보증 연계 플랫폼
 -- 신규 테이블: awards, guarantee_providers, guarantee_applications, stofo_predictions
 -- =========================================
 

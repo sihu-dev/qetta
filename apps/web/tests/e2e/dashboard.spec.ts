@@ -15,7 +15,7 @@ test.describe('Dashboard Page', () => {
 
   test('should load dashboard page', async ({ page }) => {
     // 페이지 타이틀 확인
-    await expect(page).toHaveTitle(/BIDFLOW|Dashboard/i);
+    await expect(page).toHaveTitle(/Qetta|Dashboard/i);
 
     // 대시보드 메인 요소 존재 확인
     await expect(page.locator('main')).toBeVisible();

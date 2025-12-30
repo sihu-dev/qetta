@@ -1,5 +1,5 @@
 /**
- * BIDFLOW 백테스트 프레임워크 v3.0
+ * Qetta 백테스트 프레임워크 v3.0
  *
  * 현실적인 낙찰 시뮬레이션:
  * 1. 사정률 기반 예정가격 결정
@@ -837,7 +837,7 @@ export class BacktestEngineV3 {
 export class BacktestReporterV3 {
   public static printReport(result: BacktestResultV3): void {
     console.log('\n' + '='.repeat(70));
-    console.log('BIDFLOW v3.0 백테스트 리포트 (현실화 버전)');
+    console.log('Qetta v3.0 백테스트 리포트 (현실화 버전)');
     console.log('='.repeat(70));
 
     console.log(`\n분석 기간: ${result.dateRange.start} ~ ${result.dateRange.end}`);

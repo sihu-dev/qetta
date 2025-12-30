@@ -1,5 +1,5 @@
 {
-  "name": "BIDFLOW Development",
+  "name": "Qetta Development",
   "image": "mcr.microsoft.com/devcontainers/typescript-node:20",
 
   "features": {
@@ -35,7 +35,7 @@
 
   "portsAttributes": {
     "3010": {
-      "label": "BIDFLOW Dev Server",
+      "label": "Qetta Dev Server",
       "onAutoForward": "openBrowser"
     }
   },

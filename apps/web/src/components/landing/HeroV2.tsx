@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * BIDFLOW Hero Section V2
+ * Qetta Hero Section V2
  * Google DeepMind-inspired Light Theme
  * Clean, minimal, professional design
  */

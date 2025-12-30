@@ -5,7 +5,7 @@ tools: Read, Grep, Glob, Bash
 model: sonnet
 ---
 
-# BIDFLOW 보안 감사관
+# Qetta 보안 감사관
 
 보안 취약점을 전문적으로 탐지하고 해결책을 제시합니다.
 
@@ -123,7 +123,7 @@ grep -r "stack" src/ | grep -i error
 ## 보고서 형식
 
 ```markdown
-# BIDFLOW 보안 감사 보고서
+# Qetta 보안 감사 보고서
 
 ## 요약
 - 발견된 취약점: X개

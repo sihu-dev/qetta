@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-BIDFLOW Pre-commit Security Check Script
+Qetta Pre-commit Security Check Script
 
 보안 취약점 패턴 탐지 및 시크릿 노출 검사
 커밋 전 자동 실행되어 보안 위험을 사전 차단
@@ -214,7 +214,7 @@ class SecurityChecker:
     def print_report(self) -> bool:
         """보고서 출력 및 결과 반환"""
         print("\n" + "=" * 60)
-        print("🔒 BIDFLOW 보안 검사 보고서")
+        print("🔒 Qetta 보안 검사 보고서")
         print("=" * 60 + "\n")
 
         has_critical = False
@@ -288,7 +288,7 @@ class SecurityChecker:
 def main():
     import argparse
 
-    parser = argparse.ArgumentParser(description="BIDFLOW 보안 검사")
+    parser = argparse.ArgumentParser(description="Qetta 보안 검사")
     parser.add_argument("--strict", action="store_true", help="엄격 모드 (경고도 차단)")
     parser.add_argument("--path", default=".", help="검사 경로")
     parser.add_argument("--skip-npm", action="store_true", help="npm audit 건너뛰기")

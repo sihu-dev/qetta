@@ -1,4 +1,4 @@
-# BIDFLOW 프로젝트 현황
+# Qetta 프로젝트 현황
 
 > **최종 업데이트**: 2025-12-21
 > **프로젝트**: 제조업 SME 입찰 자동화 시스템
@@ -158,7 +158,7 @@ normal: #a3a3a3    # neutral-400 (밝음)
 ## 프로젝트 구조
 
 ```
-bidflow/
+qetta/
 ├── src/
 │   ├── app/
 │   │   ├── (dashboard)/

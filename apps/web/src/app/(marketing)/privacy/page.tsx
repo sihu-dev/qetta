@@ -4,8 +4,8 @@
 import { Badge } from '@/components/ui/badge';
 
 export const metadata = {
-  title: '개인정보처리방침 | BIDFLOW',
-  description: 'BIDFLOW 개인정보처리방침',
+  title: '개인정보처리방침 | Qetta',
+  description: 'Qetta 개인정보처리방침',
 };
 
 export default function PrivacyPage() {
@@ -23,7 +23,7 @@ export default function PrivacyPage() {
 
             <h2 className="mb-4 mt-8 text-2xl font-semibold">1. 개인정보의 처리 목적</h2>
             <p className="text-muted-foreground mb-4">
-              BIDFLOW는 다음의 목적을 위하여 개인정보를 처리합니다:
+              Qetta는 다음의 목적을 위하여 개인정보를 처리합니다:
               <br />
               - 회원 가입 및 관리
               <br />
@@ -50,7 +50,7 @@ export default function PrivacyPage() {
 
             <h2 className="mb-4 mt-8 text-2xl font-semibold">4. 개인정보의 제3자 제공</h2>
             <p className="text-muted-foreground mb-4">
-              BIDFLOW는 이용자의 동의 없이 개인정보를 제3자에게 제공하지 않습니다. 다만, 법령에
+              Qetta는 이용자의 동의 없이 개인정보를 제3자에게 제공하지 않습니다. 다만, 법령에
               의거하거나 수사 목적으로 법령에 정해진 절차에 따라 요청이 있는 경우는 예외로 합니다.
             </p>
 
@@ -74,14 +74,14 @@ export default function PrivacyPage() {
             <p className="text-muted-foreground mb-4">
               성명: 개인정보보호팀
               <br />
-              이메일: privacy@bidflow.io
+              이메일: privacy@qetta.io
             </p>
 
             <div className="bg-muted mt-12 rounded-lg p-4">
               <p className="text-muted-foreground text-sm">
                 개인정보 관련 문의는{' '}
-                <a href="mailto:privacy@bidflow.io" className="text-primary hover:underline">
-                  privacy@bidflow.io
+                <a href="mailto:privacy@qetta.io" className="text-primary hover:underline">
+                  privacy@qetta.io
                 </a>
                 로 연락해 주세요.
               </p>

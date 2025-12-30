@@ -4,8 +4,8 @@
 import { Badge } from '@/components/ui/badge';
 
 export const metadata = {
-  title: '이용약관 | BIDFLOW',
-  description: 'BIDFLOW 서비스 이용약관',
+  title: '이용약관 | Qetta',
+  description: 'Qetta 서비스 이용약관',
 };
 
 export default function TermsPage() {
@@ -23,7 +23,7 @@ export default function TermsPage() {
 
             <h2 className="mb-4 mt-8 text-2xl font-semibold">제1조 (목적)</h2>
             <p className="text-muted-foreground mb-4">
-              이 약관은 BIDFLOW(이하 &quot;회사&quot;)가 제공하는 입찰 자동화 서비스(이하
+              이 약관은 Qetta(이하 &quot;회사&quot;)가 제공하는 입찰 자동화 서비스(이하
               &quot;서비스&quot;)의 이용조건 및 절차, 회사와 이용자의 권리, 의무, 책임사항과 기타
               필요한 사항을 규정함을 목적으로 합니다.
             </p>

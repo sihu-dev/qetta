@@ -77,5 +77,5 @@ describe('[Component/Function Name]', () => {
 ## Example Usage
 
 ```
-@test-generator bidflow/src/lib/validation/schemas.ts
+@test-generator qetta/src/lib/validation/schemas.ts
 ```

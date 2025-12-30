@@ -1,4 +1,4 @@
-# BIDFLOW 개발자 가이드
+# Qetta 개발자 가이드
 
 > **버전**: v0.1.0
 > **업데이트**: 2025-12-21
@@ -132,7 +132,7 @@ Git Hooks: Husky (예정)
 ### 디렉토리 구조
 
 ```
-bidflow/
+qetta/
 ├── src/
 │   ├── app/                      # Next.js App Router
 │   │   ├── (marketing)/          # 랜딩 페이지 그룹
@@ -437,8 +437,8 @@ Git: 2.x
 
 ```bash
 # 저장소 클론
-git clone https://github.com/yourusername/bidflow.git
-cd bidflow
+git clone https://github.com/yourusername/qetta.git
+cd qetta
 
 # 의존성 설치
 pnpm install
@@ -538,10 +538,10 @@ vercel --prod
 
 ```bash
 # 빌드
-docker build -t bidflow:0.1.0 .
+docker build -t qetta:0.1.0 .
 
 # 실행
-docker run -p 3010:3010 --env-file .env.production bidflow:0.1.0
+docker run -p 3010:3010 --env-file .env.production qetta:0.1.0
 
 # Docker Compose
 docker-compose up -d
@@ -761,12 +761,12 @@ chore: 빌드/도구 변경
 
 ## 팀 연락처
 
-- **기술 문의**: dev@bidflow.com
-- **버그 리포트**: https://github.com/yourusername/bidflow/issues
-- **Slack**: #bidflow-dev
+- **기술 문의**: dev@qetta.com
+- **버그 리포트**: https://github.com/yourusername/qetta/issues
+- **Slack**: #qetta-dev
 
 ---
 
 **마지막 업데이트**: 2025-12-21
 **문서 버전**: 1.0.0
-**작성자**: BIDFLOW 개발팀
+**작성자**: Qetta 개발팀

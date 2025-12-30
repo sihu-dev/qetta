@@ -7,8 +7,8 @@ import Link from 'next/link';
 import { Zap, Building2, FileText, Bell, Shield } from 'lucide-react';
 
 export const metadata = {
-  title: '한전 (KEPCO) 연동 | BIDFLOW',
-  description: 'BIDFLOW와 한국전력공사 조달시스템 연동',
+  title: '한전 (KEPCO) 연동 | Qetta',
+  description: 'Qetta와 한국전력공사 조달시스템 연동',
 };
 
 const features = [
@@ -114,7 +114,7 @@ export default function KepcoIntegrationPage() {
               <div>
                 <h3 className="font-semibold">계정 생성</h3>
                 <p className="text-muted-foreground text-sm">
-                  BIDFLOW 계정을 생성하고 로그인합니다.
+                  Qetta 계정을 생성하고 로그인합니다.
                 </p>
               </div>
             </div>

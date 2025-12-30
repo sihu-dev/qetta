@@ -1,4 +1,4 @@
-# BIDFLOW V2 Beta Design Document
+# Qetta V2 Beta Design Document
 ## Part 5: Operations, Security & Roadmap
 
 > GPT 5.2 Pro 검수용 마스터 설계 문서
@@ -51,7 +51,7 @@ INNGEST_SIGNING_KEY=signkey_xxxxxxxxxx
 # ========================================
 # Email
 RESEND_API_KEY=re_xxxxxxxxxx
-EMAIL_FROM=noreply@bidflow.co.kr
+EMAIL_FROM=noreply@qetta.co.kr
 
 # Slack
 SLACK_WEBHOOK_URL=https://hooks.slack.com/services/xxx
@@ -59,7 +59,7 @@ SLACK_WEBHOOK_URL=https://hooks.slack.com/services/xxx
 # ========================================
 # Application
 # ========================================
-NEXT_PUBLIC_APP_URL=https://bidflow.co.kr
+NEXT_PUBLIC_APP_URL=https://qetta.co.kr
 NODE_ENV=production
 
 # ========================================
@@ -792,7 +792,7 @@ describe('TEDConnector', () => {
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
-│                    BIDFLOW V2 Implementation Roadmap                     │
+│                    Qetta V2 Implementation Roadmap                     │
 ├─────────────────────────────────────────────────────────────────────────┤
 │                                                                          │
 │  Week 1-2: Foundation                                                    │
@@ -1135,17 +1135,17 @@ NAICS: North American Industry Classification System (미국 산업 분류)
 ## 11.4 Contact & Support
 
 ```yaml
-Project Lead: BIDFLOW Team
-Repository: https://github.com/bidflow/bidflow
-Documentation: https://docs.bidflow.co.kr
+Project Lead: Qetta Team
+Repository: https://github.com/qetta/qetta
+Documentation: https://docs.qetta.co.kr
 
 Issue Tracking: GitHub Issues
-Emergency Contact: ops@bidflow.co.kr
+Emergency Contact: ops@qetta.co.kr
 ```
 
 ---
 
-*End of BIDFLOW V2 Beta Design Document*
+*End of Qetta V2 Beta Design Document*
 
 *Total: 5 Parts, ~150 pages equivalent*
 *Last Updated: 2025-12-21*

@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * BIDFLOW 스프레드시트 뷰
+ * Qetta 스프레드시트 뷰
  * Handsontable 기반 입찰 관리 테이블
  */
 

@@ -1,5 +1,5 @@
 -- =========================================
--- BIDFLOW V2 Migration: Audit Logs Table
+-- Qetta V2 Migration: Audit Logs Table
 -- =========================================
 
 CREATE TABLE IF NOT EXISTS audit_logs (

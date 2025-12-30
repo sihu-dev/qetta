@@ -1,6 +1,6 @@
 {
   "$schema": "https://claude.ai/schemas/claude-code-settings.json",
-  "description": "BIDFLOW Core MCP 서버 - Opus 4.5 최적화 설정",
+  "description": "Qetta Core MCP 서버 - Opus 4.5 최적화 설정",
 
   "model": {
     "default": "opus",
@@ -24,7 +24,7 @@
       "read": true,
       "edit": true,
       "bash": ["npm run", "node", "npx", "git status", "git diff"],
-      "mcp": ["bidflow-core", "sequential-thinking", "github"]
+      "mcp": ["qetta-core", "sequential-thinking", "github"]
     },
     "requireApproval": {
       "git": ["push", "force", "reset --hard"],
@@ -34,12 +34,12 @@
   },
 
   "mcpServers": {
-    "primary": ["bidflow-core"],
+    "primary": ["qetta-core"],
     "secondary": ["sequential-thinking", "supabase"],
     "optional": ["github", "brave-search"]
   },
 
-  "bidflowCore": {
+  "qettaCore": {
     "description": "입찰 자동화 MCP 서버 설정",
     "tools": {
       "search_bids": { "enabled": true, "cache": "5m" },
@@ -93,21 +93,21 @@
       "model": "opus",
       "temperature": 0.3,
       "maxTokens": 8000,
-      "tools": ["bidflow-core", "sequential-thinking"]
+      "tools": ["qetta-core", "sequential-thinking"]
     },
     "stofo-predictor": {
       "description": "낙찰 예측 전문 에이전트",
       "model": "opus",
       "temperature": 0.2,
       "maxTokens": 4000,
-      "tools": ["bidflow-core"]
+      "tools": ["qetta-core"]
     },
     "market-analyzer": {
       "description": "시장 분석 에이전트",
       "model": "opus",
       "temperature": 0.4,
       "maxTokens": 6000,
-      "tools": ["bidflow-core", "brave-search"]
+      "tools": ["qetta-core", "brave-search"]
     }
   },
 
@@ -132,7 +132,7 @@
 
   "hooks": {
     "preToolUse": {
-      "bidflow-core": {
+      "qetta-core": {
         "validateTenantId": true,
         "logUsage": true
       }

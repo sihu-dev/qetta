@@ -176,17 +176,17 @@ async function sendEmailNotification(payload: NotificationPayload): Promise<void
 function getEmailSubject(type: NotificationPayload['type'], count: number): string {
   switch (type) {
     case 'new_bids':
-      return `[BIDFLOW] 새 입찰 공고 ${count}건이 등록되었습니다`;
+      return `[Qetta] 새 입찰 공고 ${count}건이 등록되었습니다`;
     case 'deadline_d3':
-      return `[BIDFLOW] ⏰ D-3 마감 임박 공고 ${count}건`;
+      return `[Qetta] ⏰ D-3 마감 임박 공고 ${count}건`;
     case 'deadline_d1':
-      return `[BIDFLOW] 🔴 D-1 마감 임박 공고 ${count}건`;
+      return `[Qetta] 🔴 D-1 마감 임박 공고 ${count}건`;
     case 'bid_result':
-      return `[BIDFLOW] 입찰 결과 알림`;
+      return `[Qetta] 입찰 결과 알림`;
     case 'daily_report':
-      return `[BIDFLOW] 일일 입찰 현황 리포트`;
+      return `[Qetta] 일일 입찰 현황 리포트`;
     default:
-      return `[BIDFLOW] 알림`;
+      return `[Qetta] 알림`;
   }
 }
 
@@ -229,7 +229,7 @@ function formatEmailHtml(payload: NotificationPayload): string {
     <body>
       <div class="container">
         <div class="header">
-          <h1 style="margin: 0; font-size: 24px;">BIDFLOW</h1>
+          <h1 style="margin: 0; font-size: 24px;">Qetta</h1>
           <p style="margin: 8px 0 0 0; opacity: 0.9;">입찰 자동화 시스템</p>
         </div>
         <div class="content">
@@ -247,7 +247,7 @@ function formatEmailHtml(payload: NotificationPayload): string {
             </tbody>
           </table>
           <p style="margin-top: 20px; color: #6b7280; font-size: 14px;">
-            자세한 내용은 <a href="${process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3010'}">BIDFLOW</a>에서 확인하세요.
+            자세한 내용은 <a href="${process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3010'}">Qetta</a>에서 확인하세요.
           </p>
         </div>
       </div>

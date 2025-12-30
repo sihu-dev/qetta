@@ -38,7 +38,7 @@
     }
   },
   "features": {
-    "title": "BIDFLOW 핵심 기능",
+    "title": "Qetta 핵심 기능",
     "subtitle": "AI 기반 입찰 자동화로 비즈니스 성장을 가속화하세요",
     "items": {
       "aiMatching": {
@@ -187,7 +187,7 @@
     "legal": "법적 고지",
     "privacy": "개인정보처리방침",
     "terms": "이용약관",
-    "copyright": "© {year} BIDFLOW. All rights reserved."
+    "copyright": "© {year} Qetta. All rights reserved."
   },
   "error": {
     "notFound": "페이지를 찾을 수 없습니다",

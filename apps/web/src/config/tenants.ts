@@ -49,15 +49,15 @@ export interface TenantConfig {
 }
 
 // ============================================================================
-// 기본 테넌트: BIDFLOW (범용)
+// 기본 테넌트: Qetta (범용)
 // ============================================================================
 
 export const DEFAULT_TENANT: TenantConfig = {
-  id: 'bidflow',
+  id: 'qetta',
   branding: {
-    name: 'BIDFLOW',
+    name: 'Qetta',
     tagline: '입찰 자동화의 새로운 기준',
-    logo: '/logos/bidflow.svg',
+    logo: '/logos/qetta.svg',
   },
   hero: {
     badge: 'AI 기반 입찰 자동화 플랫폼',
@@ -67,7 +67,7 @@ export const DEFAULT_TENANT: TenantConfig = {
       '나라장터, TED, SAM.gov 등 45개 이상의 데이터 소스에서 입찰 공고를 자동 수집하고, AI가 귀사 제품과 매칭하여 입찰 성공률을 높여드립니다.',
   },
   features: {
-    title: '왜 BIDFLOW인가요?',
+    title: '왜 Qetta인가요?',
     description: '중소 제조업체를 위한 맞춤형 입찰 자동화',
     items: [
       {
@@ -115,7 +115,7 @@ export const CMNTECH_TENANT: TenantConfig = {
       '나라장터, TED, 한전 공고에서 유량계 입찰을 AI가 자동 수집하고, 5개 CMNTech 제품과 매칭하여 입찰 성공률을 높여드립니다.',
   },
   features: {
-    title: '왜 BIDFLOW + CMNTech인가요?',
+    title: '왜 Qetta + CMNTech인가요?',
     description: '유량계 전문 입찰 자동화',
     items: [
       {
@@ -181,7 +181,7 @@ export const CMNTECH_TENANT: TenantConfig = {
 // ============================================================================
 
 export const TENANTS: Record<string, TenantConfig> = {
-  bidflow: DEFAULT_TENANT,
+  qetta: DEFAULT_TENANT,
   cmntech: CMNTECH_TENANT,
 };
 
@@ -196,7 +196,7 @@ export function getTenantConfig(tenantId?: string | null): TenantConfig {
 /**
  * URL에서 테넌트 ID 추출
  * - 쿼리 파라미터: ?tenant=cmntech
- * - 서브도메인: cmntech.bidflow.com
+ * - 서브도메인: cmntech.qetta.com
  */
 export function extractTenantId(
   searchParams?: URLSearchParams | null,
@@ -219,5 +219,5 @@ export function extractTenantId(
   }
 
   // 3. 기본값
-  return 'bidflow';
+  return 'qetta';
 }

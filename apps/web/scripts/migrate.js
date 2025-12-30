@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * BIDFLOW DB 마이그레이션 스크립트
+ * Qetta DB 마이그레이션 스크립트
  * PostgreSQL 직접 연결
  */
 
@@ -25,7 +25,7 @@ async function runMigration() {
 
     const sqlPath = path.join(
       __dirname,
-      '../bidflow/supabase/migrations/001_create_tables_and_indexes.sql'
+      '../qetta/supabase/migrations/001_create_tables_and_indexes.sql'
     );
     const sql = fs.readFileSync(sqlPath, 'utf-8');
 

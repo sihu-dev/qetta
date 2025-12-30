@@ -112,7 +112,7 @@ export default function FeaturesPage() {
               자동화합니다
             </h1>
             <p className="text-muted-foreground mt-6 text-lg">
-              공고 수집부터 제안서 작성까지, BIDFLOW가 입찰 프로세스 전체를 혁신합니다.
+              공고 수집부터 제안서 작성까지, Qetta가 입찰 프로세스 전체를 혁신합니다.
             </p>
           </div>
         </div>

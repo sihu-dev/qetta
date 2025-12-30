@@ -32,7 +32,7 @@ interface TenantProviderProps {
 }
 
 export function TenantProvider({ tenant, children }: TenantProviderProps) {
-  const isDefault = tenant.id === 'bidflow';
+  const isDefault = tenant.id === 'qetta';
 
   return <TenantContext.Provider value={{ tenant, isDefault }}>{children}</TenantContext.Provider>;
 }

@@ -1,4 +1,4 @@
-# BIDFLOW V2 Beta Design Document
+# Qetta V2 Beta Design Document
 ## Part 3: Connector Framework & Matching Engine
 
 > GPT 5.2 Pro 검수용 마스터 설계 문서

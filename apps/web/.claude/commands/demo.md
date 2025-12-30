@@ -100,7 +100,7 @@ curl http://localhost:3010/api/v1/matches/stats
 ## 출력 형식
 
 ```
-🎬 BIDFLOW 데모 모드
+🎬 Qetta 데모 모드
 
 시나리오: CMNTech 5분 데모
 예상 시간: 5분

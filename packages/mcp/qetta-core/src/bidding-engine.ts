@@ -1,5 +1,5 @@
 /**
- * BIDFLOW 입찰 전략 엔진 v2.0
+ * Qetta 입찰 전략 엔진 v2.0
  *
  * 2025년 공공조달 실제 로직 기반:
  * - 예정가격 예측 (15개 복수예비가격 + 사정률)
@@ -629,6 +629,6 @@ export function generateBidPrediction(request: PredictionRequest): BidStrategy &
   return {
     ...strategy,
     bid: { id: bid.id, title: bid.title },
-    modelVersion: 'bidflow-engine-v2.0',
+    modelVersion: 'qetta-engine-v2.0',
   };
 }

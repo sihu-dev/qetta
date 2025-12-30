@@ -1,5 +1,5 @@
 /**
- * BIDFLOW AI Analysis Module
+ * Qetta AI Analysis Module
  *
  * Claude Sonnet 기반 상세 매칭 분석
  * - 필터 통과 입찰에 대한 심층 분석

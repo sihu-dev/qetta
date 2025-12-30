@@ -1,5 +1,5 @@
 -- =========================================
--- BIDFLOW V2 Migration: CMNTech Seed Data
+-- Qetta V2 Migration: CMNTech Seed Data
 -- =========================================
 
 -- CMNTech 테넌트 생성

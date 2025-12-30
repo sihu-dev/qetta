@@ -1,11 +1,11 @@
 #!/bin/bash
-# BIDFLOW Quality Check Script
+# Qetta Quality Check Script
 # 자가 개선 루프에서 사용되는 품질 검사 스크립트
 
 set -e
 
 echo "=========================================="
-echo "  BIDFLOW Quality Check"
+echo "  Qetta Quality Check"
 echo "=========================================="
 echo ""
 

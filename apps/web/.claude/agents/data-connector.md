@@ -6,7 +6,7 @@ model: sonnet
 permissionMode: default
 ---
 
-# BIDFLOW V2 데이터 커넥터 전문가
+# Qetta V2 데이터 커넥터 전문가
 
 > TED, SAM.gov, 나라장터 API 연동 및 공고 수집 자동화
 

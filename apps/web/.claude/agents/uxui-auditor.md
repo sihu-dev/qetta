@@ -5,7 +5,7 @@ tools: Read, Grep, Glob, Bash, WebFetch
 model: sonnet
 ---
 
-# BIDFLOW UX/UI 감사관
+# Qetta UX/UI 감사관
 
 사용자 경험과 인터페이스 품질을 전문적으로 검수합니다.
 

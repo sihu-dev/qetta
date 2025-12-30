@@ -1,5 +1,5 @@
 /**
- * BIDFLOW Database Types
+ * Qetta Database Types
  *
  * Supabase 스키마와 1:1 매핑되는 TypeScript 타입
  */

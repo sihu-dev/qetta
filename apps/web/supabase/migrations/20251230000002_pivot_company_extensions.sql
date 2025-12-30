@@ -1,5 +1,5 @@
 -- =========================================
--- BIDFLOW 2026 Pivot: 기업 정보 확장 및 MCP 로그
+-- Qetta 2026 Pivot: 기업 정보 확장 및 MCP 로그
 -- =========================================
 
 -- 1. TENANTS 테이블 확장 (기업 상세 정보)
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS mcp_call_logs (
   tenant_id UUID REFERENCES tenants(id),
 
   -- MCP 정보
-  server_name TEXT NOT NULL,  -- 'bidflow-core', 'stofo-engine', 'guarantee-api'
+  server_name TEXT NOT NULL,  -- 'qetta-core', 'stofo-engine', 'guarantee-api'
   tool_name TEXT NOT NULL,    -- 'search_bids', 'predict_win_rate', etc.
 
   -- 요청/응답

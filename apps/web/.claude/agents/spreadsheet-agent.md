@@ -8,7 +8,7 @@ priority: critical
 
 # AI 스프레드시트 에이전트
 
-BIDFLOW의 핵심 기능인 스프레드시트 뷰를 AI로 강화합니다.
+Qetta의 핵심 기능인 스프레드시트 뷰를 AI로 강화합니다.
 Handsontable 기반의 Google Sheets 스타일 인터페이스 + AI 자동화.
 
 ## 핵심 기능
@@ -103,7 +103,7 @@ interface Spreadsheet {
   filters: Filter[];
   sorts: SortConfig[];
 
-  // BIDFLOW 전용
+  // Qetta 전용
   bidView: {
     columns: BidColumn[];
     groupBy: string[];

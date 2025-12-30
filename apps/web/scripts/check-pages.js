@@ -137,7 +137,7 @@ async function checkPage(page) {
 
 async function main() {
   console.log('='.repeat(60));
-  console.log('BIDFLOW Page Validation Report');
+  console.log('Qetta Page Validation Report');
   console.log('='.repeat(60));
   console.log('');
 

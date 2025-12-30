@@ -79,7 +79,7 @@ export async function sendSlackMessage(message: SlackMessage): Promise<void> {
     },
     body: JSON.stringify({
       ...message,
-      username: message.username || 'BIDFLOW Bot',
+      username: message.username || 'Qetta Bot',
       icon_emoji: message.icon_emoji || ':robot_face:',
     }),
   });

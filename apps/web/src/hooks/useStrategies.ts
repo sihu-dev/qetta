@@ -1,5 +1,5 @@
 /**
- * Mock useStrategies hook for BIDFLOW
+ * Mock useStrategies hook for Qetta
  */
 export interface Strategy {
   id: string;

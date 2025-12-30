@@ -56,7 +56,7 @@ const navLinks: NavItem[] = [
       { href: '/docs', label: '문서', description: '가이드 및 API' },
       { href: '/support', label: '고객 지원', description: 'FAQ 및 문의' },
       { href: '/research', label: '연구팀', description: '데이터 분석 전문팀' },
-      { href: '/about', label: '회사 소개', description: 'BIDFLOW 소개' },
+      { href: '/about', label: '회사 소개', description: 'Qetta 소개' },
     ],
   },
 ];

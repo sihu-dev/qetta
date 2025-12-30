@@ -79,11 +79,11 @@ export function Footer() {
         {/* Bottom */}
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t pt-8 md:flex-row">
           <p className="text-muted-foreground text-sm">
-            &copy; {new Date().getFullYear()} BIDFLOW. All rights reserved.
+            &copy; {new Date().getFullYear()} Qetta. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <a
-              href="https://github.com/bidflow"
+              href="https://github.com/qetta"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-foreground transition-colors"
@@ -94,7 +94,7 @@ export function Footer() {
               </svg>
             </a>
             <a
-              href="https://twitter.com/bidflow"
+              href="https://twitter.com/qetta"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-foreground transition-colors"

@@ -106,5 +106,5 @@ const { data } = await supabase
 ## Example Usage
 
 ```
-@security-scanner bidflow/src/app/api/v1/bids/route.ts
+@security-scanner qetta/src/app/api/v1/bids/route.ts
 ```

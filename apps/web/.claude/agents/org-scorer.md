@@ -11,7 +11,7 @@ model: sonnet
 
 ## 역할
 
-BIDFLOW V2 매칭 엔진에서 기관 점수(Organization Score, 50점)를 관리합니다.
+Qetta V2 매칭 엔진에서 기관 점수(Organization Score, 50점)를 관리합니다.
 초기 데이터 설정, 거래 이력 반영, 가중치 조정을 담당합니다.
 
 ---

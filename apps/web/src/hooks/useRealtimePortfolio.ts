@@ -1,5 +1,5 @@
 /**
- * Mock useRealtimePortfolio hook for BIDFLOW/CMNTECH
+ * Mock useRealtimePortfolio hook for Qetta/CMNTECH
  */
 export function useRealtimePortfolio() {
   return {

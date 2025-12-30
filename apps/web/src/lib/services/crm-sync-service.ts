@@ -34,7 +34,7 @@ export interface SyncResult {
 
 /**
  * CRM 동기화 서비스
- * BIDFLOW의 리드를 외부 CRM으로 자동 동기화
+ * Qetta의 리드를 외부 CRM으로 자동 동기화
  */
 export class CRMSyncService {
   private crm: Awaited<ReturnType<typeof CRMFactory.create>>;
@@ -78,11 +78,11 @@ export class CRMSyncService {
         jobTitle: leadData.title,
         phone: leadData.phone,
         company: leadData.organization,
-        source: 'other', // Map bidflow source to CRM source type
+        source: 'other', // Map qetta source to CRM source type
         customFields: {
-          bidflow_id: leadData.id,
-          bidflow_score: leadData.score?.toString() || '0',
-          bidflow_source: leadData.source,
+          qetta_id: leadData.id,
+          qetta_score: leadData.score?.toString() || '0',
+          qetta_source: leadData.source,
         },
       };
 
@@ -205,14 +205,14 @@ export class CRMSyncService {
       const deal: IDeal = {
         id: '', // Will be assigned by CRM
         title: params.title,
-        description: `Lead from BIDFLOW - ${lead.name}`,
+        description: `Lead from Qetta - ${lead.name}`,
         stage: dealStage,
         priority: params.priority || 'medium',
         value: params.value,
         currency: 'KRW',
         customFields: {
-          bidflow_lead_id: params.leadId,
-          bidflow_score: lead.score?.toString() || '0',
+          qetta_lead_id: params.leadId,
+          qetta_score: lead.score?.toString() || '0',
           contact_email: lead.email,
           contact_name: lead.name,
           company: lead.organization ?? '',

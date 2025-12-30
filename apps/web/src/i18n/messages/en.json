@@ -37,7 +37,7 @@
     }
   },
   "features": {
-    "title": "BIDFLOW Core Features",
+    "title": "Qetta Core Features",
     "subtitle": "Accelerate your business growth with AI-powered bid automation",
     "items": {
       "aiMatching": {
@@ -161,7 +161,7 @@
     "legal": "Legal",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
-    "copyright": "© {year} BIDFLOW. All rights reserved."
+    "copyright": "© {year} Qetta. All rights reserved."
   },
   "error": {
     "notFound": "Page not found",

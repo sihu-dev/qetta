@@ -51,7 +51,7 @@ echo "SAM_GOV_API_KEY: $([ -n \"$SAM_GOV_API_KEY\" ] && echo 'SET' || echo 'MISS
 ## 출력 형식
 
 ```
-🏥 BIDFLOW 시스템 상태
+🏥 Qetta 시스템 상태
 
 ┌─────────────────────────────────────────┐
 │ Component       │ Status │ Latency     │

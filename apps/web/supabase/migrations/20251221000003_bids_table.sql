@@ -1,5 +1,5 @@
 -- =========================================
--- BIDFLOW V2 Migration: Bids Table
+-- Qetta V2 Migration: Bids Table
 -- =========================================
 
 CREATE TABLE IF NOT EXISTS bids (

@@ -16,7 +16,7 @@ const isDevelopment = process.env.NODE_ENV !== 'production';
 // 개발용 Mock 사용자
 const DEV_MOCK_USER = {
   id: 'dev-user-001',
-  email: 'dev@bidflow.local',
+  email: 'dev@qetta.local',
   role: 'admin' as const,
 };
 

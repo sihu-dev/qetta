@@ -1,7 +1,7 @@
 /**
  * @qetta/workflows - n8n Workflow Definitions & Management
  *
- * BIDFLOW 및 FORGE LABS 플랫폼 전반의 자동화 워크플로우
+ * Qetta 및 FORGE LABS 플랫폼 전반의 자동화 워크플로우
  * n8n JSON 형식 호환, 이벤트 기반 실행
  */
 

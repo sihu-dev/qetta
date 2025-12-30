@@ -1,10 +1,10 @@
 ---
-name: bidflow-ingest
+name: qetta-ingest
 description: "V2 데이터 수집 파이프라인 - TED/SAM.gov API 연동, 공고 수집, 정규화, DB 저장. 수집/인제스트/커넥터 관련 작업 시 자동 호출"
 allowed-tools: Read, Grep, Glob, Bash, WebFetch
 ---
 
-# BIDFLOW V2 수집 파이프라인 스킬
+# Qetta V2 수집 파이프라인 스킬
 
 > 글로벌 입찰 데이터 수집 자동화
 

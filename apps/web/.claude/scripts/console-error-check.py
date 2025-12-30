@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-BIDFLOW 콘솔 에러 감지 스크립트
+Qetta 콘솔 에러 감지 스크립트
 브라우저/Node.js 콘솔 에러를 감지하고 보고합니다.
 """
 import subprocess
@@ -108,7 +108,7 @@ class ConsoleErrorChecker:
                 capture_output=True,
                 text=True,
                 timeout=60,
-                cwd='/home/sihu2129/bidflow'
+                cwd='/home/sihu2129/qetta'
             )
             if result.returncode != 0:
                 # 에러 메시지 파싱
@@ -125,7 +125,7 @@ class ConsoleErrorChecker:
                 capture_output=True,
                 text=True,
                 timeout=60,
-                cwd='/home/sihu2129/bidflow'
+                cwd='/home/sihu2129/qetta'
             )
             if result.returncode != 0:
                 for line in result.stderr.split('\n'):
@@ -171,7 +171,7 @@ class ConsoleErrorChecker:
             (r'\.map\([^)]*\)\s*[^}]*[^k]ey=', '잠재적 key prop 누락'),
         ]
 
-        src_dir = Path('/home/sihu2129/bidflow/src')
+        src_dir = Path('/home/sihu2129/qetta/src')
         for tsx_file in src_dir.rglob('*.tsx'):
             try:
                 content = tsx_file.read_text()
@@ -206,7 +206,7 @@ class ConsoleErrorChecker:
 
 def main():
     """메인 함수"""
-    log_info("BIDFLOW 콘솔 에러 검사 시작...")
+    log_info("Qetta 콘솔 에러 검사 시작...")
 
     checker = ConsoleErrorChecker()
     errors, warnings = checker.run()

@@ -98,7 +98,7 @@ export default function SpreadsheetPage() {
                       <div className="h-3 w-3 rounded-full bg-neutral-300" />
                       <div className="h-3 w-3 rounded-full bg-neutral-300" />
                     </div>
-                    <span className="text-xs text-neutral-500">BIDFLOW Spreadsheet</span>
+                    <span className="text-xs text-neutral-500">Qetta Spreadsheet</span>
                   </div>
                   <div className="grid grid-cols-6 text-xs">
                     <div className="border-b border-r bg-neutral-50 p-2 font-medium text-neutral-600">

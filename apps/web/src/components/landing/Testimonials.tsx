@@ -40,7 +40,7 @@ export function Testimonials() {
             고객들의 이야기
           </h2>
           <p className="mt-4 text-lg text-neutral-500">
-            CMNTech 제품 입찰에 BIDFLOW를 활용하는 분들의 후기
+            CMNTech 제품 입찰에 Qetta를 활용하는 분들의 후기
           </p>
         </div>
 

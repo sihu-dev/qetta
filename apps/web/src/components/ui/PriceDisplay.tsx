@@ -1,5 +1,5 @@
 /**
- * Mock PriceDisplay component for BIDFLOW
+ * Mock PriceDisplay component for Qetta
  */
 interface PriceDisplayProps {
   price: number;

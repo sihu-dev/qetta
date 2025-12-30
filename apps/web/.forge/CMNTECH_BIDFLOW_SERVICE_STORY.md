@@ -1,6 +1,6 @@
-# CMNTech × BIDFLOW 서비스 스토리
+# CMNTech × Qetta 서비스 스토리
 
-> CMNTech을 첫 고객으로 한 BIDFLOW 서비스 전체 로직 설계
+> CMNTech을 첫 고객으로 한 Qetta 서비스 전체 로직 설계
 > 작성일: 2025-12-21
 > 작성: Claude Opus 4.5 + Sequential Thinking MCP
 
@@ -48,7 +48,7 @@ Goals:
 
 ## 3. 서비스 여정 (Before vs After)
 
-### Before BIDFLOW (As-Is)
+### Before Qetta (As-Is)
 
 ```
 07:30 출근 전 카카오톡으로 팀장님 메시지 확인
@@ -81,14 +81,14 @@ Goals:
       "이번엔 꼭 따야 할 텐데..."
 ```
 
-### After BIDFLOW (To-Be)
+### After Qetta (To-Be)
 
 ```
-08:30 출근하며 BIDFLOW 알림 확인
+08:30 출근하며 Qetta 알림 확인
       📱 "오늘의 매칭 공고 8건 (85%+ 매칭)"
       "오, K-water 공고 자동으로 잡았네"
 
-08:35 BIDFLOW 대시보드 열기
+08:35 Qetta 대시보드 열기
       ⭐ 92% 매칭 | K-water 대전지사 - UR-1000PLUS 추천
       "제품까지 자동 매칭이네, 바로 상세 보자"
 
@@ -126,7 +126,7 @@ Goals:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│  BIDFLOW Dashboard                     김영수 과장 | CMNTech │
+│  Qetta Dashboard                     김영수 과장 | CMNTech │
 ├─────────────────────────────────────────────────────────────┤
 │                                                              │
 │  🔔 오늘의 알림 (12건)                                        │
@@ -242,12 +242,12 @@ Goals:
 ### 6.1 프로젝트 개요
 
 ```yaml
-프로젝트명: BIDFLOW AI 입찰 예측 시스템 고도화
+프로젝트명: Qetta AI 입찰 예측 시스템 고도화
 총 예산: ₩100,000,000
   - 정부 지원: ₩70,000,000 (70%)
-  - BIDFLOW 자부담: ₩30,000,000 (30%)
+  - Qetta 자부담: ₩30,000,000 (30%)
 기간: 6개월 (2025.03 ~ 2025.08)
-수행 체계: BIDFLOW (주관) × CMNTech (참여)
+수행 체계: Qetta (주관) × CMNTech (참여)
 ```
 
 ### 6.2 개발 모듈
@@ -357,7 +357,7 @@ Month 4: 신청 준비
   - 사업계획서 초안 작성
 
 Month 5: 공동 신청
-  - BIDFLOW-CMNTech 컨소시엄 MOU
+  - Qetta-CMNTech 컨소시엄 MOU
   - AI 바우처 온라인 신청
 
 Month 6: 선정 & 착수
@@ -409,7 +409,7 @@ Month 6: 선정 & 착수
 
 ---
 
-## 11. CMNTech × BIDFLOW 윈윈 구조
+## 11. CMNTech × Qetta 윈윈 구조
 
 ### CMNTech 가치
 
@@ -422,7 +422,7 @@ Month 6: 선정 & 착수
 ROI: 2,525배
 ```
 
-### BIDFLOW 가치
+### Qetta 가치
 
 ```yaml
 확보 가치:
@@ -436,7 +436,7 @@ ROI: 2,525배
 
 ## 12. 핵심 메시지
 
-> **"CMNTech이 BIDFLOW의 첫 고객으로서
+> **"CMNTech이 Qetta의 첫 고객으로서
 > 유량계 입찰 시장의 디지털 전환을 선도하고,
 > AI 바우처를 통해 함께 AI 입찰 시스템을 구축하여
 > 업계 전체의 입찰 효율성을 혁신합니다."**
@@ -445,7 +445,7 @@ ROI: 2,525배
 
 ## 성과 비교표
 
-| 항목 | Before | After BIDFLOW | After AI |
+| 항목 | Before | After Qetta | After AI |
 |------|--------|---------------|----------|
 | 일일 검색 시간 | 3시간+ | 35분 | 20분 |
 | 공고 놓침률 | 60%+ | <5% | <2% |

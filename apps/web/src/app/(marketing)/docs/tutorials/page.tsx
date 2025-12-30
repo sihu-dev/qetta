@@ -7,8 +7,8 @@ import Link from 'next/link';
 import { Clock, Play } from 'lucide-react';
 
 export const metadata = {
-  title: '튜토리얼 | BIDFLOW',
-  description: 'BIDFLOW 사용법 튜토리얼 및 가이드',
+  title: '튜토리얼 | Qetta',
+  description: 'Qetta 사용법 튜토리얼 및 가이드',
 };
 
 const tutorials = [
@@ -16,7 +16,7 @@ const tutorials = [
     category: '시작하기',
     items: [
       {
-        title: '5분 만에 BIDFLOW 시작하기',
+        title: '5분 만에 Qetta 시작하기',
         duration: '5분',
         level: '입문',
         description: '계정 생성부터 첫 입찰 공고 분석까지 빠르게 시작하세요.',
@@ -98,7 +98,7 @@ export default function TutorialsPage() {
           </Badge>
           <h1 className="mb-4 text-4xl font-bold">튜토리얼</h1>
           <p className="text-muted-foreground mb-12 text-xl">
-            단계별 가이드로 BIDFLOW를 마스터하세요.
+            단계별 가이드로 Qetta를 마스터하세요.
           </p>
 
           {/* 튜토리얼 카테고리 */}

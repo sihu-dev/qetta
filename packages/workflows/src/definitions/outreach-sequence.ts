@@ -10,7 +10,7 @@ export const outreachSequenceWorkflow: IWorkflowDefinition = {
   id: 'outreach-sequence-v1',
   name: 'Outreach Sequence Automation',
   active: true,
-  tags: ['bidflow', 'sales-automation', 'outreach'],
+  tags: ['qetta', 'sales-automation', 'outreach'],
   nodes: [
     // 1. 스케줄 트리거 (매일 오전 9시)
     {
@@ -46,7 +46,7 @@ export const outreachSequenceWorkflow: IWorkflowDefinition = {
       },
       parameters: {
         operation: 'getAll',
-        tableId: 'bidflow_leads',
+        tableId: 'qetta_leads',
         returnAll: false,
         limit: 100,
         filters: {
@@ -118,10 +118,10 @@ if (!isFirstContact) {
 // 이메일 템플릿 선택
 const templates = {
   initial_email: {
-    subject: \`\${lead.company_name}님, BIDFLOW로 입찰 자동화 하세요\`,
+    subject: \`\${lead.company_name}님, Qetta로 입찰 자동화 하세요\`,
     body: \`안녕하세요 \${lead.contact_name || '담당자'}님,
 
-BIDFLOW는 공공입찰/조달 프로세스를 자동화하는 AI 플랫폼입니다.
+Qetta는 공공입찰/조달 프로세스를 자동화하는 AI 플랫폼입니다.
 
 귀사(\${lead.company_name})와 같은 \${lead.enrichment?.industry_category || '업종'}에서
 평균 60% 이상의 시간 절감 효과를 보고 있습니다.
@@ -136,13 +136,13 @@ BIDFLOW는 공공입찰/조달 프로세스를 자동화하는 AI 플랫폼입�
 편하신 시간 있으시면 회신 부탁드립니다.
 
 감사합니다.
-BIDFLOW 팀\`,
+Qetta 팀\`,
   },
   second_followup: {
-    subject: \`Re: \${lead.company_name}님, BIDFLOW 데모 제안\`,
+    subject: \`Re: \${lead.company_name}님, Qetta 데모 제안\`,
     body: \`안녕하세요 \${lead.contact_name || '담당자'}님,
 
-지난주 안내드린 BIDFLOW 자동화 솔루션 관련하여
+지난주 안내드린 Qetta 자동화 솔루션 관련하여
 추가 정보 전달드립니다.
 
 최근 유사 업종 고객사 성과:
@@ -155,7 +155,7 @@ BIDFLOW 팀\`,
 감사합니다.\`,
   },
   final_followup: {
-    subject: \`마지막 안내: BIDFLOW 특별 혜택\`,
+    subject: \`마지막 안내: Qetta 특별 혜택\`,
     body: \`안녕하세요 \${lead.contact_name || '담당자'}님,
 
 마지막으로 연락드립니다.
@@ -166,7 +166,7 @@ BIDFLOW 팀\`,
 관심 없으시면 더 이상 연락드리지 않겠습니다.
 
 감사합니다.
-BIDFLOW 팀\`,
+Qetta 팀\`,
   },
 };
 
@@ -224,7 +224,7 @@ return {
       },
       parameters: {
         operation: 'update',
-        tableId: 'bidflow_leads',
+        tableId: 'qetta_leads',
         filterType: 'manual',
         matchCase: 'all',
         conditions: {
@@ -274,7 +274,7 @@ return {
       },
       parameters: {
         operation: 'insert',
-        tableId: 'bidflow_outreach_log',
+        tableId: 'qetta_outreach_log',
         fieldsUi: {
           values: [
             {

@@ -234,7 +234,7 @@ export * as HephaitosTypes from './hephaitos/index.js';
 export * from './hephaitos/index.js';
 
 /**
- * BIDFLOW 상세 타입 (L0 구현체)
+ * Qetta 상세 타입 (L0 구현체)
  * 입찰 자동화 시스템
  */
 export * as BiddingTypes from './bidding/index.js';

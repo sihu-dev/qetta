@@ -4,11 +4,11 @@
 import { Metadata } from 'next';
 
 const siteConfig = {
-  name: 'BIDFLOW',
+  name: 'Qetta',
   description: '제조업 SME를 위한 AI 입찰 자동화 플랫폼',
-  url: 'https://bidflow.io',
-  ogImage: 'https://bidflow.io/og-image.png',
-  twitter: '@bidflow',
+  url: 'https://qetta.io',
+  ogImage: 'https://qetta.io/og-image.png',
+  twitter: '@qetta',
 };
 
 interface PageMetadata {
@@ -68,7 +68,7 @@ export const pageMetadata = {
     main: {
       title: '기능',
       description:
-        'BIDFLOW의 핵심 기능을 살펴보세요. 공고 수집, AI 매칭, 제안서 자동 생성까지 입찰 업무를 자동화합니다.',
+        'Qetta의 핵심 기능을 살펴보세요. 공고 수집, AI 매칭, 제안서 자동 생성까지 입찰 업무를 자동화합니다.',
       path: '/features',
     },
     collection: {
@@ -116,7 +116,7 @@ export const pageMetadata = {
   useCases: {
     main: {
       title: '활용 사례',
-      description: '다양한 산업에서 BIDFLOW를 활용하여 입찰 업무를 혁신하고 있습니다.',
+      description: '다양한 산업에서 Qetta를 활용하여 입찰 업무를 혁신하고 있습니다.',
       path: '/use-cases',
     },
     manufacturing: {
@@ -160,17 +160,17 @@ export const pageMetadata = {
   resources: {
     docs: {
       title: '문서',
-      description: 'BIDFLOW를 시작하고 활용하는 데 필요한 모든 정보를 찾아보세요.',
+      description: 'Qetta를 시작하고 활용하는 데 필요한 모든 정보를 찾아보세요.',
       path: '/docs',
     },
     support: {
       title: '고객 지원',
-      description: 'BIDFLOW 팀이 항상 도움을 드릴 준비가 되어 있습니다.',
+      description: 'Qetta 팀이 항상 도움을 드릴 준비가 되어 있습니다.',
       path: '/support',
     },
     about: {
       title: '회사 소개',
-      description: 'BIDFLOW는 AI 기술로 중소기업의 공공입찰 참여를 혁신합니다.',
+      description: 'Qetta는 AI 기술로 중소기업의 공공입찰 참여를 혁신합니다.',
       path: '/about',
     },
     contact: {

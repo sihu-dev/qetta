@@ -172,7 +172,7 @@ def optimize_parameters(historical_data):
 ## MCP 도구 활용
 
 ```yaml
-bidflow-core:
+qetta-core:
   - get_stofo_prediction: 예측 실행
   - get_stats: 과거 데이터 조회
 

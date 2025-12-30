@@ -8,7 +8,7 @@ trigger: /strategy, /bid-strategy
 # 입찰 전략 스킬
 
 > **용도**: 특정 공고에 대한 최적 입찰 전략 수립
-> **MCP 연동**: bidflow-core, sequential-thinking
+> **MCP 연동**: qetta-core, sequential-thinking
 
 ---
 
@@ -26,7 +26,7 @@ trigger: /strategy, /bid-strategy
 ### 1단계: 공고 정보 수집
 
 ```yaml
-도구: bidflow-core/get_bid_detail
+도구: qetta-core/get_bid_detail
 입력: bid_id
 출력:
   - 공고명, 발주처
@@ -38,7 +38,7 @@ trigger: /strategy, /bid-strategy
 ### 2단계: 제품 매칭
 
 ```yaml
-도구: bidflow-core/match_products
+도구: qetta-core/match_products
 입력: bid_id, tenant_id
 출력:
   - 매칭 점수 (175점 만점)
@@ -49,7 +49,7 @@ trigger: /strategy, /bid-strategy
 ### 3단계: 전략 분석
 
 ```yaml
-도구: bidflow-core/get_stofo_prediction
+도구: qetta-core/get_stofo_prediction
 입력:
   - bid_id
   - product_id

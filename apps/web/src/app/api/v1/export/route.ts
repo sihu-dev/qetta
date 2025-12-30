@@ -180,7 +180,7 @@ async function handlePost(
         return new NextResponse(csv, {
           headers: {
             'Content-Type': 'text/csv; charset=utf-8',
-            'Content-Disposition': `attachment; filename="bidflow_export_${new Date().toISOString().split('T')[0]}.csv"`,
+            'Content-Disposition': `attachment; filename="qetta_export_${new Date().toISOString().split('T')[0]}.csv"`,
           },
         });
       }

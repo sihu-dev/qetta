@@ -1,17 +1,17 @@
 /**
- * BIDFLOW ↔ HEPHAITOS 크로스셀 워크플로우
+ * Qetta ↔ HEPHAITOS 크로스셀 워크플로우
  *
- * BIDFLOW 리드 → HEPHAITOS 온보딩 제안
- * HEPHAITOS 사용자 → BIDFLOW 추천
+ * Qetta 리드 → HEPHAITOS 온보딩 제안
+ * HEPHAITOS 사용자 → Qetta 추천
  */
 
 import type { IWorkflowDefinition } from '../types.js';
 
 export const crossSellWorkflow: IWorkflowDefinition = {
   id: 'cross-sell-v1',
-  name: 'Cross-Sell: BIDFLOW ↔ HEPHAITOS',
+  name: 'Cross-Sell: Qetta ↔ HEPHAITOS',
   active: true,
-  tags: ['bidflow', 'hephaitos', 'cross-sell', 'revenue'],
+  tags: ['qetta', 'hephaitos', 'cross-sell', 'revenue'],
   nodes: [
     // 1. 스케줄 트리거 (매일 오후 3시)
     {
@@ -32,10 +32,10 @@ export const crossSellWorkflow: IWorkflowDefinition = {
       },
     },
 
-    // 2. BIDFLOW → HEPHAITOS 후보 조회
+    // 2. Qetta → HEPHAITOS 후보 조회
     {
-      id: 'fetch-bidflow-for-hephaitos',
-      name: 'BIDFLOW → HEPHAITOS Candidates',
+      id: 'fetch-qetta-for-hephaitos',
+      name: 'Qetta → HEPHAITOS Candidates',
       type: 'n8n-nodes-base.supabase',
       typeVersion: 1,
       position: [450, 200],
@@ -47,7 +47,7 @@ export const crossSellWorkflow: IWorkflowDefinition = {
       },
       parameters: {
         operation: 'getAll',
-        tableId: 'bidflow_leads',
+        tableId: 'qetta_leads',
         returnAll: false,
         limit: 50,
         filters: {
@@ -176,10 +176,10 @@ return {
             {
               role: 'system',
               content: `You are a sales copywriter for FORGE LABS.
-Write a personalized cross-sell email proposing HEPHAITOS to BIDFLOW customers.
+Write a personalized cross-sell email proposing HEPHAITOS to Qetta customers.
 
 HEPHAITOS: AI 트레이딩 플랫폼 (No-Code 전략 빌더, 백테스트, 실계좌 연동)
-BIDFLOW: 입찰 자동화 플랫폼
+Qetta: 입찰 자동화 플랫폼
 
 Tone: Professional, consultative, benefit-focused
 Length: 150-200 words
@@ -192,12 +192,12 @@ Format: Korean, plain text`,
 Company: {{ $json.company_name }}
 Industry: {{ $json.enrichment.industry_category }}
 Contact: {{ $json.contact_name }}
-Current Product: BIDFLOW
+Current Product: Qetta
 Cross-Sell Reasons: {{ $json.cross_sell_reasons.join(", ") }}
 
 Highlight:
 1. Diversification opportunity (입찰 외 수익원 다각화)
-2. AI automation synergy (BIDFLOW 자동화 + HEPHAITOS 트레이딩)
+2. AI automation synergy (Qetta 자동화 + HEPHAITOS 트레이딩)
 3. Special offer for existing customers (20% discount)`,
             },
           ],
@@ -224,8 +224,8 @@ Highlight:
       },
       parameters: {
         operation: 'send',
-        to: '={{ $("BIDFLOW → HEPHAITOS Candidates").item.json.contact_email }}',
-        subject: 'BIDFLOW 고객님께 특별 제안: HEPHAITOS AI 트레이딩',
+        to: '={{ $("Qetta → HEPHAITOS Candidates").item.json.contact_email }}',
+        subject: 'Qetta 고객님께 특별 제안: HEPHAITOS AI 트레이딩',
         message: '={{ $json.message.content }}',
         options: {
           bccList: 'sales@forge-labs.io',
@@ -248,14 +248,14 @@ Highlight:
       },
       parameters: {
         operation: 'update',
-        tableId: 'bidflow_leads',
+        tableId: 'qetta_leads',
         filterType: 'manual',
         conditions: {
           conditions: [
             {
               keyName: 'id',
               condition: 'equals',
-              value: '={{ $("BIDFLOW → HEPHAITOS Candidates").item.json.id }}',
+              value: '={{ $("Qetta → HEPHAITOS Candidates").item.json.id }}',
             },
           ],
         },
@@ -278,10 +278,10 @@ Highlight:
       },
     },
 
-    // 8. HEPHAITOS → BIDFLOW 후보 조회
+    // 8. HEPHAITOS → Qetta 후보 조회
     {
-      id: 'fetch-hephaitos-for-bidflow',
-      name: 'HEPHAITOS → BIDFLOW Candidates',
+      id: 'fetch-hephaitos-for-qetta',
+      name: 'HEPHAITOS → Qetta Candidates',
       type: 'n8n-nodes-base.supabase',
       typeVersion: 1,
       position: [450, 400],
@@ -331,12 +331,12 @@ const user = $input.item.json;
 return {
   user_id: user.id,
   message_type: 'cross_sell',
-  title: '멘토님, BIDFLOW로 추가 수익 창출하세요',
+  title: '멘토님, Qetta로 추가 수익 창출하세요',
   content: \`안녕하세요 \${user.display_name}님,
 
 HEPHAITOS 멘토로 활동하시면서 입찰 관련 고민이 있으셨나요?
 
-BIDFLOW는 공공입찰 자동화 플랫폼으로, 멘토님께 추가 수익 기회를 제공합니다:
+Qetta는 공공입찰 자동화 플랫폼으로, 멘토님께 추가 수익 기회를 제공합니다:
 
 ✓ 나라장터/지자체 입찰 공고 자동 매칭
 ✓ AI 제안서 초안 작성
@@ -347,8 +347,8 @@ HEPHAITOS 멘토 특별 혜택:
 • 우선 고객 지원
 
 관심 있으시면 [여기]를 클릭해 주세요.\`,
-  cta_text: 'BIDFLOW 시작하기',
-  cta_url: 'https://bidflow.forge-labs.io/signup?ref=hephaitos&mentor=' + user.id,
+  cta_text: 'Qetta 시작하기',
+  cta_url: 'https://qetta.forge-labs.io/signup?ref=hephaitos&mentor=' + user.id,
   priority: 'medium',
   expires_at: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString(),
 };
@@ -397,7 +397,7 @@ HEPHAITOS 멘토 특별 혜택:
             {
               keyName: 'id',
               condition: 'equals',
-              value: '={{ $("HEPHAITOS → BIDFLOW Candidates").item.json.id }}',
+              value: '={{ $("HEPHAITOS → Qetta Candidates").item.json.id }}',
             },
           ],
         },
@@ -405,7 +405,7 @@ HEPHAITOS 멘토 특별 혜택:
           values: [
             {
               fieldName: 'cross_sell_offered',
-              fieldValue: 'bidflow',
+              fieldValue: 'qetta',
             },
             {
               fieldName: 'cross_sell_offered_at',
@@ -421,12 +421,12 @@ HEPHAITOS 멘토 특별 혜택:
     'Daily 3PM Trigger': {
       main: [
         [
-          { node: 'BIDFLOW → HEPHAITOS Candidates', type: 'main', index: 0 },
-          { node: 'HEPHAITOS → BIDFLOW Candidates', type: 'main', index: 0 },
+          { node: 'Qetta → HEPHAITOS Candidates', type: 'main', index: 0 },
+          { node: 'HEPHAITOS → Qetta Candidates', type: 'main', index: 0 },
         ],
       ],
     },
-    'BIDFLOW → HEPHAITOS Candidates': {
+    'Qetta → HEPHAITOS Candidates': {
       main: [[{ node: 'Analyze Cross-Sell Fit', type: 'main', index: 0 }]],
     },
     'Analyze Cross-Sell Fit': {
@@ -441,7 +441,7 @@ HEPHAITOS 멘토 특별 혜택:
     'Send Cross-Sell Email': {
       main: [[{ node: 'Log Cross-Sell Offer', type: 'main', index: 0 }]],
     },
-    'HEPHAITOS → BIDFLOW Candidates': {
+    'HEPHAITOS → Qetta Candidates': {
       main: [[{ node: 'Create In-App Message', type: 'main', index: 0 }]],
     },
     'Create In-App Message': {

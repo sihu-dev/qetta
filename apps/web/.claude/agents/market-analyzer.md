@@ -188,7 +188,7 @@ LOW_RISK:
 ## MCP 도구 활용
 
 ```yaml
-bidflow-core:
+qetta-core:
   - search_bids: 유사 공고 검색
   - get_stats: 통계 조회
   - match_products: 제품 매칭

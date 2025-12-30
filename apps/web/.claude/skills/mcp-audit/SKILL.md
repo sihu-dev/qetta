@@ -14,7 +14,7 @@ allowed-tools: Read, Bash, mcp__playwright__*, mcp__sequential-thinking__*
 
 ## 개요
 
-Playwright MCP와 Sequential Thinking MCP를 활용한 BIDFLOW 종합 품질 검수 시스템입니다.
+Playwright MCP와 Sequential Thinking MCP를 활용한 Qetta 종합 품질 검수 시스템입니다.
 콘솔 오류, E2E 테스트, 기능 검수를 자동화합니다.
 
 ---
@@ -359,7 +359,7 @@ MCP 명령:
 
 ```
 ╔══════════════════════════════════════════════════════════════════════╗
-║                   BIDFLOW MCP 종합 검수 보고서                          ║
+║                   Qetta MCP 종합 검수 보고서                          ║
 ╠══════════════════════════════════════════════════════════════════════╣
 ║  검수 시간: 2025-12-21 15:30:00                                        ║
 ║  MCP 서버: playwright ✓  sequential-thinking ✓                         ║

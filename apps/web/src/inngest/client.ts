@@ -6,6 +6,6 @@
 import { Inngest } from 'inngest';
 
 export const inngest = new Inngest({
-  id: 'bidflow',
-  name: 'BIDFLOW 입찰 자동화',
+  id: 'qetta',
+  name: 'Qetta 입찰 자동화',
 });

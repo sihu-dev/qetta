@@ -281,7 +281,7 @@ N8N_BASE_URL=https://your-n8n-instance.app
 1. Install package dependencies: `pnpm install`
 2. Build TypeScript: `pnpm build`
 3. Review examples in `examples/complete-workflow.ts`
-4. Integrate with BIDFLOW app (bidflow automation use case)
+4. Integrate with Qetta app (qetta automation use case)
 5. Add unit tests for each client
 6. Configure CI/CD for package publishing
 

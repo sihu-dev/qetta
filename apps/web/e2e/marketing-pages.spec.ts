@@ -11,7 +11,7 @@ test.describe('Marketing Pages', () => {
       });
 
       await page.goto('/');
-      await expect(page).toHaveTitle(/BIDFLOW/);
+      await expect(page).toHaveTitle(/Qetta/);
       await expect(page.locator('h1')).toBeVisible();
 
       // Check no console errors

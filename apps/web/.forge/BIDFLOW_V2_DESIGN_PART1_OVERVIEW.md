@@ -1,4 +1,4 @@
-# BIDFLOW V2 Beta Design Document
+# Qetta V2 Beta Design Document
 ## Part 1: Overview & Persona
 
 > GPT 5.2 Pro 검수용 마스터 설계 문서
@@ -12,7 +12,7 @@
 
 ## 1.1 프로젝트 개요
 
-BIDFLOW V2는 CMNTech(첫 번째 고객)을 대상으로 한 **글로벌 입찰 통합 플랫폼**이다.
+Qetta V2는 CMNTech(첫 번째 고객)을 대상으로 한 **글로벌 입찰 통합 플랫폼**이다.
 
 ### 핵심 목표
 ```yaml
@@ -59,7 +59,7 @@ When: 2025년 Q1 파일럿 → Q2 정식 런칭
 주요 도구: Excel, HWP, 나라장터, 이메일
 IT 역량: 중급 (엑셀 함수 가능, 매크로 어려움)
 
-# 일일 루틴 (Before BIDFLOW)
+# 일일 루틴 (Before Qetta)
 07:30 - 출근 전 카톡으로 팀장 메시지 확인
 08:30 - 나라장터 로그인, "유량계" 검색 (847건)
 09:00 - 엑셀에 수동 복사/붙여넣기
@@ -166,15 +166,15 @@ TED가 뭔지도 모르고, 영어 공고문을
 Trigger: 팀장 지시 "해외 입찰도 알아봐"
 Emotion: 불안, 부담
 Action: 구글 검색 "글로벌 입찰 플랫폼"
-BIDFLOW 접점: 광고/소개 페이지 발견
+Qetta 접점: 광고/소개 페이지 발견
 ```
 
 ### Stage 2: 탐색 (Consideration)
 ```
-Trigger: BIDFLOW 데모 요청
+Trigger: Qetta 데모 요청
 Emotion: 호기심, 반신반의
 Action: 5분 데모 시청
-BIDFLOW 접점: 대시보드 첫 화면 경험
+Qetta 접점: 대시보드 첫 화면 경험
 ```
 
 ### Stage 3: 결정 (Decision)
@@ -182,7 +182,7 @@ BIDFLOW 접점: 대시보드 첫 화면 경험
 Trigger: 실제 CMNTech 제품으로 매칭 시연
 Emotion: 놀람, 기대
 Action: 파일럿 신청
-BIDFLOW 접점: Pro 티어 3개월 무료 제안
+Qetta 접점: Pro 티어 3개월 무료 제안
 ```
 
 ### Stage 4: 온보딩 (Onboarding)
@@ -190,7 +190,7 @@ BIDFLOW 접점: Pro 티어 3개월 무료 제안
 Trigger: 계정 생성, 제품 등록
 Emotion: 기대, 약간의 학습 부담
 Action: 5개 제품 키워드 설정
-BIDFLOW 접점: 가이드 위자드, 첫 알림 수신
+Qetta 접점: 가이드 위자드, 첫 알림 수신
 ```
 
 ### Stage 5: 일상 활용 (Usage)
@@ -198,7 +198,7 @@ BIDFLOW 접점: 가이드 위자드, 첫 알림 수신
 Trigger: 매일 아침 알림 수신
 Emotion: 편안함, 효율감
 Action: 대시보드 확인 → 관심 공고 상세 → 제안서 시작
-BIDFLOW 접점: 일일 대시보드, 경쟁사 분석
+Qetta 접점: 일일 대시보드, 경쟁사 분석
 ```
 
 ### Stage 6: 확장 (Expansion)
@@ -206,14 +206,14 @@ BIDFLOW 접점: 일일 대시보드, 경쟁사 분석
 Trigger: 3개월 파일럿 성공
 Emotion: 신뢰, 확신
 Action: Pro 유료 전환, AI 바우처 공동 신청
-BIDFLOW 접점: Enterprise 업그레이드, AI 기능 요청
+Qetta 접점: Enterprise 업그레이드, AI 기능 요청
 ```
 
 ---
 
 ## 2.5 CMNTech 제품 카탈로그
 
-BIDFLOW에서 매칭할 CMNTech 5개 핵심 제품:
+Qetta에서 매칭할 CMNTech 5개 핵심 제품:
 
 ### Product 1: UR-1000PLUS
 ```yaml
@@ -393,7 +393,7 @@ CMNTech의 주요 경쟁사 (모니터링 대상):
 
 ### 데모 목표
 > "CMNTech 김영수 과장이 5분 안에
-> 'BIDFLOW 없이는 입찰 업무가 불가능하다'고 느끼게 만든다."
+> 'Qetta 없이는 입찰 업무가 불가능하다'고 느끼게 만든다."
 
 ### 데모 스크립트
 
@@ -406,7 +406,7 @@ CMNTech의 주요 경쟁사 (모니터링 대상):
 
 발표자: "지금부터 보여드릴 건, 그 2시간을 5분으로 줄이는 방법입니다."
 
-[BIDFLOW 로고 애니메이션]
+[Qetta 로고 애니메이션]
 ```
 
 #### 00:30-01:30 | 통합 대시보드 시연
@@ -511,7 +511,7 @@ Siemens ██████░░░░░░░░░░░░  18% (₩4.3억)
 ```
 [화면: ROI 계산기]
 
-📈 BIDFLOW 도입 효과 (CMNTech 기준)
+📈 Qetta 도입 효과 (CMNTech 기준)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Before          After           개선
 ───────────────────────────────────
@@ -555,8 +555,8 @@ Before          After           개선
 
 ### North Star Metric
 ```
-"BIDFLOW를 통해 발견한 공고의 낙찰 금액"
-= ₩ (BIDFLOW 매칭 → 참여 → 낙찰된 금액 합계)
+"Qetta를 통해 발견한 공고의 낙찰 금액"
+= ₩ (Qetta 매칭 → 참여 → 낙찰된 금액 합계)
 
 목표: 월 ₩5억+ (Year 1 말)
 ```

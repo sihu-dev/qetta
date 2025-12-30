@@ -20,7 +20,7 @@ const contactMethods = [
   {
     icon: Mail,
     title: '이메일',
-    description: 'support@bidflow.io로 문의',
+    description: 'support@qetta.io로 문의',
     action: '이메일 보내기',
     availability: '24시간 접수',
   },
@@ -94,7 +94,7 @@ export default function SupportPage() {
             </Badge>
             <h1 className="text-4xl font-bold tracking-tight md:text-5xl">무엇을 도와드릴까요?</h1>
             <p className="text-muted-foreground mt-6 text-lg">
-              BIDFLOW 팀이 항상 도움을 드릴 준비가 되어 있습니다.
+              Qetta 팀이 항상 도움을 드릴 준비가 되어 있습니다.
               <br />
               궁금한 점이 있으시면 언제든 문의해주세요.
             </p>

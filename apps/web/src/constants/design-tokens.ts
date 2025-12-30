@@ -1,5 +1,5 @@
 /**
- * BIDFLOW Design Tokens
+ * Qetta Design Tokens
  * Google DeepMind-inspired Light Theme
  * Clean, transparent, minimal design
  *

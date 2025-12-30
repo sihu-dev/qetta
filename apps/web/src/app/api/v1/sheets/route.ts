@@ -64,7 +64,7 @@ export async function POST(request: NextRequest) {
       case 'create': {
         // 새 스프레드시트 생성
         const spreadsheetTitle =
-          title || `BIDFLOW 입찰 관리 - ${new Date().toLocaleDateString('ko-KR')}`;
+          title || `Qetta 입찰 관리 - ${new Date().toLocaleDateString('ko-KR')}`;
         const spreadsheetId = await googleSheetsClient.createSpreadsheet(spreadsheetTitle);
 
         return NextResponse.json({

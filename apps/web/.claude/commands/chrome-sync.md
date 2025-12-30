@@ -1,6 +1,6 @@
 # Chrome Claude 컨텍스트 동기화
 
-> **용도**: Chrome Claude에서 BIDFLOW 프로젝트 작업 시 컨텍스트 동기화
+> **용도**: Chrome Claude에서 Qetta 프로젝트 작업 시 컨텍스트 동기화
 > **호출**: `/chrome-sync` 또는 Chrome Claude에서 직접 복사/붙여넣기
 
 ---
@@ -8,9 +8,9 @@
 ## 프로젝트 컨텍스트
 
 ```yaml
-프로젝트: BIDFLOW 입찰 자동화 시스템
+프로젝트: Qetta 입찰 자동화 시스템
 리포지토리: sihu2/forge-labs
-앱 경로: apps/bidflow
+앱 경로: apps/qetta
 기술 스택:
   - Frontend: Next.js 15 (App Router)
   - Backend: Supabase (PostgreSQL + Auth + Edge Functions)

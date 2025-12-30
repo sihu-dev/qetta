@@ -1,4 +1,4 @@
-# BIDFLOW AI 스프레드시트 아키텍처
+# Qetta AI 스프레드시트 아키텍처
 
 > **작성일**: 2025-12-21
 > **목표**: 구글 시트 100% 기능 + AI 네이티브 입찰 자동화
@@ -124,7 +124,7 @@ class AIFunctionPlugin extends FunctionPlugin {
 import { Disposable, ICommandService } from '@univerjs/core';
 
 export class BidflowAIPlugin extends Disposable {
-  static pluginName = 'bidflow-ai';
+  static pluginName = 'qetta-ai';
 
   constructor(@ICommandService private _commandService: ICommandService) {
     super();

@@ -1,5 +1,5 @@
 /**
- * Mock usePortfolioMetrics hook for BIDFLOW/CMNTECH
+ * Mock usePortfolioMetrics hook for Qetta/CMNTECH
  */
 export function usePortfolioMetrics() {
   return {

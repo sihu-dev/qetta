@@ -1,7 +1,7 @@
 {
-  "name": "@bidflow/mcp-core",
+  "name": "@qetta/mcp-core",
   "version": "1.0.0",
-  "description": "BIDFLOW Core MCP Server - 입찰 공고 CRUD, 매칭, 알림",
+  "description": "Qetta Core MCP Server - 입찰 공고 CRUD, 매칭, 알림",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

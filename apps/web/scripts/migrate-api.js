@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * BIDFLOW DB 마이그레이션 - Supabase Management API
+ * Qetta DB 마이그레이션 - Supabase Management API
  */
 
 const fs = require('fs');
@@ -10,11 +10,11 @@ const ACCESS_TOKEN = 'sbp_19c81537257044f10cc4de81d0b1cf014f53a222';
 const PROJECT_REF = 'srmyrrenbhwdfdgnnlnn';
 
 async function runMigration() {
-  console.log('🚀 BIDFLOW 마이그레이션 시작...\n');
+  console.log('🚀 Qetta 마이그레이션 시작...\n');
 
   const sqlPath = path.join(
     __dirname,
-    '../bidflow/supabase/migrations/001_create_tables_and_indexes.sql'
+    '../qetta/supabase/migrations/001_create_tables_and_indexes.sql'
   );
   const sql = fs.readFileSync(sqlPath, 'utf-8');
 

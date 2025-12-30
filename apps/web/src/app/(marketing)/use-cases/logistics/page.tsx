@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
 export const metadata: Metadata = {
-  title: '물류/유통 | 활용사례 | BIDFLOW',
+  title: '물류/유통 | 활용사례 | Qetta',
   description: '물류 및 유통 산업의 공공조달 입찰 자동화 사례',
 };
 
@@ -44,7 +44,7 @@ export default function LogisticsPage() {
             </Badge>
             <h1 className="mb-4 text-4xl font-bold text-slate-900">물류 운송 입찰의 새로운 기준</h1>
             <p className="mb-8 text-lg text-slate-600">
-              전국 단위 운송 계약부터 지역 배송까지, BIDFLOW로 물류 입찰을 체계적으로 관리하세요.
+              전국 단위 운송 계약부터 지역 배송까지, Qetta로 물류 입찰을 체계적으로 관리하세요.
             </p>
             <div className="flex gap-4">
               <Button asChild>
@@ -76,7 +76,7 @@ export default function LogisticsPage() {
       {/* 솔루션 */}
       <section className="border-b">
         <div className="container mx-auto px-4 py-16">
-          <h2 className="mb-8 text-2xl font-bold text-slate-900">BIDFLOW 솔루션</h2>
+          <h2 className="mb-8 text-2xl font-bold text-slate-900">Qetta 솔루션</h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {solutions.map((item) => (
               <div
@@ -123,7 +123,7 @@ export default function LogisticsPage() {
       <section>
         <div className="container mx-auto px-4 py-16 text-center">
           <h2 className="mb-4 text-2xl font-bold text-slate-900">물류 입찰 자동화 시작하기</h2>
-          <p className="mb-6 text-slate-600">14일 무료 체험으로 BIDFLOW를 경험해보세요.</p>
+          <p className="mb-6 text-slate-600">14일 무료 체험으로 Qetta를 경험해보세요.</p>
           <Button asChild size="lg">
             <Link href="/signup">무료 체험 시작</Link>
           </Button>

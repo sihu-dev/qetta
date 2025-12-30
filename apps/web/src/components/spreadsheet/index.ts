@@ -1,5 +1,5 @@
 /**
- * BIDFLOW Spreadsheet Components
+ * Qetta Spreadsheet Components
  */
 
 // Main Components

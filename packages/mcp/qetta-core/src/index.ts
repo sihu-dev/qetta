@@ -1,5 +1,5 @@
 /**
- * BIDFLOW Core MCP Server
+ * Qetta Core MCP Server
  *
  * Tools:
  * - search_bids: 입찰 공고 검색
@@ -305,7 +305,7 @@ function getDefaultOrganizationScore(organization: string): { score: number; tie
 // MCP 서버 생성
 const server = new Server(
   {
-    name: 'bidflow-core',
+    name: 'qetta-core',
     version: '1.0.0',
   },
   {
@@ -1571,13 +1571,13 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
 server.setRequestHandler(ListResourcesRequestSchema, async () => ({
   resources: [
     {
-      uri: 'bidflow://bids/today',
+      uri: 'qetta://bids/today',
       name: '오늘의 공고',
       description: '오늘 마감인 입찰 공고 목록',
       mimeType: 'application/json',
     },
     {
-      uri: 'bidflow://matches/high',
+      uri: 'qetta://matches/high',
       name: '고신뢰도 매칭',
       description: '점수 120점 이상 매칭 결과',
       mimeType: 'application/json',
@@ -1589,7 +1589,7 @@ server.setRequestHandler(ListResourcesRequestSchema, async () => ({
 server.setRequestHandler(ReadResourceRequestSchema, async (request) => {
   const { uri } = request.params;
 
-  if (uri === 'bidflow://bids/today') {
+  if (uri === 'qetta://bids/today') {
     const today = new Date().toISOString().split('T')[0];
     const tomorrow = new Date(Date.now() + 86400000).toISOString().split('T')[0];
 
@@ -1618,7 +1618,7 @@ server.setRequestHandler(ReadResourceRequestSchema, async (request) => {
 async function main() {
   const transport = new StdioServerTransport();
   await server.connect(transport);
-  console.error('BIDFLOW Core MCP Server running on stdio');
+  console.error('Qetta Core MCP Server running on stdio');
 }
 
 main().catch(console.error);

@@ -70,7 +70,7 @@ temperature: 0.3
 
 ## MCP 도구 활용
 
-### bidflow-core 도구
+### qetta-core 도구
 ```yaml
 get_stofo_prediction:
   - bid_id: 공고 ID
@@ -188,7 +188,7 @@ crawl_g2b:
 @bid-strategy-opus 서울시 초음파유량계 입찰 전략 분석해줘
 
 # 자동 수행
-1. bidflow-core/get_stofo_prediction 호출
+1. qetta-core/get_stofo_prediction 호출
 2. 경쟁 분석 (sequential-thinking)
 3. 최적 전략 리포트 생성
 ```

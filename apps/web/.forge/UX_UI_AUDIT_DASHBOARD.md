@@ -1,4 +1,4 @@
-# BIDFLOW Dashboard UX/UI 검수 리포트
+# Qetta Dashboard UX/UI 검수 리포트
 
 > **검수 대상**: `/dashboard` 페이지 및 스프레드시트 컴포넌트
 > **검수일**: 2025-12-21

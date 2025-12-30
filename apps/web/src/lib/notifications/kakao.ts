@@ -56,17 +56,17 @@ const isDevelopment = process.env.NODE_ENV !== 'production';
 
 export const ALIMTALK_TEMPLATES = {
   // 새 입찰 공고 알림
-  NEW_BIDS: 'BIDFLOW_NEW_BIDS',
+  NEW_BIDS: 'Qetta_NEW_BIDS',
   // 마감 임박 알림 (D-3)
-  DEADLINE_D3: 'BIDFLOW_DEADLINE_D3',
+  DEADLINE_D3: 'Qetta_DEADLINE_D3',
   // 마감 임박 알림 (D-1)
-  DEADLINE_D1: 'BIDFLOW_DEADLINE_D1',
+  DEADLINE_D1: 'Qetta_DEADLINE_D1',
   // 입찰 결과 알림
-  BID_RESULT: 'BIDFLOW_BID_RESULT',
+  BID_RESULT: 'Qetta_BID_RESULT',
   // 일일 리포트
-  DAILY_REPORT: 'BIDFLOW_DAILY_REPORT',
+  DAILY_REPORT: 'Qetta_DAILY_REPORT',
   // 문의 접수 확인
-  CONTACT_RECEIVED: 'BIDFLOW_CONTACT_RECEIVED',
+  CONTACT_RECEIVED: 'Qetta_CONTACT_RECEIVED',
 } as const;
 
 // ============================================================================
@@ -293,21 +293,21 @@ function truncate(str: string, maxLength: number): string {
  * 3. 발신 프로필 검수
  * 4. 템플릿 등록 및 검수
  *
- * 템플릿 예시 (BIDFLOW_NEW_BIDS):
+ * 템플릿 예시 (Qetta_NEW_BIDS):
  * ---
- * [BIDFLOW] 새 입찰 공고 알림
+ * [Qetta] 새 입찰 공고 알림
  *
  * 안녕하세요, #{count}건의 새 입찰 공고가 등록되었습니다.
  *
  * 📌 #{title}
  * 🏢 #{organization}
  *
- * 자세한 내용은 BIDFLOW에서 확인하세요.
+ * 자세한 내용은 Qetta에서 확인하세요.
  * ---
  *
- * 템플릿 예시 (BIDFLOW_DEADLINE_D3):
+ * 템플릿 예시 (Qetta_DEADLINE_D3):
  * ---
- * [BIDFLOW] 마감 임박 알림
+ * [Qetta] 마감 임박 알림
  *
  * ⚠️ #{dday} 마감!
  *

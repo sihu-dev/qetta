@@ -178,15 +178,15 @@ export default function AlertsPage() {
                 <ul className="space-y-3">
                   <li className="flex items-center gap-3">
                     <Check className="h-5 w-5 text-neutral-700" />
-                    <span>#bidflow-urgent: 긴급 공고</span>
+                    <span>#qetta-urgent: 긴급 공고</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <Check className="h-5 w-5 text-neutral-700" />
-                    <span>#bidflow-alerts: 중요 공고</span>
+                    <span>#qetta-alerts: 중요 공고</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <Check className="h-5 w-5 text-neutral-700" />
-                    <span>#bidflow-updates: 일반 업데이트</span>
+                    <span>#qetta-updates: 일반 업데이트</span>
                   </li>
                 </ul>
               </div>
@@ -196,7 +196,7 @@ export default function AlertsPage() {
                     B
                   </div>
                   <div>
-                    <p className="font-medium">BIDFLOW</p>
+                    <p className="font-medium">Qetta</p>
                     <p className="text-xs text-gray-400">오늘 오전 9:00</p>
                   </div>
                 </div>

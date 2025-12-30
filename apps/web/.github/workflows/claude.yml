@@ -1,4 +1,4 @@
-# Claude Code AI Assistant for BIDFLOW
+# Claude Code AI Assistant for Qetta
 # 모바일 Claude 앱에서 @claude 멘션으로 코드 리뷰 및 작업 자동화
 #
 # 사용법:
@@ -57,7 +57,7 @@ jobs:
           model: claude-opus-4-5-20251101
           # 최대 10턴 대화
           max_turns: 10
-          # bidflow 프로젝트 컨텍스트 포함
+          # qetta 프로젝트 컨텍스트 포함
           allowed_tools: |
             Bash
             Read
@@ -67,7 +67,7 @@ jobs:
             Grep
           # 프로젝트 규칙 자동 로드
           custom_instructions: |
-            BIDFLOW 입찰 자동화 프로젝트입니다.
+            Qetta 입찰 자동화 프로젝트입니다.
 
             기술 스택:
             - Next.js 15 + TypeScript strict mode

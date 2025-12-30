@@ -157,7 +157,7 @@ export const SUPPORTED_FUNCTIONS = {
 };
 
 /**
- * AI 수식 함수 (BIDFLOW 커스텀)
+ * AI 수식 함수 (Qetta 커스텀)
  * 실제 실행은 API를 통해 비동기로 처리됨
  */
 export const AI_FUNCTIONS = [

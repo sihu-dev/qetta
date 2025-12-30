@@ -108,7 +108,7 @@ export default function ApiPage() {
             </p>
             <div className="overflow-hidden rounded-xl border">
               <div className="bg-muted/50 border-b p-4">
-                <code className="text-sm">https://api.bidflow.io/v1</code>
+                <code className="text-sm">https://api.qetta.io/v1</code>
               </div>
               <div className="divide-y">
                 {endpoints.map((endpoint) => (
@@ -145,7 +145,7 @@ export default function ApiPage() {
             <div className="overflow-x-auto rounded-xl bg-[#1e1e1e] p-6">
               <pre className="text-sm text-gray-300">
                 <code>{`// 입찰 목록 조회
-const response = await fetch('https://api.bidflow.io/v1/bids', {
+const response = await fetch('https://api.qetta.io/v1/bids', {
   headers: {
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'

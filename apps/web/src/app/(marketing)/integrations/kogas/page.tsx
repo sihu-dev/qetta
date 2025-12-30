@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
 export const metadata: Metadata = {
-  title: 'KOGAS 연동 | BIDFLOW',
+  title: 'KOGAS 연동 | Qetta',
   description: '한국가스공사 입찰 공고 자동 수집 및 분석',
 };
 

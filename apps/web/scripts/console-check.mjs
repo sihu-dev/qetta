@@ -1,14 +1,14 @@
 #!/usr/bin/env node
 
 /**
- * BIDFLOW 콘솔 오류 및 UX/UI 자동 검증
+ * Qetta 콘솔 오류 및 UX/UI 자동 검증
  * Playwright로 브라우저 실행 후 콘솔 로그 수집
  */
 
 import { chromium } from 'playwright';
 
 async function checkConsole() {
-  console.log('🚀 BIDFLOW 콘솔 검사 시작...\n');
+  console.log('🚀 Qetta 콘솔 검사 시작...\n');
 
   const browser = await chromium.launch({
     headless: true,
@@ -57,7 +57,7 @@ async function checkConsole() {
     await page.waitForTimeout(3000);
 
     // 스크린샷 저장
-    await page.screenshot({ path: '/tmp/bidflow-main.png', fullPage: true });
+    await page.screenshot({ path: '/tmp/qetta-main.png', fullPage: true });
     console.log('✅ 메인 페이지 로드 완료\n');
 
     // 주요 페이지 테스트
@@ -156,7 +156,7 @@ async function checkConsole() {
     };
 
     await page.evaluate((data) => {
-      console.log('BIDFLOW_TEST_RESULTS:', JSON.stringify(data, null, 2));
+      console.log('Qetta_TEST_RESULTS:', JSON.stringify(data, null, 2));
     }, results);
 
     console.log('✅ 검사 완료!\n');

@@ -50,7 +50,7 @@ export interface WorkflowConfig {
  */
 export function generateN8nWorkflow(config: WorkflowConfig) {
   return {
-    name: 'BIDFLOW: 입찰 → 리드 자동화',
+    name: 'Qetta: 입찰 → 리드 자동화',
     nodes: [
       // ========================================
       // Trigger: 입찰 공고 크롤링 완료
@@ -95,7 +95,7 @@ export function generateN8nWorkflow(config: WorkflowConfig) {
       // ========================================
       {
         parameters: {
-          url: '={{$env.BIDFLOW_API_URL}}/api/v1/leads/enrich',
+          url: '={{$env.Qetta_API_URL}}/api/v1/leads/enrich',
           authentication: 'predefinedCredentialType',
           nodeCredentialType: 'httpHeaderAuth',
           sendHeaders: true,
@@ -103,7 +103,7 @@ export function generateN8nWorkflow(config: WorkflowConfig) {
             parameter: [
               {
                 name: 'Authorization',
-                value: '=Bearer {{$env.BIDFLOW_API_KEY}}',
+                value: '=Bearer {{$env.Qetta_API_KEY}}',
               },
             ],
           },
@@ -158,7 +158,7 @@ export function generateN8nWorkflow(config: WorkflowConfig) {
       // ========================================
       {
         parameters: {
-          url: '={{$env.BIDFLOW_API_URL}}/api/v1/crm/sync',
+          url: '={{$env.Qetta_API_URL}}/api/v1/crm/sync',
           authentication: 'predefinedCredentialType',
           nodeCredentialType: 'httpHeaderAuth',
           sendHeaders: true,
@@ -166,7 +166,7 @@ export function generateN8nWorkflow(config: WorkflowConfig) {
             parameter: [
               {
                 name: 'Authorization',
-                value: '=Bearer {{$env.BIDFLOW_API_KEY}}',
+                value: '=Bearer {{$env.Qetta_API_KEY}}',
               },
             ],
           },
@@ -217,7 +217,7 @@ export function generateN8nWorkflow(config: WorkflowConfig) {
       // ========================================
       {
         parameters: {
-          url: '={{$env.BIDFLOW_API_URL}}/api/v1/apollo/sequence',
+          url: '={{$env.Qetta_API_URL}}/api/v1/apollo/sequence',
           authentication: 'predefinedCredentialType',
           nodeCredentialType: 'httpHeaderAuth',
           sendHeaders: true,
@@ -225,7 +225,7 @@ export function generateN8nWorkflow(config: WorkflowConfig) {
             parameter: [
               {
                 name: 'Authorization',
-                value: '=Bearer {{$env.BIDFLOW_API_KEY}}',
+                value: '=Bearer {{$env.Qetta_API_KEY}}',
               },
             ],
           },
@@ -255,7 +255,7 @@ export function generateN8nWorkflow(config: WorkflowConfig) {
       // ========================================
       {
         parameters: {
-          channel: '#bidflow-leads',
+          channel: '#qetta-leads',
           text: `🎯 새 고득점 리드 발견!
 
 조직: {{$json["data"]["organizationName"]}}

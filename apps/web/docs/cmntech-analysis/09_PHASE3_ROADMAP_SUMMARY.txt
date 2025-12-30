@@ -1,4 +1,4 @@
-# BIDFLOW Phase 3 로드맵 요약 (CMNTech 관련)
+# Qetta Phase 3 로드맵 요약 (CMNTech 관련)
 
 > **목표**: Production Ready 배포
 > **대상 기업**: 씨엠엔텍 (유량계/열량계 제조)

@@ -1,5 +1,5 @@
 -- =========================================
--- BIDFLOW V2 Migration: Matches Table (175점 매칭)
+-- Qetta V2 Migration: Matches Table (175점 매칭)
 -- =========================================
 
 CREATE TABLE IF NOT EXISTS matches (

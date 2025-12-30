@@ -1,4 +1,4 @@
-# BIDFLOW API 연동 가이드
+# Qetta API 연동 가이드
 
 > 나라장터, TED Europa, SAM.gov 공식 API 연동 상세 가이드
 > **작성일**: 2025-12-29
@@ -7,7 +7,7 @@
 
 ## 개요
 
-BIDFLOW는 4개의 공식 공공조달 API를 통합합니다:
+Qetta는 4개의 공식 공공조달 API를 통합합니다:
 
 | 플랫폼 | 지역 | API | 비용 | 일일 입찰 |
 |--------|------|-----|------|----------|
@@ -982,5 +982,5 @@ export async function GET() {
 
 ---
 
-*BIDFLOW API Integration Guide v1.0*
+*Qetta API Integration Guide v1.0*
 *2025-12-29*

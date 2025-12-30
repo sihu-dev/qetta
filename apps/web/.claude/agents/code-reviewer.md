@@ -62,5 +62,5 @@
 ## Example Usage
 
 ```
-@code-reviewer bidflow/src/components/spreadsheet/SpreadsheetView.tsx
+@code-reviewer qetta/src/components/spreadsheet/SpreadsheetView.tsx
 ```

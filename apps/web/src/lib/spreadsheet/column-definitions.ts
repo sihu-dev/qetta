@@ -1,5 +1,5 @@
 /**
- * BIDFLOW 스프레드시트 열 정의
+ * Qetta 스프레드시트 열 정의
  */
 
 // Handsontable 열 설정 타입

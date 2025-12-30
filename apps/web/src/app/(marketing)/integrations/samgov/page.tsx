@@ -87,7 +87,7 @@ export default function SamgovPage() {
               </div>
             </div>
             <p className="text-muted-foreground mb-8 max-w-2xl text-xl">
-              미국 연방정부 공공조달 포털인 SAM.gov의 모든 계약 기회를 BIDFLOW에서 관리하세요. 미국
+              미국 연방정부 공공조달 포털인 SAM.gov의 모든 계약 기회를 Qetta에서 관리하세요. 미국
               정부 조달 시장 진출의 파트너가 되겠습니다.
             </p>
             <div className="flex flex-wrap gap-4">

@@ -64,7 +64,7 @@ describe('notifications', () => {
   describe('Slack 알림', () => {
     it('Slack 메시지 형식', async () => {
       const slackMessage = {
-        channel: '#bidflow-alerts',
+        channel: '#qetta-alerts',
         text: '새로운 입찰 공고가 등록되었습니다.',
         blocks: [
           {
@@ -89,7 +89,7 @@ describe('notifications', () => {
               {
                 type: 'button',
                 text: { type: 'plain_text', text: '상세보기' },
-                url: 'https://bidflow.example.com/bids/123',
+                url: 'https://qetta.example.com/bids/123',
               },
             ],
           },
@@ -109,14 +109,14 @@ describe('notifications', () => {
 
     it('알림 우선순위에 따른 채널 분기', () => {
       const channelMap = {
-        urgent: '#bidflow-urgent',
-        high: '#bidflow-alerts',
-        normal: '#bidflow-updates',
-        low: '#bidflow-log',
+        urgent: '#qetta-urgent',
+        high: '#qetta-alerts',
+        normal: '#qetta-updates',
+        low: '#qetta-log',
       };
 
-      expect(channelMap.urgent).toBe('#bidflow-urgent');
-      expect(channelMap.high).toBe('#bidflow-alerts');
+      expect(channelMap.urgent).toBe('#qetta-urgent');
+      expect(channelMap.high).toBe('#qetta-alerts');
     });
   });
 
@@ -161,7 +161,7 @@ describe('notifications', () => {
           enabled: true,
           userId: 'U12345678',
           dm: true,
-          channels: ['#bidflow-alerts'],
+          channels: ['#qetta-alerts'],
         },
         filters: {
           minAmount: 100000000, // 1억 이상

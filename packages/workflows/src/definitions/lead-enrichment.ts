@@ -10,7 +10,7 @@ export const leadEnrichmentWorkflow: IWorkflowDefinition = {
   id: 'lead-enrichment-v1',
   name: 'Lead Data Enrichment',
   active: true,
-  tags: ['bidflow', 'lead-management', 'ai'],
+  tags: ['qetta', 'lead-management', 'ai'],
   nodes: [
     // 1. 웹훅 트리거
     {
@@ -185,7 +185,7 @@ return {
       },
       parameters: {
         operation: 'insert',
-        tableId: 'bidflow_leads',
+        tableId: 'qetta_leads',
         options: {
           upsert: true,
           onConflict: 'contact_email',

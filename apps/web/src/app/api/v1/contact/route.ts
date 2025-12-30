@@ -122,7 +122,7 @@ export async function POST(request: NextRequest) {
     try {
       await sendEmail({
         to: data.email,
-        subject: '[BIDFLOW] 문의가 접수되었습니다',
+        subject: '[Qetta] 문의가 접수되었습니다',
         html: createConfirmationEmailHtml(data.name, inquiryId),
       });
     } catch (emailError) {
@@ -183,7 +183,7 @@ function createConfirmationEmailHtml(name: string, inquiryId: string): string {
     <body>
       <div class="container">
         <div class="header">
-          <h1 style="margin: 0; font-size: 24px;">BIDFLOW</h1>
+          <h1 style="margin: 0; font-size: 24px;">Qetta</h1>
           <p style="margin: 10px 0 0 0; opacity: 0.9;">문의 접수 확인</p>
         </div>
         <div class="content">
@@ -193,13 +193,13 @@ function createConfirmationEmailHtml(name: string, inquiryId: string): string {
           <p>담당자가 확인 후 빠른 시일 내에 연락드리겠습니다.<br>보통 1~2 영업일 내에 답변을 받으실 수 있습니다.</p>
           <div style="text-align: center; margin-top: 30px;">
             <a href="${process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3010'}" class="button">
-              BIDFLOW 바로가기
+              Qetta 바로가기
             </a>
           </div>
         </div>
         <div class="footer">
           <p>본 메일은 발신 전용입니다. 추가 문의사항은 웹사이트를 통해 연락해주세요.</p>
-          <p>© ${new Date().getFullYear()} BIDFLOW. All rights reserved.</p>
+          <p>© ${new Date().getFullYear()} Qetta. All rights reserved.</p>
         </div>
       </div>
     </body>

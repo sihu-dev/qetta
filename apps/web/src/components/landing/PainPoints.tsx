@@ -95,7 +95,7 @@ export function PainPoints() {
               {/* After (Solution) */}
               <div className="bg-white p-6">
                 <div className="mb-2 text-xs font-medium uppercase tracking-wider text-neutral-600">
-                  With BIDFLOW
+                  With Qetta
                 </div>
                 <div className="text-2xl font-bold text-neutral-900">{point.after.title}</div>
                 <div className="mt-1 text-sm text-neutral-500">{point.after.description}</div>
@@ -113,7 +113,7 @@ export function PainPoints() {
         <div className="mt-16 text-center">
           <p className="text-neutral-500">
             <span className="font-semibold text-neutral-900">127 companies</span> have automated
-            their bidding process with BIDFLOW
+            their bidding process with Qetta
           </p>
         </div>
       </div>

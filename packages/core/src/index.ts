@@ -2,7 +2,7 @@
  * @qetta/core - L2/L3 핵심 서비스 (Cells/Tissues)
  *
  * 비즈니스 로직과 데이터 접근 레이어
- * HEPHAITOS + BIDFLOW 전용
+ * HEPHAITOS + Qetta 전용
  */
 
 // L2 Services - Exchange

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * BIDFLOW Font Rendering Verification Script
+ * Qetta Font Rendering Verification Script
  *
  * Checks:
  * 1. Noto Sans KR for Korean text
@@ -265,7 +265,7 @@ async function verifyFontsOnPage(page, route) {
  * Main execution
  */
 async function main() {
-  console.log('🔤 BIDFLOW Font Rendering Verification');
+  console.log('🔤 Qetta Font Rendering Verification');
   console.log('=' .repeat(60));
   console.log(`📁 Screenshots will be saved to: ${SCREENSHOT_DIR}\n`);
 

@@ -7,7 +7,7 @@ model: opus
 
 # MCP 종합 검수 에이전트
 
-Playwright MCP와 Sequential Thinking MCP를 활용하여 BIDFLOW의 품질을 종합 검수합니다.
+Playwright MCP와 Sequential Thinking MCP를 활용하여 Qetta의 품질을 종합 검수합니다.
 
 ## 역할
 

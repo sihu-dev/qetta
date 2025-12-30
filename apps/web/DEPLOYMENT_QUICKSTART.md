@@ -1,4 +1,4 @@
-# BIDFLOW 배포 빠른 시작 가이드
+# Qetta 배포 빠른 시작 가이드
 
 ## 🚀 1분 만에 Supabase 연결하기
 
@@ -8,8 +8,8 @@
 ### Step 2: 명령어 복사/붙여넣기
 
 ```bash
-# 1. bidflow 디렉토리로 이동
-cd apps/bidflow
+# 1. qetta 디렉토리로 이동
+cd apps/qetta
 
 # 2. Supabase 로그인 (브라우저 자동 열림)
 npx supabase login
@@ -34,7 +34,7 @@ npx supabase db push
 Docker가 설치되어 있다면:
 
 ```bash
-cd apps/bidflow
+cd apps/qetta
 
 # 로컬 Supabase 시작
 npx supabase start

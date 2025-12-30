@@ -1,5 +1,5 @@
 /**
- * BIDFLOW AI Filter Module
+ * Qetta AI Filter Module
  *
  * Claude Haiku 기반 빠른 적합성 필터링
  * - 1차 스크리닝으로 대량 입찰 공고 빠르게 필터링

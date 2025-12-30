@@ -139,7 +139,7 @@ export function EmptyState({
 }
 
 // ============================================
-// Specialized Empty States for BIDFLOW
+// Specialized Empty States for Qetta
 // ============================================
 
 export function EmptyBidsState({

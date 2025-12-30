@@ -1,5 +1,5 @@
 /**
- * BIDFLOW API Clients
+ * Qetta API Clients
  *
  * 나라장터 (G2B), TED Europa, SAM.gov 통합 클라이언트
  */

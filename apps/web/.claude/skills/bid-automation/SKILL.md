@@ -51,5 +51,5 @@ interface BidMatch {
 ## 관련 파일
 
 - `.forge/BID_AUTOMATION_SPEC.md`
-- `bidflow/src/lib/clients/` - API 클라이언트
-- `bidflow/src/lib/domain/` - 비즈니스 로직
+- `qetta/src/lib/clients/` - API 클라이언트
+- `qetta/src/lib/domain/` - 비즈니스 로직

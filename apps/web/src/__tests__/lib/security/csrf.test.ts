@@ -11,7 +11,7 @@ import {
 
 // Environment setup
 vi.stubEnv('CSRF_SECRET', 'test-csrf-secret-key-12345');
-vi.stubEnv('NEXT_PUBLIC_APP_URL', 'https://bidflow.example.com');
+vi.stubEnv('NEXT_PUBLIC_APP_URL', 'https://qetta.example.com');
 
 describe('csrf', () => {
   beforeEach(() => {
@@ -90,8 +90,8 @@ describe('csrf', () => {
       const mockRequest = {
         headers: {
           get: vi.fn((name: string) => {
-            if (name === 'origin') return 'https://bidflow.example.com';
-            if (name === 'host') return 'bidflow.example.com';
+            if (name === 'origin') return 'https://qetta.example.com';
+            if (name === 'host') return 'qetta.example.com';
             return null;
           }),
         },
@@ -105,8 +105,8 @@ describe('csrf', () => {
         headers: {
           get: vi.fn((name: string) => {
             if (name === 'origin') return null;
-            if (name === 'referer') return 'https://bidflow.example.com/page';
-            if (name === 'host') return 'bidflow.example.com';
+            if (name === 'referer') return 'https://qetta.example.com/page';
+            if (name === 'host') return 'qetta.example.com';
             return null;
           }),
         },
@@ -130,7 +130,7 @@ describe('csrf', () => {
         headers: {
           get: vi.fn((name: string) => {
             if (name === 'origin') return 'https://evil.com';
-            if (name === 'host') return 'bidflow.example.com';
+            if (name === 'host') return 'qetta.example.com';
             return null;
           }),
         },

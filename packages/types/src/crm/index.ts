@@ -153,8 +153,8 @@ export interface ICRMDeal extends ICRMEntity {
   source?: string;
   lostReason?: string;
 
-  // BIDFLOW/HEPHAITOS 연동
-  bidflowBidId?: string;
+  // Qetta/HEPHAITOS 연동
+  qettaBidId?: string;
   hephaitosEnrollmentId?: string;
 
   tags: string[];

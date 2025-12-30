@@ -255,7 +255,7 @@ describe('Login Page Logic', () => {
     });
 
     it('HTTPS 리다이렉트 URL 사용 (프로덕션)', () => {
-      const prodUrl = 'https://bidflow.com/dashboard';
+      const prodUrl = 'https://qetta.com/dashboard';
       const devUrl = 'http://localhost:3010/dashboard';
 
       expect(prodUrl).toMatch(/^https:\/\//);

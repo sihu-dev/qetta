@@ -123,7 +123,7 @@ function evaluateCondition(value: unknown, condition: Record<string, unknown>): 
  * 일반적인 이벤트 타입
  */
 export const COMMON_EVENTS = {
-  // BIDFLOW 리드 이벤트
+  // Qetta 리드 이벤트
   LEAD_CREATED: 'lead.created',
   LEAD_UPDATED: 'lead.updated',
   LEAD_SCORED: 'lead.scored',

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-BIDFLOW PostToolUse Hook - 코드 품질 검사
+Qetta PostToolUse Hook - 코드 품질 검사
 Write/Edit 도구 실행 후 자동으로 코드 품질을 검사합니다.
 """
 import json

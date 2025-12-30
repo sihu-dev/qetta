@@ -1,5 +1,5 @@
 -- =========================================
--- BIDFLOW V2 Migration: RLS Policies
+-- Qetta V2 Migration: RLS Policies
 -- =========================================
 
 -- RLS 활성화

@@ -1,5 +1,5 @@
 /**
- * BIDFLOW 대시보드 - Supabase 100% 벤치마킹
+ * Qetta 대시보드 - Supabase 100% 벤치마킹
  * 미니멀 전문 디자인, 인공적 요소 최소화
  */
 
@@ -363,7 +363,7 @@ export default function DashboardPage() {
             <div className="flex h-7 w-7 items-center justify-center rounded bg-slate-900">
               <span className="text-xs font-bold text-white">B</span>
             </div>
-            <span className="hidden text-base font-semibold text-slate-900 sm:inline">BIDFLOW</span>
+            <span className="hidden text-base font-semibold text-slate-900 sm:inline">Qetta</span>
           </Link>
 
           {/* 데스크톱 네비게이션 */}

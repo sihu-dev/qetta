@@ -1,5 +1,5 @@
 -- =========================================
--- BIDFLOW V2 Migration: Alerts Table
+-- Qetta V2 Migration: Alerts Table
 -- =========================================
 
 CREATE TABLE IF NOT EXISTS alerts (

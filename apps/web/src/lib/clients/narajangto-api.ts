@@ -59,7 +59,7 @@ export interface SearchOptions {
   numOfRows?: number;
 }
 
-/** BIDFLOW Bid 타입으로 변환된 결과 */
+/** Qetta Bid 타입으로 변환된 결과 */
 export interface MappedBid {
   source: 'narajangto';
   external_id: string;
@@ -218,12 +218,12 @@ export class NaraJangtoClient {
       await this.delay(200);
     }
 
-    // BIDFLOW 형식으로 변환
+    // Qetta 형식으로 변환
     return allResults.map((notice) => this.mapToBid(notice, 'product'));
   }
 
   /**
-   * 나라장터 응답을 BIDFLOW Bid 형식으로 변환
+   * 나라장터 응답을 Qetta Bid 형식으로 변환
    */
   mapToBid(notice: BidNotice, type: 'product' | 'service' = 'product'): MappedBid {
     // 키워드 추출

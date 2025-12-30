@@ -1,11 +1,11 @@
 /**
- * BIDFLOW v2.1 엔진 테스트
+ * Qetta v2.1 엔진 테스트
  */
 
 import { generateBidPredictionV2 } from './dist/bidding-engine-v2.1.js';
 
 console.log('='.repeat(60));
-console.log('BIDFLOW 입찰 전략 엔진 v2.1 테스트');
+console.log('Qetta 입찰 전략 엔진 v2.1 테스트');
 console.log('='.repeat(60));
 
 // 테스트 케이스 1: 서울시 유량계 입찰

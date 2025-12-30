@@ -1,5 +1,5 @@
 -- Lead Management Tables
--- BIDFLOW 리드 관리 시스템
+-- Qetta 리드 관리 시스템
 
 -- ============================================================================
 -- 1. Leads Table
@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS leads (
   score INTEGER DEFAULT 0 CHECK (score >= 0 AND score <= 100),
 
   -- 소스
-  source TEXT DEFAULT 'bidflow', -- apollo, persana, manual, import
+  source TEXT DEFAULT 'qetta', -- apollo, persana, manual, import
   verified BOOLEAN DEFAULT false,
 
   -- 강화 데이터

@@ -334,7 +334,7 @@ describe('Integration: 전체 입찰 워크플로우', () => {
         format: 'xlsx',
         columns: ['title', 'organization', 'deadline', 'estimatedAmount', 'status'],
         filters: { status: ['new', 'reviewing', 'preparing'] },
-        filename: 'BIDFLOW_2025-01-01.xlsx',
+        filename: 'Qetta_2025-01-01.xlsx',
       };
 
       expect(exportConfig.columns).toContain('title');

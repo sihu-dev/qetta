@@ -7,7 +7,7 @@ model: sonnet
 
 # Ops Monitor Agent
 
-> BIDFLOW V2 운영 모니터링 및 알림 시스템 관리
+> Qetta V2 운영 모니터링 및 알림 시스템 관리
 
 ## 역할
 
@@ -84,7 +84,7 @@ Supabase 모니터링:
 
 ```typescript
 interface SlackAlert {
-  channel: string;  // #bidflow-alerts
+  channel: string;  // #qetta-alerts
   level: 'info' | 'warning' | 'error' | 'critical';
   message: string;
   fields?: {
@@ -95,7 +95,7 @@ interface SlackAlert {
 
 // 알림 예시
 {
-  channel: "#bidflow-alerts",
+  channel: "#qetta-alerts",
   level: "error",
   message: "🔴 TED API 연결 실패",
   fields: [
@@ -111,7 +111,7 @@ interface SlackAlert {
 ```yaml
 이메일 설정:
   Provider: Resend
-  From: alerts@bidflow.io
+  From: alerts@qetta.io
   To: ops-team@cmntech.com
 
 발송 조건:
@@ -198,7 +198,7 @@ Level 1 (자동 복구):
 
 Level 2 (팀 알림):
   조건: 5분 이상 장애 지속
-  액션: Slack #bidflow-alerts 알림
+  액션: Slack #qetta-alerts 알림
 
 Level 3 (긴급 호출):
   조건: 30분 이상 서비스 다운
@@ -213,7 +213,7 @@ Level 3 (긴급 호출):
 
 ```
 ╔══════════════════════════════════════════════════════════════╗
-║               BIDFLOW 운영 상태 대시보드                       ║
+║               Qetta 운영 상태 대시보드                       ║
 ╠══════════════════════════════════════════════════════════════╣
 ║  시간: 2025-01-15 14:30:00 KST                                ║
 ║  환경: Production                                             ║

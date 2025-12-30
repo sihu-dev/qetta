@@ -1,4 +1,4 @@
-# BIDFLOW
+# Qetta
 
 > AI-powered global bid automation platform for manufacturing SMEs
 
@@ -11,7 +11,7 @@
 
 ## Overview
 
-BIDFLOW automates the entire bid discovery and analysis workflow for manufacturing companies:
+Qetta automates the entire bid discovery and analysis workflow for manufacturing companies:
 
 ```
 Data Collection → AI Analysis → Smart Matching → Notifications
@@ -43,7 +43,7 @@ Data Collection → AI Analysis → Smart Matching → Notifications
 ```bash
 # Clone repository
 git clone https://github.com/sihu-dev/forge-labs.git
-cd forge-labs/apps/bidflow
+cd forge-labs/apps/qetta
 
 # Install dependencies
 pnpm install
@@ -82,7 +82,7 @@ RESEND_API_KEY=your-resend-key        # Email
 ## Project Structure
 
 ```
-apps/bidflow/
+apps/qetta/
 ├── src/
 │   ├── app/
 │   │   ├── api/v1/              # REST API endpoints
@@ -376,7 +376,7 @@ const result = await anthropic.messages.create({
 
 ## Spreadsheet AI Functions
 
-BIDFLOW provides Excel-like AI functions in the spreadsheet view:
+Qetta provides Excel-like AI functions in the spreadsheet view:
 
 | Function | Description | Example |
 |----------|-------------|---------|
@@ -414,7 +414,7 @@ pnpm test:e2e         # E2E tests (Playwright)
 
 ### Design System
 
-BIDFLOW uses a monochrome design system:
+Qetta uses a monochrome design system:
 
 ```css
 /* Primary Colors */
@@ -546,5 +546,5 @@ Proprietary - FORGE LABS
 
 ---
 
-*BIDFLOW v2.0 - AI Bid Automation Platform*
+*Qetta v2.0 - AI Bid Automation Platform*
 *Built with Next.js 15, Supabase, Claude AI*

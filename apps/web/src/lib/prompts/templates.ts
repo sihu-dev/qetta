@@ -1,6 +1,6 @@
 /**
  * @module prompts/templates
- * @description BIDFLOW 시스템 프롬프트 템플릿
+ * @description Qetta 시스템 프롬프트 템플릿
  */
 
 import type { PromptVariable } from '../supabase/types';

@@ -10,7 +10,7 @@ import { getTenantConfig, extractTenantId, TENANTS } from '@/config/tenants';
 // cookies/headers 사용으로 인해 동적 렌더링 강제
 export const dynamic = 'force-dynamic';
 
-const TENANT_COOKIE = 'bidflow_tenant';
+const TENANT_COOKIE = 'qetta_tenant';
 
 export default async function MarketingLayout({ children }: { children: React.ReactNode }) {
   // 서버에서 테넌트 감지 (쿠키 > 서브도메인 순)

@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
 export const metadata: Metadata = {
-  title: '연구팀 | BIDFLOW',
+  title: '연구팀 | Qetta',
   description: 'KAIST 연계 데이터 분석 및 예측 전문 연구팀',
 };
 
@@ -201,11 +201,11 @@ export default function ResearchPage() {
         </div>
       </section>
 
-      {/* BIDFLOW 적용 */}
+      {/* Qetta 적용 */}
       <section className="border-b bg-slate-900 text-white">
         <div className="container mx-auto px-4 py-16">
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="mb-4 text-2xl font-bold">BIDFLOW에 적용된 연구 역량</h2>
+            <h2 className="mb-4 text-2xl font-bold">Qetta에 적용된 연구 역량</h2>
             <p className="mb-8 text-slate-400">
               입찰 시장 예측, 경쟁 분석, 낙찰률 예측 등 핵심 기능에 연구팀의 통계적 모형과 데이터
               분석 역량이 적용되었습니다.

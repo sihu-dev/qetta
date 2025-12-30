@@ -1,8 +1,8 @@
 {
-  "name": "bidflow-quality-system",
+  "name": "qetta-quality-system",
   "version": "2.0.0",
-  "description": "BIDFLOW 종합 검수 자동화 시스템 - 코드, 콘솔, UX/UI, E2E, 보안",
-  "author": "BIDFLOW Team",
+  "description": "Qetta 종합 검수 자동화 시스템 - 코드, 콘솔, UX/UI, E2E, 보안",
+  "author": "Qetta Team",
   "license": "MIT",
 
   "mcp": {

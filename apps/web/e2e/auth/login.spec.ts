@@ -15,7 +15,7 @@ test.describe('Login Page', () => {
 
       // 주요 요소 확인
       await expect(page.getByRole('heading', { name: '로그인' })).toBeVisible();
-      await expect(page.getByText('BIDFLOW에 다시 오신 것을 환영합니다')).toBeVisible();
+      await expect(page.getByText('Qetta에 다시 오신 것을 환영합니다')).toBeVisible();
     });
 
     test('로그인 폼 요소들이 모두 표시됨', async ({ page }) => {

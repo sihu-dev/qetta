@@ -10,7 +10,7 @@ export const leadScoringWorkflow: IWorkflowDefinition = {
   id: 'lead-scoring-v1',
   name: 'AI Lead Scoring',
   active: true,
-  tags: ['bidflow', 'lead-management', 'ai', 'automation'],
+  tags: ['qetta', 'lead-management', 'ai', 'automation'],
   nodes: [
     // 1. 스케줄 트리거 (매 시간)
     {
@@ -45,7 +45,7 @@ export const leadScoringWorkflow: IWorkflowDefinition = {
       },
       parameters: {
         operation: 'getAll',
-        tableId: 'bidflow_leads',
+        tableId: 'qetta_leads',
         returnAll: false,
         limit: 50,
         filters: {
@@ -85,7 +85,7 @@ export const leadScoringWorkflow: IWorkflowDefinition = {
       },
       parameters: {
         model: 'claude-3-5-haiku-20241022',
-        systemPrompt: `You are a lead qualification expert for BIDFLOW (입찰 자동화 플랫폼).
+        systemPrompt: `You are a lead qualification expert for Qetta (입찰 자동화 플랫폼).
 
 Score leads from 0-100 based on:
 1. Company Fit (0-30)
@@ -217,7 +217,7 @@ return {
       },
       parameters: {
         operation: 'update',
-        tableId: 'bidflow_leads',
+        tableId: 'qetta_leads',
         filterType: 'manual',
         matchCase: 'all',
         conditions: {
@@ -266,7 +266,7 @@ return {
         },
       },
       parameters: {
-        channel: '#bidflow-leads',
+        channel: '#qetta-leads',
         text: `🎯 고득점 리드 발견!
 
 **Tier {{ $json.score_tier }}** (점수: {{ $json.score }}/100)
@@ -281,7 +281,7 @@ return {
 **주의사항:**
 {{ $json.red_flags.join("\\n") || "없음" }}
 
-상세보기: https://bidflow.forge-labs.io/leads/{{ $json.id }}`,
+상세보기: https://qetta.forge-labs.io/leads/{{ $json.id }}`,
         attachments: [],
         otherOptions: {},
       },

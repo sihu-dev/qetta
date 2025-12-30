@@ -1,5 +1,5 @@
 /**
- * Mock websocket hooks for BIDFLOW
+ * Mock websocket hooks for Qetta
  */
 export function useTickerStream(_params?: { symbols?: string[] }) {
   return {

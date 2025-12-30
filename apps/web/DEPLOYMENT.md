@@ -1,4 +1,4 @@
-# BIDFLOW 배포 가이드
+# Qetta 배포 가이드
 
 > **버전**: v0.1.0  
 > **플랫폼**: Vercel (권장), AWS, Docker  
@@ -92,7 +92,7 @@ pnpm start
 
 2. **프로젝트 Import**
    - New Project → Import Git Repository
-   - 저장소 선택: `yourusername/bidflow`
+   - 저장소 선택: `yourusername/qetta`
 
 3. **환경 변수 설정**
    - Settings → Environment Variables
@@ -182,7 +182,7 @@ CMD ["node", "server.js"]
 version: '3.8'
 
 services:
-  bidflow:
+  qetta:
     build: .
     ports:
       - "3010:3010"
@@ -198,10 +198,10 @@ services:
 
 ```bash
 # 빌드
-docker build -t bidflow:0.1.0 .
+docker build -t qetta:0.1.0 .
 
 # 실행
-docker run -p 3010:3010 --env-file .env.production bidflow:0.1.0
+docker run -p 3010:3010 --env-file .env.production qetta:0.1.0
 
 # Docker Compose
 docker-compose up -d
@@ -231,8 +231,8 @@ npm install -g pnpm
 npm install -g pm2
 
 # 프로젝트 클론
-git clone https://github.com/yourusername/bidflow.git
-cd bidflow
+git clone https://github.com/yourusername/qetta.git
+cd qetta
 
 # 의존성 설치
 pnpm install
@@ -245,7 +245,7 @@ nano .env.production
 pnpm build
 
 # PM2로 실행
-pm2 start npm --name "bidflow" -- start
+pm2 start npm --name "qetta" -- start
 pm2 save
 pm2 startup
 ```
@@ -431,4 +431,4 @@ curl https://your-project.supabase.co/rest/v1/
 
 ---
 
-**배포 문의**: support@bidflow.com
+**배포 문의**: support@qetta.com

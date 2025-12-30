@@ -1,7 +1,7 @@
 /**
  * CRM 양방향 동기화 워크플로우
  *
- * BIDFLOW ↔ HubSpot/Salesforce 데이터 동기화
+ * Qetta ↔ HubSpot/Salesforce 데이터 동기화
  */
 
 import type { IWorkflowDefinition } from '../types.js';
@@ -10,7 +10,7 @@ export const crmSyncWorkflow: IWorkflowDefinition = {
   id: 'crm-sync-v1',
   name: 'CRM Bidirectional Sync',
   active: true,
-  tags: ['bidflow', 'crm-integration', 'automation'],
+  tags: ['qetta', 'crm-integration', 'automation'],
   nodes: [
     // 1. 스케줄 트리거 (15분마다)
     {
@@ -31,10 +31,10 @@ export const crmSyncWorkflow: IWorkflowDefinition = {
       },
     },
 
-    // 2. BIDFLOW 신규/업데이트 리드 조회
+    // 2. Qetta 신규/업데이트 리드 조회
     {
-      id: 'fetch-bidflow-leads',
-      name: 'Fetch BIDFLOW Leads',
+      id: 'fetch-qetta-leads',
+      name: 'Fetch Qetta Leads',
       type: 'n8n-nodes-base.supabase',
       typeVersion: 1,
       position: [450, 200],
@@ -46,7 +46,7 @@ export const crmSyncWorkflow: IWorkflowDefinition = {
       },
       parameters: {
         operation: 'getAll',
-        tableId: 'bidflow_leads',
+        tableId: 'qetta_leads',
         returnAll: false,
         limit: 100,
         filters: {
@@ -93,20 +93,20 @@ return {
     hs_lead_status: lead.status === 'scored' ? 'QUALIFIED' : 'NEW',
 
     // Custom fields
-    bidflow_lead_id: lead.id,
-    bidflow_score: lead.score || 0,
-    bidflow_tier: lead.score_tier || '',
+    qetta_lead_id: lead.id,
+    qetta_score: lead.score || 0,
+    qetta_tier: lead.score_tier || '',
     company_size: lead.enrichment?.company_size || '',
     estimated_employees: lead.enrichment?.estimated_employees || 0,
     annual_revenue_estimate: lead.enrichment?.annual_revenue_estimate || '',
     business_model: lead.enrichment?.business_model || '',
-    lead_source: lead.source || 'BIDFLOW',
+    lead_source: lead.source || 'Qetta',
 
     // Timestamps
     createdate: lead.created_at,
     lastmodifieddate: lead.updated_at,
   },
-  bidflow_id: lead.id,
+  qetta_id: lead.id,
 };
         `,
       },
@@ -150,14 +150,14 @@ return {
       },
       parameters: {
         operation: 'update',
-        tableId: 'bidflow_leads',
+        tableId: 'qetta_leads',
         filterType: 'manual',
         conditions: {
           conditions: [
             {
               keyName: 'id',
               condition: 'equals',
-              value: '={{ $json.bidflow_id }}',
+              value: '={{ $json.qetta_id }}',
             },
           ],
         },
@@ -208,7 +208,7 @@ return {
                   value: '={{ $now.minus({ minutes: 15 }).toMillis() }}',
                 },
                 {
-                  propertyName: 'bidflow_lead_id',
+                  propertyName: 'qetta_lead_id',
                   operator: 'NOT_HAS_PROPERTY',
                 },
               ],
@@ -218,10 +218,10 @@ return {
       },
     },
 
-    // 7. BIDFLOW 포맷 변환
+    // 7. Qetta 포맷 변환
     {
-      id: 'transform-to-bidflow',
-      name: 'Transform to BIDFLOW',
+      id: 'transform-to-qetta',
+      name: 'Transform to Qetta',
       type: 'n8n-nodes-base.code',
       typeVersion: 1,
       position: [650, 400],
@@ -229,7 +229,7 @@ return {
         jsCode: `
 const contact = $input.item.json.properties;
 
-// BIDFLOW Lead 포맷
+// Qetta Lead 포맷
 return {
   company_name: contact.company || 'Unknown',
   contact_email: contact.email,
@@ -251,10 +251,10 @@ return {
       },
     },
 
-    // 8. BIDFLOW 저장
+    // 8. Qetta 저장
     {
-      id: 'save-to-bidflow',
-      name: 'Save to BIDFLOW',
+      id: 'save-to-qetta',
+      name: 'Save to Qetta',
       type: 'n8n-nodes-base.supabase',
       typeVersion: 1,
       position: [850, 400],
@@ -266,7 +266,7 @@ return {
       },
       parameters: {
         operation: 'insert',
-        tableId: 'bidflow_leads',
+        tableId: 'qetta_leads',
         options: {
           upsert: true,
           onConflict: 'contact_email',
@@ -279,12 +279,12 @@ return {
     'Every 15min Sync': {
       main: [
         [
-          { node: 'Fetch BIDFLOW Leads', type: 'main', index: 0 },
+          { node: 'Fetch Qetta Leads', type: 'main', index: 0 },
           { node: 'Fetch HubSpot Contacts', type: 'main', index: 0 },
         ],
       ],
     },
-    'Fetch BIDFLOW Leads': {
+    'Fetch Qetta Leads': {
       main: [[{ node: 'Transform to HubSpot', type: 'main', index: 0 }]],
     },
     'Transform to HubSpot': {
@@ -294,10 +294,10 @@ return {
       main: [[{ node: 'Update Sync Status', type: 'main', index: 0 }]],
     },
     'Fetch HubSpot Contacts': {
-      main: [[{ node: 'Transform to BIDFLOW', type: 'main', index: 0 }]],
+      main: [[{ node: 'Transform to Qetta', type: 'main', index: 0 }]],
     },
-    'Transform to BIDFLOW': {
-      main: [[{ node: 'Save to BIDFLOW', type: 'main', index: 0 }]],
+    'Transform to Qetta': {
+      main: [[{ node: 'Save to Qetta', type: 'main', index: 0 }]],
     },
   },
 

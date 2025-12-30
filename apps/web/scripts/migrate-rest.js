@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * BIDFLOW DB 마이그레이션 스크립트
+ * Qetta DB 마이그레이션 스크립트
  * Supabase REST API 사용
  */
 

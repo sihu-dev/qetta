@@ -3,7 +3,7 @@
 -- =====================================================
 -- Created: 2024-12-24
 -- Purpose: Lead management, campaign automation, cross-sell opportunities
--- Apps: BIDFLOW, HEPHAITOS, DRYON, FOLIO, ADE
+-- Apps: Qetta, HEPHAITOS, DRYON, FOLIO, ADE
 -- =====================================================
 
 -- Enable required extensions
@@ -16,7 +16,7 @@ CREATE EXTENSION IF NOT EXISTS "pg_trgm"; -- For text search optimization
 
 -- Lead source types
 CREATE TYPE lead_source AS ENUM (
-  'bidflow_bid',           -- BIDFLOW 입찰 참여자
+  'qetta_bid',           -- Qetta 입찰 참여자
   'hephaitos_youtube',     -- HEPHAITOS 유튜브 채널
   'dryon_demo',            -- DRYON 데모 신청
   'folio_trial',           -- FOLIO 무료 체험
@@ -135,8 +135,8 @@ CREATE TYPE workflow_status AS ENUM (
 
 -- Cross-sell type
 CREATE TYPE cross_sell_type AS ENUM (
-  'bidflow_to_hephaitos',     -- 입찰자 → 트레이딩 교육
-  'hephaitos_to_bidflow',     -- 트레이더 → 입찰 시스템
+  'qetta_to_hephaitos',     -- 입찰자 → 트레이딩 교육
+  'hephaitos_to_qetta',     -- 트레이더 → 입찰 시스템
   'dryon_to_folio',           -- 기후 AI → 재고 최적화
   'folio_to_dryon',           -- 재고 관리 → 에너지 절감
   'any_to_ade'                -- 모든 플랫폼 → AI 개발
@@ -211,7 +211,7 @@ CREATE TABLE leads (
   company_domain TEXT,
 
   -- Cross-platform tracking
-  bidflow_bid_id UUID,                   -- BIDFLOW 입찰 ID
+  qetta_bid_id UUID,                   -- Qetta 입찰 ID
   hephaitos_channel_id UUID,             -- HEPHAITOS 채널 ID
   dryon_demo_id UUID,                    -- DRYON 데모 신청 ID
   folio_trial_id UUID,                   -- FOLIO 체험 ID
@@ -259,7 +259,7 @@ CREATE TABLE campaigns (
   -- Targeting
   target_segments JSONB DEFAULT '[]'::jsonb,
   -- Example: [
-  --   { "source": "bidflow_bid", "tier": "hot" },
+  --   { "source": "qetta_bid", "tier": "hot" },
   --   { "company_size": ["startup", "small"], "industry": "construction" }
   -- ]
 
@@ -415,7 +415,7 @@ CREATE TABLE workflows (
   trigger_config JSONB DEFAULT '{}'::jsonb,
   -- Example: {
   --   "type": "lead_created",
-  --   "conditions": { "source": "bidflow_bid", "tier": "hot" },
+  --   "conditions": { "source": "qetta_bid", "tier": "hot" },
   --   "actions": [
   --     { "type": "enrich_lead", "provider": "apollo" },
   --     { "type": "add_to_sequence", "sequence_id": "uuid" },
@@ -457,7 +457,7 @@ CREATE TABLE cross_sell_opportunities (
   type cross_sell_type NOT NULL,
 
   -- Source tracking
-  source_platform TEXT NOT NULL,         -- 'bidflow', 'hephaitos', 'dryon', 'folio', 'ade'
+  source_platform TEXT NOT NULL,         -- 'qetta', 'hephaitos', 'dryon', 'folio', 'ade'
   source_user_id UUID,                   -- User ID in source platform
   target_platform TEXT NOT NULL,
 
@@ -526,7 +526,7 @@ CREATE INDEX idx_leads_name_trgm ON leads USING gin((first_name || ' ' || last_n
 CREATE INDEX idx_companies_name_trgm ON companies USING gin(name gin_trgm_ops);
 
 -- Cross-platform tracking indexes
-CREATE INDEX idx_leads_bidflow_bid_id ON leads(bidflow_bid_id) WHERE bidflow_bid_id IS NOT NULL;
+CREATE INDEX idx_leads_qetta_bid_id ON leads(qetta_bid_id) WHERE qetta_bid_id IS NOT NULL;
 CREATE INDEX idx_leads_hephaitos_channel_id ON leads(hephaitos_channel_id) WHERE hephaitos_channel_id IS NOT NULL;
 
 -- JSONB indexes for enrichment data
@@ -1028,7 +1028,7 @@ COMMENT ON TABLE cross_sell_opportunities IS 'Cross-platform upsell/cross-sell o
 COMMENT ON COLUMN leads.score IS 'Lead quality score (0-100), auto-updates tier';
 COMMENT ON COLUMN leads.tier IS 'Auto-calculated: hot(90+), warm(70-89), cold(50-69), ice(<50)';
 COMMENT ON COLUMN leads.enrichment_data IS 'Third-party enrichment data (Apollo, Clearbit, LinkedIn)';
-COMMENT ON COLUMN leads.bidflow_bid_id IS 'Link to BIDFLOW bid if lead came from there';
+COMMENT ON COLUMN leads.qetta_bid_id IS 'Link to Qetta bid if lead came from there';
 COMMENT ON COLUMN leads.hephaitos_channel_id IS 'Link to HEPHAITOS YouTube channel if applicable';
 
 COMMENT ON COLUMN activities.is_automated IS 'True if activity was performed by automation (n8n, Zapier)';

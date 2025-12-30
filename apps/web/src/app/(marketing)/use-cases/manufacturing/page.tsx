@@ -47,7 +47,7 @@ const caseStudy = {
   company: '씨엠엔텍',
   industry: '유량계 제조',
   quote:
-    'BIDFLOW 도입 후 입찰 관련 업무 시간이 80% 이상 줄었습니다. 이전에는 3명이 하루 종일 공고를 확인했는데, 지금은 1명이 1시간이면 충분합니다.',
+    'Qetta 도입 후 입찰 관련 업무 시간이 80% 이상 줄었습니다. 이전에는 3명이 하루 종일 공고를 확인했는데, 지금은 1명이 1시간이면 충분합니다.',
   person: '김영수 대표',
   results: ['월 50건 이상 공고 자동 수집', '입찰 참여율 3배 증가', '낙찰률 15%에서 32%로 향상'],
 };
@@ -128,7 +128,7 @@ export default function ManufacturingPage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
-            <h2 className="mb-4 text-center text-3xl font-bold">BIDFLOW 솔루션</h2>
+            <h2 className="mb-4 text-center text-3xl font-bold">Qetta 솔루션</h2>
             <p className="text-muted-foreground mb-12 text-center">
               제조업 특화 기능으로 입찰 업무를 혁신합니다
             </p>
@@ -220,7 +220,7 @@ export default function ManufacturingPage() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="mb-4 text-2xl font-bold md:text-3xl">제조업 입찰 자동화를 시작하세요</h2>
           <p className="text-muted-foreground mb-8">
-            14일 무료 체험으로 BIDFLOW의 가치를 직접 확인해보세요.
+            14일 무료 체험으로 Qetta의 가치를 직접 확인해보세요.
           </p>
           <div className="flex flex-col justify-center gap-4 sm:flex-row">
             <Button size="lg" asChild>

@@ -1,5 +1,5 @@
 /**
- * Simple i18n hook for BIDFLOW (Korean only)
+ * Simple i18n hook for Qetta (Korean only)
  * Passthrough implementation - returns the key as-is
  */
 export function useI18n() {

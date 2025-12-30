@@ -7,8 +7,8 @@ import Link from 'next/link';
 import { Terminal, Key, Shield, Zap } from 'lucide-react';
 
 export const metadata = {
-  title: 'API 문서 | BIDFLOW',
-  description: 'BIDFLOW REST API 문서 및 사용 가이드',
+  title: 'API 문서 | Qetta',
+  description: 'Qetta REST API 문서 및 사용 가이드',
 };
 
 const endpoints = [
@@ -54,7 +54,7 @@ export default function ApiDocsPage() {
           </Badge>
           <h1 className="mb-4 text-4xl font-bold">API 문서</h1>
           <p className="text-muted-foreground mb-12 text-xl">
-            BIDFLOW REST API를 사용하여 입찰 데이터를 프로그래밍 방식으로 관리하세요.
+            Qetta REST API를 사용하여 입찰 데이터를 프로그래밍 방식으로 관리하세요.
           </p>
 
           {/* 빠른 시작 */}
@@ -64,7 +64,7 @@ export default function ApiDocsPage() {
               빠른 시작
             </h2>
             <div className="overflow-x-auto rounded-md bg-gray-900 p-4 font-mono text-sm text-gray-100">
-              <pre>{`curl -X GET "https://api.bidflow.io/v1/bids" \\
+              <pre>{`curl -X GET "https://api.qetta.io/v1/bids" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`}</pre>
             </div>

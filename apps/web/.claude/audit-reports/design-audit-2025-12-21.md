@@ -1,7 +1,7 @@
-# BIDFLOW 디자인 시스템 검수 보고서
+# Qetta 디자인 시스템 검수 보고서
 
 > **검수 시간**: 2025-12-21 02:45:00
-> **검수 대상**: /home/sihu2129/bidflow/src
+> **검수 대상**: /home/sihu2129/qetta/src
 > **검수 유형**: /audit --design
 
 ---
@@ -239,6 +239,6 @@ use-cases/*          - 4개 파일
 
 ---
 
-*BIDFLOW 디자인 검수 보고서*
+*Qetta 디자인 검수 보고서*
 *생성: 2025-12-21 02:45:00*
 *검수 도구: /audit --design*

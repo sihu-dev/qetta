@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
 export const metadata: Metadata = {
-  title: '시설관리 | 활용사례 | BIDFLOW',
+  title: '시설관리 | 활용사례 | Qetta',
   description: '시설관리 및 FM 산업의 공공조달 입찰 자동화 사례',
 };
 
@@ -76,7 +76,7 @@ export default function FacilityPage() {
       {/* 솔루션 */}
       <section className="border-b">
         <div className="container mx-auto px-4 py-16">
-          <h2 className="mb-8 text-2xl font-bold text-slate-900">BIDFLOW 솔루션</h2>
+          <h2 className="mb-8 text-2xl font-bold text-slate-900">Qetta 솔루션</h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {solutions.map((item) => (
               <div
@@ -123,7 +123,7 @@ export default function FacilityPage() {
       <section>
         <div className="container mx-auto px-4 py-16 text-center">
           <h2 className="mb-4 text-2xl font-bold text-slate-900">시설관리 입찰 자동화 시작하기</h2>
-          <p className="mb-6 text-slate-600">14일 무료 체험으로 BIDFLOW를 경험해보세요.</p>
+          <p className="mb-6 text-slate-600">14일 무료 체험으로 Qetta를 경험해보세요.</p>
           <Button asChild size="lg">
             <Link href="/signup">무료 체험 시작</Link>
           </Button>
