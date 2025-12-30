@@ -98,20 +98,20 @@ const additionalFeatures = [
 
 export default function FeaturesPage() {
   return (
-    <>
+    <div className="bg-[#0D0D0F] min-h-screen">
       {/* Hero */}
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
-            <Badge variant="secondary" className="mb-6">
+            <Badge className="mb-6 bg-[#5E6AD2]/10 border border-[#5E6AD2]/20 text-[#7C8AEA]">
               기능 소개
             </Badge>
-            <h1 className="text-4xl font-bold tracking-tight md:text-5xl">
+            <h1 className="text-4xl font-bold tracking-tight text-white md:text-5xl">
               입찰 업무의 모든 것을
               <br />
               자동화합니다
             </h1>
-            <p className="text-muted-foreground mt-6 text-lg">
+            <p className="text-zinc-400 mt-6 text-lg">
               공고 수집부터 제안서 작성까지, Qetta가 입찰 프로세스 전체를 혁신합니다.
             </p>
           </div>
@@ -119,7 +119,7 @@ export default function FeaturesPage() {
       </section>
 
       {/* Main Features */}
-      <section className="bg-muted/30 py-16">
+      <section className="bg-[#0A0A0A] py-16">
         <div className="container mx-auto px-4">
           <div className="space-y-24">
             {mainFeatures.map((feature, index) => (
@@ -131,16 +131,16 @@ export default function FeaturesPage() {
               >
                 {/* Icon & Title */}
                 <div className="lg:w-1/2">
-                  <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10">
-                    <feature.icon className="h-8 w-8 text-primary" />
+                  <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-[#5E6AD2]/10">
+                    <feature.icon className="h-8 w-8 text-[#7C8AEA]" />
                   </div>
-                  <h2 className="mb-4 text-2xl font-bold md:text-3xl">{feature.title}</h2>
-                  <p className="text-muted-foreground mb-6 text-lg">{feature.description}</p>
+                  <h2 className="mb-4 text-2xl font-bold text-white md:text-3xl">{feature.title}</h2>
+                  <p className="text-zinc-400 mb-6 text-lg">{feature.description}</p>
                   <ul className="space-y-3">
                     {feature.details.map((detail) => (
                       <li key={detail} className="flex items-center gap-3">
-                        <div className="h-1.5 w-1.5 rounded-full bg-primary" />
-                        <span>{detail}</span>
+                        <div className="h-1.5 w-1.5 rounded-full bg-[#5E6AD2]" />
+                        <span className="text-zinc-300">{detail}</span>
                       </li>
                     ))}
                   </ul>
@@ -148,8 +148,8 @@ export default function FeaturesPage() {
 
                 {/* Placeholder for Screenshot */}
                 <div className="lg:w-1/2">
-                  <div className="flex aspect-video items-center justify-center rounded-xl border bg-gradient-to-br from-primary/5 to-primary/10">
-                    <span className="text-muted-foreground">스크린샷 영역</span>
+                  <div className="flex aspect-video items-center justify-center rounded-xl bg-white/[0.04] backdrop-blur-xl border border-white/[0.06] bg-gradient-to-br from-[#5E6AD2]/5 to-[#5E6AD2]/10">
+                    <span className="text-zinc-500">스크린샷 영역</span>
                   </div>
                 </div>
               </div>
@@ -162,21 +162,21 @@ export default function FeaturesPage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="mx-auto mb-16 max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight md:text-4xl">그 외 다양한 기능</h2>
-            <p className="text-muted-foreground mt-4 text-lg">업무 효율을 높이는 부가 기능들</p>
+            <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">그 외 다양한 기능</h2>
+            <p className="text-zinc-400 mt-4 text-lg">업무 효율을 높이는 부가 기능들</p>
           </div>
 
           <div className="mx-auto grid max-w-5xl gap-8 md:grid-cols-2 lg:grid-cols-3">
             {additionalFeatures.map((feature) => (
               <div
                 key={feature.title}
-                className="bg-card rounded-xl border p-6 transition-shadow hover:shadow-md"
+                className="bg-white/[0.04] backdrop-blur-xl border border-white/[0.06] rounded-xl p-6 transition-all hover:bg-white/[0.06] hover:border-white/[0.1]"
               >
-                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
-                  <feature.icon className="h-5 w-5 text-primary" />
+                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[#5E6AD2]/10">
+                  <feature.icon className="h-5 w-5 text-[#7C8AEA]" />
                 </div>
-                <h3 className="mb-2 font-semibold">{feature.title}</h3>
-                <p className="text-muted-foreground text-sm">{feature.description}</p>
+                <h3 className="mb-2 font-semibold text-white">{feature.title}</h3>
+                <p className="text-zinc-400 text-sm">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -184,15 +184,15 @@ export default function FeaturesPage() {
       </section>
 
       {/* CTA */}
-      <section className="text-primary-foreground bg-primary py-20">
+      <section className="bg-gradient-to-r from-[#5E6AD2] to-[#4B56C8] py-20">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="mb-4 text-3xl font-bold md:text-4xl">지금 바로 시작하세요</h2>
-          <p className="mb-8 text-lg opacity-90">14일 무료 체험으로 모든 기능을 경험해보세요.</p>
-          <Button size="lg" variant="secondary" asChild>
+          <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">지금 바로 시작하세요</h2>
+          <p className="mb-8 text-lg text-white/90">14일 무료 체험으로 모든 기능을 경험해보세요.</p>
+          <Button size="lg" variant="secondary" asChild className="bg-white text-[#5E6AD2] hover:bg-white/90">
             <Link href="/signup">무료로 시작하기</Link>
           </Button>
         </div>
       </section>
-    </>
+    </div>
   );
 }

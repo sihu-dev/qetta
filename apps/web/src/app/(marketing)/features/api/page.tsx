@@ -53,27 +53,27 @@ const rateLimits = [
 
 export default function ApiPage() {
   return (
-    <>
+    <div className="bg-[#0D0D0F] min-h-screen">
       {/* Hero */}
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
             <div className="mb-6 flex items-center gap-4">
-              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10">
-                <Code className="h-8 w-8 text-primary" />
+              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#5E6AD2]/10">
+                <Code className="h-8 w-8 text-[#7C8AEA]" />
               </div>
-              <Badge variant="secondary">개발자</Badge>
+              <Badge className="bg-[#5E6AD2]/10 border border-[#5E6AD2]/20 text-[#7C8AEA]">개발자</Badge>
             </div>
-            <h1 className="mb-6 text-4xl font-bold tracking-tight md:text-5xl">REST API</h1>
-            <p className="text-muted-foreground mb-8 max-w-2xl text-xl">
+            <h1 className="mb-6 text-4xl font-bold tracking-tight text-white md:text-5xl">REST API</h1>
+            <p className="text-zinc-400 mb-8 max-w-2xl text-xl">
               강력한 API를 통해 기존 시스템과 통합하거나 자동화 워크플로우를 구축하세요. 모든 기능을
               프로그래밍 방식으로 활용할 수 있습니다.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" asChild>
+              <Button size="lg" asChild className="bg-gradient-to-r from-[#5E6AD2] to-[#4B56C8] text-white hover:opacity-90">
                 <Link href="/docs">API 문서 보기</Link>
               </Button>
-              <Button size="lg" variant="outline" asChild>
+              <Button size="lg" variant="outline" asChild className="border-white/[0.1] text-white hover:bg-white/[0.04]">
                 <Link href="/signup">API 키 발급</Link>
               </Button>
             </div>
@@ -82,16 +82,16 @@ export default function ApiPage() {
       </section>
 
       {/* Features */}
-      <section className="bg-muted/30 py-16">
+      <section className="bg-[#0A0A0A] py-16">
         <div className="container mx-auto px-4">
           <div className="mx-auto grid max-w-4xl gap-8 md:grid-cols-3">
             {features.map((feature) => (
-              <div key={feature.title} className="bg-card rounded-xl border p-6 text-center">
-                <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
-                  <feature.icon className="h-6 w-6 text-primary" />
+              <div key={feature.title} className="bg-white/[0.04] backdrop-blur-xl border border-white/[0.06] rounded-xl p-6 text-center">
+                <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-[#5E6AD2]/10">
+                  <feature.icon className="h-6 w-6 text-[#7C8AEA]" />
                 </div>
-                <h3 className="mb-2 font-semibold">{feature.title}</h3>
-                <p className="text-muted-foreground text-sm">{feature.description}</p>
+                <h3 className="mb-2 font-semibold text-white">{feature.title}</h3>
+                <p className="text-zinc-400 text-sm">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -102,33 +102,32 @@ export default function ApiPage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
-            <h2 className="mb-4 text-center text-3xl font-bold">API 엔드포인트</h2>
-            <p className="text-muted-foreground mb-12 text-center">
+            <h2 className="mb-4 text-center text-3xl font-bold text-white">API 엔드포인트</h2>
+            <p className="text-zinc-400 mb-12 text-center">
               RESTful API로 모든 기능에 접근할 수 있습니다
             </p>
-            <div className="overflow-hidden rounded-xl border">
-              <div className="bg-muted/50 border-b p-4">
-                <code className="text-sm">https://api.qetta.io/v1</code>
+            <div className="overflow-hidden rounded-xl bg-white/[0.04] backdrop-blur-xl border border-white/[0.06]">
+              <div className="bg-[#0A0A0A] border-b border-white/[0.06] p-4">
+                <code className="text-sm text-zinc-400">https://api.qetta.io/v1</code>
               </div>
-              <div className="divide-y">
+              <div className="divide-y divide-white/[0.06]">
                 {endpoints.map((endpoint) => (
                   <div key={endpoint.path} className="flex items-center gap-4 p-4">
                     <Badge
-                      variant={
+                      className={`w-16 justify-center ${
                         endpoint.method === 'GET'
-                          ? 'default'
+                          ? 'bg-[#5E6AD2]/10 border border-[#5E6AD2]/20 text-[#7C8AEA]'
                           : endpoint.method === 'POST'
-                            ? 'secondary'
+                            ? 'bg-emerald-500/10 border border-emerald-500/20 text-emerald-400'
                             : endpoint.method === 'PATCH'
-                              ? 'outline'
-                              : 'destructive'
-                      }
-                      className="w-16 justify-center"
+                              ? 'bg-amber-500/10 border border-amber-500/20 text-amber-400'
+                              : 'bg-red-500/10 border border-red-500/20 text-red-400'
+                      }`}
                     >
                       {endpoint.method}
                     </Badge>
-                    <code className="flex-1 text-sm">{endpoint.path}</code>
-                    <span className="text-muted-foreground text-sm">{endpoint.description}</span>
+                    <code className="flex-1 text-sm text-zinc-300">{endpoint.path}</code>
+                    <span className="text-zinc-500 text-sm">{endpoint.description}</span>
                   </div>
                 ))}
               </div>
@@ -138,11 +137,11 @@ export default function ApiPage() {
       </section>
 
       {/* Code Example */}
-      <section className="bg-muted/30 py-20">
+      <section className="bg-[#0A0A0A] py-20">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
-            <h2 className="mb-8 text-center text-3xl font-bold">코드 예제</h2>
-            <div className="overflow-x-auto rounded-xl bg-[#1e1e1e] p-6">
+            <h2 className="mb-8 text-center text-3xl font-bold text-white">코드 예제</h2>
+            <div className="overflow-x-auto rounded-xl bg-[#1a1d21] p-6 border border-white/[0.06]">
               <pre className="text-sm text-gray-300">
                 <code>{`// 입찰 목록 조회
 const response = await fetch('https://api.qetta.io/v1/bids', {
@@ -183,18 +182,18 @@ console.log(bids);
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
-            <h2 className="mb-4 text-center text-3xl font-bold">활용 사례</h2>
-            <p className="text-muted-foreground mb-12 text-center">
+            <h2 className="mb-4 text-center text-3xl font-bold text-white">활용 사례</h2>
+            <p className="text-zinc-400 mb-12 text-center">
               다양한 시스템과 연동하여 활용하세요
             </p>
             <div className="grid gap-6 md:grid-cols-2">
               {useCases.map((useCase) => (
-                <div key={useCase.title} className="bg-card rounded-xl border p-6">
+                <div key={useCase.title} className="bg-white/[0.04] backdrop-blur-xl border border-white/[0.06] rounded-xl p-6">
                   <div className="flex items-start gap-3">
-                    <Check className="mt-0.5 h-5 w-5 text-neutral-700" />
+                    <Check className="mt-0.5 h-5 w-5 text-[#7C8AEA]" />
                     <div>
-                      <h3 className="mb-1 font-semibold">{useCase.title}</h3>
-                      <p className="text-muted-foreground text-sm">{useCase.description}</p>
+                      <h3 className="mb-1 font-semibold text-white">{useCase.title}</h3>
+                      <p className="text-zinc-500 text-sm">{useCase.description}</p>
                     </div>
                   </div>
                 </div>
@@ -205,16 +204,16 @@ console.log(bids);
       </section>
 
       {/* Rate Limits */}
-      <section className="bg-muted/30 py-16">
+      <section className="bg-[#0A0A0A] py-16">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-2xl">
-            <h2 className="mb-8 text-center text-2xl font-bold">Rate Limits</h2>
+            <h2 className="mb-8 text-center text-2xl font-bold text-white">Rate Limits</h2>
             <div className="grid gap-4 md:grid-cols-2">
               {rateLimits.map((item) => (
-                <div key={item.plan} className="bg-card rounded-lg border p-4 text-center">
-                  <Badge className="mb-2">{item.plan}</Badge>
-                  <p className="text-2xl font-bold">{item.limit}</p>
-                  <p className="text-muted-foreground text-sm">{item.description}</p>
+                <div key={item.plan} className="bg-white/[0.04] backdrop-blur-xl border border-white/[0.06] rounded-lg p-4 text-center">
+                  <Badge className="mb-2 bg-[#5E6AD2]/10 border border-[#5E6AD2]/20 text-[#7C8AEA]">{item.plan}</Badge>
+                  <p className="text-2xl font-bold text-white">{item.limit}</p>
+                  <p className="text-zinc-500 text-sm">{item.description}</p>
                 </div>
               ))}
             </div>
@@ -227,6 +226,6 @@ console.log(bids);
         prev={{ label: '팀 협업', href: '/features/collaboration' }}
         next={{ label: '보안', href: '/features/security' }}
       />
-    </>
+    </div>
   );
 }

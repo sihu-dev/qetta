@@ -120,13 +120,13 @@ export default function PricingPage() {
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
-            <Badge variant="secondary" className="mb-6">
+            <Badge className="mb-6 bg-[#5E6AD2]/10 border border-[#5E6AD2]/20 text-[#7C8AEA]">
               요금제
             </Badge>
-            <h1 className="text-4xl font-bold tracking-tight md:text-5xl">
+            <h1 className="text-4xl font-bold tracking-tight text-white md:text-5xl">
               심플하고 투명한 요금제
             </h1>
-            <p className="text-muted-foreground mt-6 text-lg">
+            <p className="text-zinc-400 mt-6 text-lg">
               숨겨진 비용 없이 필요한 만큼만 사용하세요.
               <br />
               언제든지 업그레이드하거나 다운그레이드할 수 있습니다.
@@ -143,26 +143,26 @@ export default function PricingPage() {
               <div
                 key={plan.name}
                 className={cn(
-                  'bg-card relative rounded-2xl border p-8',
-                  plan.highlighted && 'border-primary shadow-xl lg:scale-105'
+                  'relative rounded-2xl p-8 bg-white/[0.04] backdrop-blur-xl border border-white/[0.06]',
+                  plan.highlighted && 'border-[#5E6AD2]/50 shadow-xl lg:scale-105'
                 )}
               >
                 {plan.highlighted && (
-                  <div className="text-primary-foreground absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-primary px-4 py-1.5 text-sm font-medium">
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-[#5E6AD2] to-[#4B56C8] px-4 py-1.5 text-sm font-medium text-white">
                     가장 인기
                   </div>
                 )}
 
                 <div className="mb-8">
-                  <h3 className="text-2xl font-bold">{plan.name}</h3>
-                  <p className="text-muted-foreground mt-2 text-sm">{plan.description}</p>
+                  <h3 className="text-2xl font-bold text-white">{plan.name}</h3>
+                  <p className="text-zinc-400 mt-2 text-sm">{plan.description}</p>
                 </div>
 
                 <div className="mb-8">
-                  <span className="text-4xl font-bold">{plan.price}</span>
-                  <span className="text-muted-foreground">{plan.period}</span>
+                  <span className="text-4xl font-bold text-white">{plan.price}</span>
+                  <span className="text-zinc-400">{plan.period}</span>
                   {plan.annualPrice && (
-                    <p className="text-muted-foreground mt-1 text-sm">
+                    <p className="text-zinc-500 mt-1 text-sm">
                       연간 결제 시 {plan.annualPrice}/월
                     </p>
                   )}
@@ -172,17 +172,17 @@ export default function PricingPage() {
                   {plan.features.map((feature) => (
                     <li key={feature.text} className="flex items-start gap-3">
                       {feature.included ? (
-                        <Check className="mt-0.5 h-5 w-5 flex-shrink-0 text-neutral-700" />
+                        <Check className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#7C8AEA]" />
                       ) : (
-                        <X className="text-muted-foreground/40 mt-0.5 h-5 w-5 flex-shrink-0" />
+                        <X className="text-zinc-600 mt-0.5 h-5 w-5 flex-shrink-0" />
                       )}
-                      <span className={cn(!feature.included && 'text-muted-foreground/60')}>
+                      <span className={cn(feature.included ? 'text-zinc-300' : 'text-zinc-600')}>
                         {feature.text}
                       </span>
                       {feature.tooltip && (
                         <Tooltip>
                           <TooltipTrigger>
-                            <HelpCircle className="text-muted-foreground h-4 w-4" />
+                            <HelpCircle className="text-zinc-500 h-4 w-4" />
                           </TooltipTrigger>
                           <TooltipContent>
                             <p>{feature.tooltip}</p>
@@ -194,9 +194,13 @@ export default function PricingPage() {
                 </ul>
 
                 <Button
-                  className="w-full"
+                  className={cn(
+                    'w-full',
+                    plan.highlighted
+                      ? 'bg-gradient-to-r from-[#5E6AD2] to-[#4B56C8] text-white hover:from-[#4B56C8] hover:to-[#3D48B0]'
+                      : 'bg-white/[0.06] border border-white/[0.06] text-white hover:bg-white/[0.1]'
+                  )}
                   size="lg"
-                  variant={plan.highlighted ? 'default' : 'outline'}
                   asChild
                 >
                   <Link href={plan.name === 'Enterprise' ? '/contact' : '/signup'}>{plan.cta}</Link>
@@ -208,17 +212,17 @@ export default function PricingPage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-muted/30 py-20">
+      <section className="bg-[#0A0A0A] py-20">
         <div className="container mx-auto px-4">
           <div className="mx-auto mb-16 max-w-2xl text-center">
-            <h2 className="text-3xl font-bold">자주 묻는 질문</h2>
+            <h2 className="text-3xl font-bold text-white">자주 묻는 질문</h2>
           </div>
 
           <div className="mx-auto grid max-w-3xl gap-6">
             {faqs.map((faq) => (
-              <div key={faq.question} className="bg-card rounded-xl border p-6">
-                <h3 className="mb-2 font-semibold">{faq.question}</h3>
-                <p className="text-muted-foreground">{faq.answer}</p>
+              <div key={faq.question} className="bg-white/[0.04] backdrop-blur-xl border border-white/[0.06] rounded-xl p-6">
+                <h3 className="mb-2 font-semibold text-white">{faq.question}</h3>
+                <p className="text-zinc-400">{faq.answer}</p>
               </div>
             ))}
           </div>
@@ -228,15 +232,15 @@ export default function PricingPage() {
       {/* CTA */}
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="mb-4 text-2xl font-bold md:text-3xl">아직 결정이 어려우신가요?</h2>
-          <p className="text-muted-foreground mb-8">
+          <h2 className="mb-4 text-2xl font-bold text-white md:text-3xl">아직 결정이 어려우신가요?</h2>
+          <p className="text-zinc-400 mb-8">
             영업팀에서 귀사에 맞는 플랜을 추천해 드립니다.
           </p>
           <div className="flex flex-col justify-center gap-4 sm:flex-row">
-            <Button size="lg" variant="outline" asChild>
+            <Button size="lg" variant="outline" className="border-white/[0.06] text-white hover:bg-white/[0.06]" asChild>
               <Link href="/contact">영업팀 상담</Link>
             </Button>
-            <Button size="lg" asChild>
+            <Button size="lg" className="bg-gradient-to-r from-[#5E6AD2] to-[#4B56C8] text-white hover:from-[#4B56C8] hover:to-[#3D48B0]" asChild>
               <Link href="/signup">무료 체험 시작</Link>
             </Button>
           </div>

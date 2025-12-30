@@ -53,31 +53,31 @@ const features = [
 
 export default function ProposalPage() {
   return (
-    <>
+    <div className="bg-[#0D0D0F] min-h-screen">
       {/* Hero */}
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
             <div className="mb-6 flex items-center gap-4">
-              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10">
-                <FileText className="h-8 w-8 text-primary" />
+              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#5E6AD2]/10">
+                <FileText className="h-8 w-8 text-[#7C8AEA]" />
               </div>
-              <Badge variant="secondary">AI 기능</Badge>
+              <Badge className="bg-[#5E6AD2]/10 border border-[#5E6AD2]/20 text-[#7C8AEA]">AI 기능</Badge>
             </div>
-            <h1 className="mb-6 text-4xl font-bold tracking-tight md:text-5xl">
+            <h1 className="mb-6 text-4xl font-bold tracking-tight text-white md:text-5xl">
               제안서 초안
               <br />
               자동 생성
             </h1>
-            <p className="text-muted-foreground mb-8 max-w-2xl text-xl">
+            <p className="text-zinc-400 mb-8 max-w-2xl text-xl">
               공고 분석 결과를 바탕으로 제안서 초안을 AI가 자동으로 작성합니다. 며칠 걸리던 제안서
               작성을 몇 시간으로 단축하세요.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" asChild>
+              <Button size="lg" asChild className="bg-gradient-to-r from-[#5E6AD2] to-[#4B56C8] text-white hover:opacity-90">
                 <Link href="/signup">무료로 시작하기</Link>
               </Button>
-              <Button size="lg" variant="outline" asChild>
+              <Button size="lg" variant="outline" asChild className="border-white/[0.1] text-white hover:bg-white/[0.04]">
                 <Link href="/features">모든 기능 보기</Link>
               </Button>
             </div>
@@ -86,20 +86,20 @@ export default function ProposalPage() {
       </section>
 
       {/* Generation Process */}
-      <section className="bg-muted/30 py-16">
+      <section className="bg-[#0A0A0A] py-16">
         <div className="container mx-auto px-4">
-          <h2 className="mb-12 text-center text-3xl font-bold">생성 프로세스</h2>
+          <h2 className="mb-12 text-center text-3xl font-bold text-white">생성 프로세스</h2>
           <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-4">
             {generationProcess.map((item, index) => (
               <div key={item.title} className="text-center">
-                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
-                  <item.icon className="h-8 w-8 text-primary" />
+                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#5E6AD2]/10">
+                  <item.icon className="h-8 w-8 text-[#7C8AEA]" />
                 </div>
-                <div className="text-primary-foreground mx-auto mb-4 flex h-8 w-8 items-center justify-center rounded-full bg-primary text-sm font-bold">
+                <div className="mx-auto mb-4 flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-r from-[#5E6AD2] to-[#4B56C8] text-sm font-bold text-white">
                   {index + 1}
                 </div>
-                <h3 className="mb-2 font-semibold">{item.title}</h3>
-                <p className="text-muted-foreground text-sm">{item.description}</p>
+                <h3 className="mb-2 font-semibold text-white">{item.title}</h3>
+                <p className="text-zinc-400 text-sm">{item.description}</p>
               </div>
             ))}
           </div>
@@ -110,22 +110,22 @@ export default function ProposalPage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
-            <h2 className="mb-4 text-center text-3xl font-bold">제공 템플릿</h2>
-            <p className="text-muted-foreground mb-12 text-center">
+            <h2 className="mb-4 text-center text-3xl font-bold text-white">제공 템플릿</h2>
+            <p className="text-zinc-400 mb-12 text-center">
               다양한 제안서 템플릿을 제공합니다
             </p>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {templates.map((template) => (
-                <div key={template.name} className="bg-card rounded-lg border p-4">
+                <div key={template.name} className="bg-white/[0.04] backdrop-blur-xl border border-white/[0.06] rounded-lg p-4">
                   <div className="mb-2 flex items-start justify-between">
-                    <h3 className="font-medium">{template.name}</h3>
+                    <h3 className="font-medium text-white">{template.name}</h3>
                     <Badge
-                      variant={
+                      className={
                         template.status === 'available'
-                          ? 'default'
+                          ? 'bg-[#5E6AD2]/10 border border-[#5E6AD2]/20 text-[#7C8AEA]'
                           : template.status === 'beta'
-                            ? 'secondary'
-                            : 'outline'
+                            ? 'bg-white/[0.04] border border-white/[0.06] text-zinc-400'
+                            : 'bg-white/[0.02] border border-white/[0.04] text-zinc-500'
                       }
                     >
                       {template.status === 'available'
@@ -135,7 +135,7 @@ export default function ProposalPage() {
                           : 'Enterprise'}
                     </Badge>
                   </div>
-                  <p className="text-muted-foreground text-sm">{template.description}</p>
+                  <p className="text-zinc-500 text-sm">{template.description}</p>
                 </div>
               ))}
             </div>
@@ -144,20 +144,20 @@ export default function ProposalPage() {
       </section>
 
       {/* Features */}
-      <section className="bg-muted/30 py-20">
+      <section className="bg-[#0A0A0A] py-20">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
             <div className="grid items-center gap-12 lg:grid-cols-2">
-              <div className="order-2 flex aspect-video items-center justify-center rounded-xl border bg-gradient-to-br from-primary/5 to-primary/10 lg:order-1">
-                <span className="text-muted-foreground">에디터 스크린샷</span>
+              <div className="order-2 flex aspect-video items-center justify-center rounded-xl bg-white/[0.04] backdrop-blur-xl border border-white/[0.06] bg-gradient-to-br from-[#5E6AD2]/5 to-[#5E6AD2]/10 lg:order-1">
+                <span className="text-zinc-500">에디터 스크린샷</span>
               </div>
               <div className="order-1 lg:order-2">
-                <h2 className="mb-6 text-3xl font-bold">주요 기능</h2>
+                <h2 className="mb-6 text-3xl font-bold text-white">주요 기능</h2>
                 <ul className="space-y-4">
                   {features.map((feature) => (
                     <li key={feature} className="flex items-start gap-3">
-                      <Check className="mt-0.5 h-5 w-5 flex-shrink-0 text-neutral-700" />
-                      <span className="text-lg">{feature}</span>
+                      <Check className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#7C8AEA]" />
+                      <span className="text-lg text-zinc-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -168,11 +168,11 @@ export default function ProposalPage() {
       </section>
 
       {/* CTA */}
-      <section className="text-primary-foreground bg-primary py-16">
+      <section className="bg-gradient-to-r from-[#5E6AD2] to-[#4B56C8] py-16">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="mb-4 text-2xl font-bold md:text-3xl">제안서 작성 시간을 80% 단축하세요</h2>
-          <p className="mb-8 opacity-90">AI가 초안을 작성하면 당신은 검토만 하면 됩니다.</p>
-          <Button size="lg" variant="secondary" asChild>
+          <h2 className="mb-4 text-2xl font-bold text-white md:text-3xl">제안서 작성 시간을 80% 단축하세요</h2>
+          <p className="mb-8 text-white/90">AI가 초안을 작성하면 당신은 검토만 하면 됩니다.</p>
+          <Button size="lg" variant="secondary" asChild className="bg-white text-[#5E6AD2] hover:bg-white/90">
             <Link href="/signup">무료 체험 시작</Link>
           </Button>
         </div>
@@ -183,6 +183,6 @@ export default function ProposalPage() {
         prev={{ label: 'AI 매칭 분석', href: '/features/ai-matching' }}
         next={{ label: '스마트 알림', href: '/features/alerts' }}
       />
-    </>
+    </div>
   );
 }

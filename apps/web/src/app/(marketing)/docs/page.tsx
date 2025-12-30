@@ -71,11 +71,11 @@ export default function DocsPage() {
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
-            <Badge variant="secondary" className="mb-6">
+            <Badge className="mb-6 bg-[#5E6AD2]/10 border border-[#5E6AD2]/20 text-[#7C8AEA]">
               문서
             </Badge>
-            <h1 className="text-4xl font-bold tracking-tight md:text-5xl">Qetta 문서</h1>
-            <p className="text-muted-foreground mt-6 text-lg">
+            <h1 className="text-4xl font-bold tracking-tight text-white md:text-5xl">Qetta 문서</h1>
+            <p className="text-zinc-400 mt-6 text-lg">
               Qetta를 시작하고 활용하는 데 필요한
               <br />
               모든 정보를 찾아보세요.
@@ -85,7 +85,7 @@ export default function DocsPage() {
                 <input
                   type="search"
                   placeholder="문서 검색..."
-                  className="bg-background w-full rounded-lg border px-4 py-3"
+                  className="w-full rounded-lg bg-white/[0.04] border border-white/[0.06] px-4 py-3 text-white placeholder:text-zinc-500"
                 />
               </div>
             </div>
@@ -94,21 +94,21 @@ export default function DocsPage() {
       </section>
 
       {/* Quick Start */}
-      <section className="bg-muted/30 py-16">
+      <section className="bg-[#0A0A0A] py-16">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
-            <h2 className="mb-8 text-center text-2xl font-bold">빠른 시작 (~15분)</h2>
+            <h2 className="mb-8 text-center text-2xl font-bold text-white">빠른 시작 (~15분)</h2>
             <div className="grid gap-4 md:grid-cols-4">
               {quickStart.map((step, index) => (
-                <div key={step.title} className="bg-card rounded-lg border p-4">
+                <div key={step.title} className="bg-white/[0.04] backdrop-blur-xl border border-white/[0.06] rounded-lg p-4">
                   <div className="mb-2 flex items-center gap-2">
-                    <span className="text-primary-foreground flex h-6 w-6 items-center justify-center rounded-full bg-primary text-sm font-medium">
+                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-r from-[#5E6AD2] to-[#4B56C8] text-sm font-medium text-white">
                       {index + 1}
                     </span>
-                    <span className="text-muted-foreground text-xs">{step.time}</span>
+                    <span className="text-zinc-500 text-xs">{step.time}</span>
                   </div>
-                  <h3 className="mb-1 font-medium">{step.title}</h3>
-                  <p className="text-muted-foreground text-sm">{step.description}</p>
+                  <h3 className="mb-1 font-medium text-white">{step.title}</h3>
+                  <p className="text-zinc-400 text-sm">{step.description}</p>
                 </div>
               ))}
             </div>
@@ -120,23 +120,23 @@ export default function DocsPage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-5xl">
-            <h2 className="mb-12 text-center text-3xl font-bold">가이드</h2>
+            <h2 className="mb-12 text-center text-3xl font-bold text-white">가이드</h2>
             <div className="grid gap-6 md:grid-cols-2">
               {guides.map((guide) => (
-                <div key={guide.title} className="bg-card rounded-xl border p-6">
+                <div key={guide.title} className="bg-white/[0.04] backdrop-blur-xl border border-white/[0.06] rounded-xl p-6">
                   <div className="flex items-start gap-4">
-                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10">
-                      <guide.icon className="h-6 w-6 text-primary" />
+                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-[#5E6AD2]/10">
+                      <guide.icon className="h-6 w-6 text-[#7C8AEA]" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="mb-1 font-semibold">{guide.title}</h3>
-                      <p className="text-muted-foreground mb-4 text-sm">{guide.description}</p>
+                      <h3 className="mb-1 font-semibold text-white">{guide.title}</h3>
+                      <p className="text-zinc-400 mb-4 text-sm">{guide.description}</p>
                       <ul className="space-y-2">
                         {guide.articles.map((article) => (
                           <li key={article}>
                             <Link
                               href="#"
-                              className="flex items-center gap-1 text-sm text-primary hover:underline"
+                              className="flex items-center gap-1 text-sm text-[#7C8AEA] hover:underline"
                             >
                               <ArrowRight className="h-3 w-3" />
                               {article}
@@ -154,20 +154,20 @@ export default function DocsPage() {
       </section>
 
       {/* Resources */}
-      <section className="bg-muted/30 py-16">
+      <section className="bg-[#0A0A0A] py-16">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
-            <h2 className="mb-8 text-center text-2xl font-bold">추가 리소스</h2>
+            <h2 className="mb-8 text-center text-2xl font-bold text-white">추가 리소스</h2>
             <div className="grid gap-6 md:grid-cols-3">
               {resources.map((resource) => (
                 <Link
                   key={resource.title}
                   href={resource.link}
-                  className="bg-card rounded-xl border p-6 text-center transition-shadow hover:shadow-md"
+                  className="bg-white/[0.04] backdrop-blur-xl border border-white/[0.06] rounded-xl p-6 text-center transition-all hover:border-[#5E6AD2]/50 hover:shadow-lg"
                 >
-                  <resource.icon className="mx-auto mb-4 h-8 w-8 text-primary" />
-                  <h3 className="mb-1 font-semibold">{resource.title}</h3>
-                  <p className="text-muted-foreground text-sm">{resource.description}</p>
+                  <resource.icon className="mx-auto mb-4 h-8 w-8 text-[#7C8AEA]" />
+                  <h3 className="mb-1 font-semibold text-white">{resource.title}</h3>
+                  <p className="text-zinc-400 text-sm">{resource.description}</p>
                 </Link>
               ))}
             </div>
@@ -178,11 +178,11 @@ export default function DocsPage() {
       {/* CTA */}
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="mb-4 text-2xl font-bold">찾으시는 내용이 없나요?</h2>
-          <p className="text-muted-foreground mb-8">
+          <h2 className="mb-4 text-2xl font-bold text-white">찾으시는 내용이 없나요?</h2>
+          <p className="text-zinc-400 mb-8">
             고객 지원팀에 문의하시면 도움을 드리겠습니다.
           </p>
-          <Button asChild>
+          <Button className="bg-gradient-to-r from-[#5E6AD2] to-[#4B56C8] text-white hover:from-[#4B56C8] hover:to-[#3D48B0]" asChild>
             <Link href="/support">고객 지원 문의</Link>
           </Button>
         </div>

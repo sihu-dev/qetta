@@ -54,20 +54,20 @@ const industries = [
 
 export default function UseCasesPage() {
   return (
-    <>
+    <div className="min-h-screen bg-[#0D0D0F]">
       {/* Hero */}
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
-            <Badge variant="secondary" className="mb-6">
+            <Badge className="mb-6 bg-[#5E6AD2]/10 border border-[#5E6AD2]/20 text-[#7C8AEA]">
               활용 사례
             </Badge>
-            <h1 className="text-4xl font-bold tracking-tight md:text-5xl">
+            <h1 className="text-4xl font-bold tracking-tight text-white md:text-5xl">
               다양한 산업에서
               <br />
               활용되고 있습니다
             </h1>
-            <p className="text-muted-foreground mt-6 text-lg">
+            <p className="text-zinc-400 mt-6 text-lg">
               제조업부터 IT 서비스까지, Qetta는 다양한 산업의
               <br />
               입찰 프로세스를 혁신하고 있습니다.
@@ -83,30 +83,30 @@ export default function UseCasesPage() {
             {industries.map((industry) => (
               <div
                 key={industry.slug}
-                className="bg-card rounded-2xl border p-8 transition-shadow hover:shadow-lg"
+                className="bg-white/[0.04] backdrop-blur-xl border border-white/[0.06] rounded-2xl p-8 transition-shadow hover:shadow-lg hover:shadow-[#5E6AD2]/5"
               >
                 <div className="flex flex-col gap-8 lg:flex-row">
                   {/* Left */}
                   <div className="lg:w-2/3">
                     <div className="mb-4 flex items-center gap-4">
-                      <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
-                        <industry.icon className="h-7 w-7 text-primary" />
+                      <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-[#5E6AD2]/10">
+                        <industry.icon className="h-7 w-7 text-[#7C8AEA]" />
                       </div>
                       <div>
                         <div className="flex items-center gap-2">
-                          <h2 className="text-2xl font-bold">{industry.name}</h2>
+                          <h2 className="text-2xl font-bold text-white">{industry.name}</h2>
                         </div>
-                        <p className="text-muted-foreground">{industry.description}</p>
+                        <p className="text-zinc-400">{industry.description}</p>
                       </div>
                     </div>
                     <div className="mb-6 flex flex-wrap gap-2">
                       {industry.examples.map((example) => (
-                        <Badge key={example} variant="secondary">
+                        <Badge key={example} className="bg-[#5E6AD2]/10 border border-[#5E6AD2]/20 text-[#7C8AEA]">
                           {example}
                         </Badge>
                       ))}
                     </div>
-                    <Button variant="outline" asChild>
+                    <Button variant="outline" asChild className="border-white/[0.06] text-zinc-400 hover:bg-white/[0.04] hover:text-white">
                       <Link href={`/use-cases/${industry.slug}`}>
                         자세히 보기 <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
@@ -115,15 +115,15 @@ export default function UseCasesPage() {
 
                   {/* Right - Stats */}
                   <div className="flex gap-4 lg:w-1/3 lg:flex-col">
-                    <div className="bg-muted/50 flex-1 rounded-lg p-4 text-center">
-                      <p className="text-3xl font-bold text-primary">{industry.stats.bidWin}</p>
-                      <p className="text-muted-foreground text-sm">평균 낙찰률</p>
+                    <div className="bg-[#0A0A0A] flex-1 rounded-lg p-4 text-center border border-white/[0.06]">
+                      <p className="text-3xl font-bold text-[#7C8AEA]">{industry.stats.bidWin}</p>
+                      <p className="text-zinc-500 text-sm">평균 낙찰률</p>
                     </div>
-                    <div className="bg-muted/50 flex-1 rounded-lg p-4 text-center">
-                      <p className="text-3xl font-bold text-neutral-700">
+                    <div className="bg-[#0A0A0A] flex-1 rounded-lg p-4 text-center border border-white/[0.06]">
+                      <p className="text-3xl font-bold text-white">
                         {industry.stats.timeReduction}
                       </p>
-                      <p className="text-muted-foreground text-sm">시간 절감</p>
+                      <p className="text-zinc-500 text-sm">시간 절감</p>
                     </div>
                   </div>
                 </div>
@@ -134,24 +134,24 @@ export default function UseCasesPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-muted/30 py-20">
+      <section className="bg-[#0A0A0A] py-20">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="mb-4 text-2xl font-bold md:text-3xl">
+          <h2 className="mb-4 text-2xl font-bold text-white md:text-3xl">
             귀사의 산업에 맞는 솔루션이 궁금하신가요?
           </h2>
-          <p className="text-muted-foreground mb-8">
+          <p className="text-zinc-400 mb-8">
             전문 컨설턴트가 귀사에 최적화된 활용 방안을 제안해 드립니다.
           </p>
           <div className="flex flex-col justify-center gap-4 sm:flex-row">
-            <Button size="lg" variant="outline" asChild>
+            <Button size="lg" variant="outline" asChild className="border-white/[0.06] text-zinc-400 hover:bg-white/[0.04] hover:text-white">
               <Link href="/contact">상담 요청</Link>
             </Button>
-            <Button size="lg" asChild>
+            <Button size="lg" asChild className="bg-gradient-to-r from-[#5E6AD2] to-[#4B56C8] text-white hover:opacity-90">
               <Link href="/signup">무료 체험 시작</Link>
             </Button>
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }

@@ -24,9 +24,9 @@ export function Logo({ className, showBeta = true, size = 'md' }: LogoProps) {
 
   return (
     <Link href="/" className={cn('flex items-center gap-2', className)}>
-      <span className={cn('text-foreground font-bold', sizeClasses[size])}>{branding.name}</span>
+      <span className={cn('text-white font-bold', sizeClasses[size])}>{branding.name}</span>
       {showBeta && (
-        <span className="rounded bg-primary/10 px-1.5 py-0.5 text-xs font-medium text-primary">
+        <span className="rounded bg-[#5E6AD2]/10 px-1.5 py-0.5 text-xs font-medium text-[#7C8AEA]">
           Beta
         </span>
       )}

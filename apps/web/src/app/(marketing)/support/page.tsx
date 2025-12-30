@@ -89,11 +89,11 @@ export default function SupportPage() {
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
-            <Badge variant="secondary" className="mb-6">
+            <Badge className="mb-6 bg-[#5E6AD2]/10 border border-[#5E6AD2]/20 text-[#7C8AEA]">
               고객 지원
             </Badge>
-            <h1 className="text-4xl font-bold tracking-tight md:text-5xl">무엇을 도와드릴까요?</h1>
-            <p className="text-muted-foreground mt-6 text-lg">
+            <h1 className="text-4xl font-bold tracking-tight text-white md:text-5xl">무엇을 도와드릴까요?</h1>
+            <p className="text-zinc-400 mt-6 text-lg">
               Qetta 팀이 항상 도움을 드릴 준비가 되어 있습니다.
               <br />
               궁금한 점이 있으시면 언제든 문의해주세요.
@@ -103,21 +103,21 @@ export default function SupportPage() {
       </section>
 
       {/* Contact Methods */}
-      <section className="bg-muted/30 py-16">
+      <section className="bg-[#0A0A0A] py-16">
         <div className="container mx-auto px-4">
           <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-3">
             {contactMethods.map((method) => (
-              <div key={method.title} className="bg-card rounded-xl border p-6 text-center">
-                <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10">
-                  <method.icon className="h-7 w-7 text-primary" />
+              <div key={method.title} className="bg-white/[0.04] backdrop-blur-xl border border-white/[0.06] rounded-xl p-6 text-center">
+                <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#5E6AD2]/10">
+                  <method.icon className="h-7 w-7 text-[#7C8AEA]" />
                 </div>
-                <h3 className="mb-2 font-semibold">{method.title}</h3>
-                <p className="text-muted-foreground mb-2 text-sm">{method.description}</p>
-                <div className="text-muted-foreground mb-4 flex items-center justify-center gap-1 text-xs">
+                <h3 className="mb-2 font-semibold text-white">{method.title}</h3>
+                <p className="text-zinc-400 mb-2 text-sm">{method.description}</p>
+                <div className="text-zinc-500 mb-4 flex items-center justify-center gap-1 text-xs">
                   <Clock className="h-3 w-3" />
                   <span>{method.availability}</span>
                 </div>
-                <Button variant="outline" size="sm" className="w-full">
+                <Button variant="outline" size="sm" className="w-full border-white/[0.06] text-white hover:bg-white/[0.06]">
                   {method.action}
                 </Button>
               </div>
@@ -131,14 +131,14 @@ export default function SupportPage() {
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl">
             <div className="mb-12 flex items-center justify-center gap-3">
-              <HelpCircle className="h-8 w-8 text-primary" />
-              <h2 className="text-3xl font-bold">자주 묻는 질문</h2>
+              <HelpCircle className="h-8 w-8 text-[#7C8AEA]" />
+              <h2 className="text-3xl font-bold text-white">자주 묻는 질문</h2>
             </div>
             <div className="space-y-4">
               {faqs.map((faq) => (
-                <div key={faq.question} className="bg-card rounded-xl border p-6">
-                  <h3 className="mb-2 font-semibold">{faq.question}</h3>
-                  <p className="text-muted-foreground">{faq.answer}</p>
+                <div key={faq.question} className="bg-white/[0.04] backdrop-blur-xl border border-white/[0.06] rounded-xl p-6">
+                  <h3 className="mb-2 font-semibold text-white">{faq.question}</h3>
+                  <p className="text-zinc-400">{faq.answer}</p>
                 </div>
               ))}
             </div>
@@ -147,22 +147,22 @@ export default function SupportPage() {
       </section>
 
       {/* Support Plans */}
-      <section className="bg-muted/30 py-20">
+      <section className="bg-[#0A0A0A] py-20">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
-            <h2 className="mb-4 text-center text-3xl font-bold">플랜별 지원</h2>
-            <p className="text-muted-foreground mb-12 text-center">
+            <h2 className="mb-4 text-center text-3xl font-bold text-white">플랜별 지원</h2>
+            <p className="text-zinc-400 mb-12 text-center">
               플랜에 따라 다양한 수준의 지원을 제공합니다
             </p>
             <div className="grid gap-6 md:grid-cols-3">
               {supportPlans.map((plan) => (
-                <div key={plan.plan} className="bg-card rounded-xl border p-6">
-                  <h3 className="mb-2 text-xl font-bold">{plan.plan}</h3>
-                  <p className="mb-4 text-sm text-primary">응답 시간: {plan.responseTime}</p>
+                <div key={plan.plan} className="bg-white/[0.04] backdrop-blur-xl border border-white/[0.06] rounded-xl p-6">
+                  <h3 className="mb-2 text-xl font-bold text-white">{plan.plan}</h3>
+                  <p className="mb-4 text-sm text-[#7C8AEA]">응답 시간: {plan.responseTime}</p>
                   <ul className="space-y-2">
                     {plan.features.map((feature) => (
-                      <li key={feature} className="flex items-center gap-2 text-sm">
-                        <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+                      <li key={feature} className="flex items-center gap-2 text-sm text-zinc-300">
+                        <span className="h-1.5 w-1.5 rounded-full bg-[#5E6AD2]" />
                         {feature}
                       </li>
                     ))}
@@ -178,14 +178,14 @@ export default function SupportPage() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-2xl text-center">
-            <Book className="mx-auto mb-4 h-10 w-10 text-primary" />
-            <h2 className="mb-4 text-2xl font-bold">셀프 서비스 리소스</h2>
-            <p className="text-muted-foreground mb-8">문서와 가이드에서 답을 찾아보세요.</p>
+            <Book className="mx-auto mb-4 h-10 w-10 text-[#7C8AEA]" />
+            <h2 className="mb-4 text-2xl font-bold text-white">셀프 서비스 리소스</h2>
+            <p className="text-zinc-400 mb-8">문서와 가이드에서 답을 찾아보세요.</p>
             <div className="flex flex-col justify-center gap-4 sm:flex-row">
-              <Button variant="outline" asChild>
+              <Button variant="outline" className="border-white/[0.06] text-white hover:bg-white/[0.06]" asChild>
                 <Link href="/docs">문서 보기</Link>
               </Button>
-              <Button asChild>
+              <Button className="bg-gradient-to-r from-[#5E6AD2] to-[#4B56C8] text-white hover:from-[#4B56C8] hover:to-[#3D48B0]" asChild>
                 <Link href="/docs">API 레퍼런스</Link>
               </Button>
             </div>

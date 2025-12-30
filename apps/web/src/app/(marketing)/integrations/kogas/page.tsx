@@ -38,23 +38,30 @@ const categories = [
 
 export default function KogasPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#0D0D0F]">
       {/* Hero */}
-      <section className="border-b">
+      <section className="border-b border-white/[0.06]">
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-3xl">
-            <Badge variant="secondary" className="mb-4">
+            <Badge className="mb-4 bg-[#5E6AD2]/10 border border-[#5E6AD2]/20 text-[#7C8AEA]">
               한국가스공사
             </Badge>
-            <h1 className="mb-4 text-4xl font-bold text-slate-900">KOGAS 입찰 자동화</h1>
-            <p className="mb-8 text-lg text-slate-600">
+            <h1 className="mb-4 text-4xl font-bold text-white">KOGAS 입찰 자동화</h1>
+            <p className="mb-8 text-lg text-zinc-400">
               한국가스공사의 가스 설비, 배관, 계측 장비 입찰 공고를 자동으로 수집하고 분석합니다.
             </p>
             <div className="flex gap-4">
-              <Button asChild>
+              <Button
+                asChild
+                className="bg-gradient-to-r from-[#5E6AD2] to-[#4B56C8] text-white hover:opacity-90"
+              >
                 <Link href="/signup">무료로 시작하기</Link>
               </Button>
-              <Button variant="outline" asChild>
+              <Button
+                variant="outline"
+                asChild
+                className="border-white/[0.06] bg-white/[0.04] text-white hover:bg-white/[0.08]"
+              >
                 <Link href="/integrations">다른 플랫폼 보기</Link>
               </Button>
             </div>
@@ -63,13 +70,13 @@ export default function KogasPage() {
       </section>
 
       {/* 통계 */}
-      <section className="border-b bg-slate-50">
+      <section className="border-b border-white/[0.06] bg-[#0A0A0A]">
         <div className="container mx-auto px-4 py-12">
           <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
-                <div className="font-mono text-3xl font-bold text-slate-900">{stat.value}</div>
-                <div className="text-sm text-slate-500">{stat.label}</div>
+                <div className="font-mono text-3xl font-bold text-white">{stat.value}</div>
+                <div className="text-sm text-zinc-500">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -77,14 +84,17 @@ export default function KogasPage() {
       </section>
 
       {/* 기능 */}
-      <section className="border-b">
+      <section className="border-b border-white/[0.06]">
         <div className="container mx-auto px-4 py-16">
-          <h2 className="mb-8 text-2xl font-bold text-slate-900">연동 기능</h2>
+          <h2 className="mb-8 text-2xl font-bold text-white">연동 기능</h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {features.map((item) => (
-              <div key={item.title} className="rounded-lg border p-6">
-                <h3 className="mb-2 font-semibold text-slate-900">{item.title}</h3>
-                <p className="text-sm text-slate-500">{item.desc}</p>
+              <div
+                key={item.title}
+                className="rounded-lg bg-white/[0.04] backdrop-blur-xl border border-white/[0.06] p-6"
+              >
+                <h3 className="mb-2 font-semibold text-white">{item.title}</h3>
+                <p className="text-sm text-zinc-400">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -92,12 +102,16 @@ export default function KogasPage() {
       </section>
 
       {/* 카테고리 */}
-      <section className="border-b bg-slate-50">
+      <section className="border-b border-white/[0.06] bg-[#0A0A0A]">
         <div className="container mx-auto px-4 py-16">
-          <h2 className="mb-8 text-2xl font-bold text-slate-900">수집 카테고리</h2>
+          <h2 className="mb-8 text-2xl font-bold text-white">수집 카테고리</h2>
           <div className="flex flex-wrap gap-2">
             {categories.map((cat) => (
-              <Badge key={cat} variant="outline" className="px-3 py-1.5 text-sm">
+              <Badge
+                key={cat}
+                variant="outline"
+                className="px-3 py-1.5 text-sm border-white/[0.06] bg-white/[0.04] text-zinc-300"
+              >
                 {cat}
               </Badge>
             ))}
@@ -106,25 +120,25 @@ export default function KogasPage() {
       </section>
 
       {/* 데이터 흐름 */}
-      <section className="border-b">
+      <section className="border-b border-white/[0.06]">
         <div className="container mx-auto px-4 py-16">
-          <h2 className="mb-8 text-2xl font-bold text-slate-900">데이터 수집 프로세스</h2>
+          <h2 className="mb-8 text-2xl font-bold text-white">데이터 수집 프로세스</h2>
           <div className="grid gap-4 md:grid-cols-4">
-            <div className="rounded-lg border p-4 text-center">
-              <div className="text-lg font-semibold text-slate-900">1. 크롤링</div>
-              <p className="text-sm text-slate-500">KOGAS 입찰 페이지</p>
+            <div className="rounded-lg bg-white/[0.04] backdrop-blur-xl border border-white/[0.06] p-4 text-center">
+              <div className="text-lg font-semibold text-white">1. 크롤링</div>
+              <p className="text-sm text-zinc-400">KOGAS 입찰 페이지</p>
             </div>
-            <div className="rounded-lg border p-4 text-center">
-              <div className="text-lg font-semibold text-slate-900">2. 정제</div>
-              <p className="text-sm text-slate-500">데이터 표준화</p>
+            <div className="rounded-lg bg-white/[0.04] backdrop-blur-xl border border-white/[0.06] p-4 text-center">
+              <div className="text-lg font-semibold text-white">2. 정제</div>
+              <p className="text-sm text-zinc-400">데이터 표준화</p>
             </div>
-            <div className="rounded-lg border p-4 text-center">
-              <div className="text-lg font-semibold text-slate-900">3. 분석</div>
-              <p className="text-sm text-slate-500">매칭 점수 계산</p>
+            <div className="rounded-lg bg-white/[0.04] backdrop-blur-xl border border-white/[0.06] p-4 text-center">
+              <div className="text-lg font-semibold text-white">3. 분석</div>
+              <p className="text-sm text-zinc-400">매칭 점수 계산</p>
             </div>
-            <div className="rounded-lg border p-4 text-center">
-              <div className="text-lg font-semibold text-slate-900">4. 알림</div>
-              <p className="text-sm text-slate-500">적합 공고 통지</p>
+            <div className="rounded-lg bg-white/[0.04] backdrop-blur-xl border border-white/[0.06] p-4 text-center">
+              <div className="text-lg font-semibold text-white">4. 알림</div>
+              <p className="text-sm text-zinc-400">적합 공고 통지</p>
             </div>
           </div>
         </div>
@@ -133,9 +147,13 @@ export default function KogasPage() {
       {/* CTA */}
       <section>
         <div className="container mx-auto px-4 py-16 text-center">
-          <h2 className="mb-4 text-2xl font-bold text-slate-900">KOGAS 입찰 자동화 시작하기</h2>
-          <p className="mb-6 text-slate-600">Pro 플랜 이상에서 KOGAS 연동을 이용할 수 있습니다.</p>
-          <Button asChild size="lg">
+          <h2 className="mb-4 text-2xl font-bold text-white">KOGAS 입찰 자동화 시작하기</h2>
+          <p className="mb-6 text-zinc-400">Pro 플랜 이상에서 KOGAS 연동을 이용할 수 있습니다.</p>
+          <Button
+            asChild
+            size="lg"
+            className="bg-gradient-to-r from-[#5E6AD2] to-[#4B56C8] text-white hover:opacity-90"
+          >
             <Link href="/pricing">요금제 확인</Link>
           </Button>
         </div>

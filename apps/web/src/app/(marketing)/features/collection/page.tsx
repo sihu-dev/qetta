@@ -51,7 +51,7 @@ const benefits = [
 
 export default function CollectionPage() {
   return (
-    <>
+    <div className="bg-[#0D0D0F] min-h-screen">
       {/* Hero */}
       <PageHero
         icon={Search}
@@ -70,22 +70,27 @@ export default function CollectionPage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
-            <h2 className="mb-4 text-center text-3xl font-bold">지원 플랫폼</h2>
-            <p className="text-muted-foreground mb-12 text-center">
+            <h2 className="mb-4 text-center text-3xl font-bold text-white">지원 플랫폼</h2>
+            <p className="text-zinc-400 mb-12 text-center">
               국내외 주요 공공입찰 플랫폼을 지원합니다
             </p>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {platforms.map((platform) => (
                 <div
                   key={platform.name}
-                  className="bg-card flex items-center gap-4 rounded-lg border p-4"
+                  className="bg-white/[0.04] backdrop-blur-xl border border-white/[0.06] flex items-center gap-4 rounded-lg p-4"
                 >
                   <span className="text-3xl">{platform.logo}</span>
                   <div className="flex-1">
-                    <h3 className="font-medium">{platform.name}</h3>
-                    <p className="text-muted-foreground text-sm">{platform.country}</p>
+                    <h3 className="font-medium text-white">{platform.name}</h3>
+                    <p className="text-zinc-500 text-sm">{platform.country}</p>
                   </div>
-                  <Badge variant={platform.status === '지원' ? 'default' : 'secondary'}>
+                  <Badge
+                    className={platform.status === '지원'
+                      ? 'bg-[#5E6AD2]/10 border border-[#5E6AD2]/20 text-[#7C8AEA]'
+                      : 'bg-white/[0.04] border border-white/[0.06] text-zinc-400'
+                    }
+                  >
                     {platform.status}
                   </Badge>
                 </div>
@@ -96,16 +101,16 @@ export default function CollectionPage() {
       </section>
 
       {/* Benefits */}
-      <section className="bg-muted/30 py-20">
+      <section className="bg-[#0A0A0A] py-20">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
             <div className="grid items-center gap-12 lg:grid-cols-2">
               <div>
-                <h2 className="mb-6 text-3xl font-bold">기대 효과</h2>
+                <h2 className="mb-6 text-3xl font-bold text-white">기대 효과</h2>
                 <CheckList items={benefits} className="text-lg" />
               </div>
-              <div className="flex aspect-video items-center justify-center rounded-xl border bg-gradient-to-br from-primary/5 to-primary/10">
-                <span className="text-muted-foreground">스크린샷 영역</span>
+              <div className="flex aspect-video items-center justify-center rounded-xl bg-white/[0.04] backdrop-blur-xl border border-white/[0.06] bg-gradient-to-br from-[#5E6AD2]/5 to-[#5E6AD2]/10">
+                <span className="text-zinc-500">스크린샷 영역</span>
               </div>
             </div>
           </div>
@@ -114,6 +119,6 @@ export default function CollectionPage() {
 
       {/* Next Feature */}
       <PageNavigation next={{ label: 'AI 기반 매칭 분석', href: '/features/ai-matching' }} />
-    </>
+    </div>
   );
 }

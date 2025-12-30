@@ -71,7 +71,7 @@ export function Header({ className }: HeaderProps) {
   return (
     <header
       className={cn(
-        'bg-background/95 supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 w-full border-b backdrop-blur',
+        'bg-[#0D0D0F]/95 supports-[backdrop-filter]:bg-[#0D0D0F]/60 sticky top-0 z-50 w-full border-b border-white/[0.06] backdrop-blur',
         className
       )}
     >
@@ -87,7 +87,7 @@ export function Header({ className }: HeaderProps) {
                 {link.children ? (
                   <>
                     <button
-                      className="text-muted-foreground hover:text-foreground flex items-center gap-1 py-2 text-sm font-medium transition-colors"
+                      className="text-zinc-400 hover:text-white flex items-center gap-1 py-2 text-sm font-medium transition-colors"
                       aria-haspopup="true"
                       aria-expanded="false"
                       aria-label={`${link.label} 메뉴 열기`}
@@ -96,16 +96,16 @@ export function Header({ className }: HeaderProps) {
                       <ChevronDown className="h-4 w-4" aria-hidden="true" />
                     </button>
                     <div className="invisible absolute left-0 top-full pt-2 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100">
-                      <div className="bg-background w-56 rounded-lg border p-2 shadow-lg">
+                      <div className="bg-[#0D0D0F] w-56 rounded-lg border border-white/[0.06] p-2 shadow-lg">
                         {link.children.map((child) => (
                           <Link
                             key={child.href}
                             href={child.href}
-                            className="hover:bg-muted block rounded-md px-3 py-2 transition-colors"
+                            className="hover:bg-white/[0.04] block rounded-md px-3 py-2 transition-colors"
                           >
-                            <span className="block text-sm font-medium">{child.label}</span>
+                            <span className="block text-sm font-medium text-white">{child.label}</span>
                             {child.description && (
-                              <span className="text-muted-foreground block text-xs">
+                              <span className="text-zinc-500 block text-xs">
                                 {child.description}
                               </span>
                             )}
@@ -117,7 +117,7 @@ export function Header({ className }: HeaderProps) {
                 ) : (
                   <Link
                     href={link.href}
-                    className="text-muted-foreground hover:text-foreground py-2 text-sm font-medium transition-colors"
+                    className="text-zinc-400 hover:text-white py-2 text-sm font-medium transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -148,20 +148,20 @@ export function Header({ className }: HeaderProps) {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="max-h-[70vh] overflow-y-auto border-t py-4 md:hidden">
+          <div className="max-h-[70vh] overflow-y-auto border-t border-white/[0.06] py-4 md:hidden">
             <nav className="flex flex-col gap-2">
               {navLinks.map((link) => (
                 <div key={link.href}>
                   {link.children ? (
                     <div className="space-y-1">
-                      <span className="text-muted-foreground px-2 text-xs font-semibold uppercase tracking-wider">
+                      <span className="text-zinc-500 px-2 text-xs font-semibold uppercase tracking-wider">
                         {link.label}
                       </span>
                       {link.children.map((child) => (
                         <Link
                           key={child.href}
                           href={child.href}
-                          className="text-foreground hover:bg-muted block rounded-md px-2 py-2 text-sm font-medium transition-colors"
+                          className="text-white hover:bg-white/[0.04] block rounded-md px-2 py-2 text-sm font-medium transition-colors"
                           onClick={() => setMobileMenuOpen(false)}
                         >
                           {child.label}
@@ -171,7 +171,7 @@ export function Header({ className }: HeaderProps) {
                   ) : (
                     <Link
                       href={link.href}
-                      className="text-foreground hover:bg-muted block rounded-md px-2 py-2 text-sm font-medium transition-colors"
+                      className="text-white hover:bg-white/[0.04] block rounded-md px-2 py-2 text-sm font-medium transition-colors"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {link.label}
@@ -179,7 +179,7 @@ export function Header({ className }: HeaderProps) {
                   )}
                 </div>
               ))}
-              <div className="mt-2 flex flex-col gap-2 border-t pt-4">
+              <div className="mt-2 flex flex-col gap-2 border-t border-white/[0.06] pt-4">
                 <Button variant="outline" asChild className="w-full">
                   <Link href="/login">로그인</Link>
                 </Button>

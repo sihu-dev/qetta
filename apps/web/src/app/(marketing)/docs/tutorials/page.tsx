@@ -93,36 +93,36 @@ export default function TutorialsPage() {
     <section className="py-20">
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-4xl">
-          <Badge variant="secondary" className="mb-6">
+          <Badge className="mb-6 bg-[#5E6AD2]/10 border border-[#5E6AD2]/20 text-[#7C8AEA]">
             학습
           </Badge>
-          <h1 className="mb-4 text-4xl font-bold">튜토리얼</h1>
-          <p className="text-muted-foreground mb-12 text-xl">
+          <h1 className="mb-4 text-4xl font-bold text-white">튜토리얼</h1>
+          <p className="text-zinc-400 mb-12 text-xl">
             단계별 가이드로 Qetta를 마스터하세요.
           </p>
 
           {/* 튜토리얼 카테고리 */}
           {tutorials.map((category, catIndex) => (
             <div key={catIndex} className="mb-12">
-              <h2 className="mb-6 text-2xl font-semibold">{category.category}</h2>
+              <h2 className="mb-6 text-2xl font-semibold text-white">{category.category}</h2>
               <div className="space-y-4">
                 {category.items.map((tutorial, tutIndex) => (
                   <div
                     key={tutIndex}
-                    className="group cursor-pointer rounded-lg border p-6 transition-colors hover:border-primary/50"
+                    className="group cursor-pointer rounded-lg border border-white/[0.06] bg-white/[0.04] p-6 transition-colors hover:border-[#5E6AD2]/50"
                   >
                     <div className="flex items-start justify-between">
                       <div className="flex-1">
                         <div className="mb-2 flex items-center gap-3">
-                          <h3 className="font-semibold transition-colors group-hover:text-primary">
+                          <h3 className="font-semibold text-white transition-colors group-hover:text-[#7C8AEA]">
                             {tutorial.title}
                           </h3>
-                          <Badge variant="outline" className="text-xs">
+                          <Badge variant="outline" className="text-xs border-white/[0.06] text-zinc-400">
                             {tutorial.level}
                           </Badge>
                         </div>
-                        <p className="text-muted-foreground mb-3 text-sm">{tutorial.description}</p>
-                        <div className="flex items-center gap-4 text-xs text-gray-500">
+                        <p className="text-zinc-400 mb-3 text-sm">{tutorial.description}</p>
+                        <div className="flex items-center gap-4 text-xs text-zinc-500">
                           <span className="flex items-center gap-1">
                             <Clock className="h-3 w-3" />
                             {tutorial.duration}
@@ -130,8 +130,8 @@ export default function TutorialsPage() {
                         </div>
                       </div>
                       <div className="ml-4">
-                        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 transition-colors group-hover:bg-primary group-hover:text-white">
-                          <Play className="h-4 w-4" />
+                        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#5E6AD2]/10 transition-colors group-hover:bg-gradient-to-r group-hover:from-[#5E6AD2] group-hover:to-[#4B56C8] group-hover:text-white">
+                          <Play className="h-4 w-4 text-[#7C8AEA] group-hover:text-white" />
                         </div>
                       </div>
                     </div>
@@ -142,19 +142,19 @@ export default function TutorialsPage() {
           ))}
 
           {/* 도움이 필요하신가요? */}
-          <div className="bg-muted rounded-lg p-8 text-center">
-            <h3 className="mb-4 text-xl font-semibold">도움이 필요하신가요?</h3>
-            <p className="text-muted-foreground mb-6">
+          <div className="bg-white/[0.04] backdrop-blur-xl border border-white/[0.06] rounded-lg p-8 text-center">
+            <h3 className="mb-4 text-xl font-semibold text-white">도움이 필요하신가요?</h3>
+            <p className="text-zinc-400 mb-6">
               튜토리얼에서 원하는 내용을 찾지 못하셨나요?
               <br />
               지원팀에 문의해 주세요.
             </p>
             <div className="flex justify-center gap-4">
               <Link href="/support">
-                <Button>지원 센터</Button>
+                <Button className="bg-gradient-to-r from-[#5E6AD2] to-[#4B56C8] text-white hover:from-[#4B56C8] hover:to-[#3D48B0]">지원 센터</Button>
               </Link>
               <Link href="/contact">
-                <Button variant="outline">문의하기</Button>
+                <Button variant="outline" className="border-white/[0.06] text-white hover:bg-white/[0.06]">문의하기</Button>
               </Link>
             </div>
           </div>

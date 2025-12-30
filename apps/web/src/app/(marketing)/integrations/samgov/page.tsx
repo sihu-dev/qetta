@@ -65,14 +65,14 @@ const stats = [
 
 export default function SamgovPage() {
   return (
-    <>
+    <div className="min-h-screen bg-[#0D0D0F]">
       {/* Hero */}
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
             <Link
               href="/integrations"
-              className="text-muted-foreground hover:text-foreground mb-6 inline-flex items-center gap-2 text-sm"
+              className="mb-6 inline-flex items-center gap-2 text-sm text-zinc-400 hover:text-white"
             >
               <ArrowLeft className="h-4 w-4" /> 연동 플랫폼으로 돌아가기
             </Link>
@@ -80,21 +80,32 @@ export default function SamgovPage() {
               <span className="text-5xl">🇺🇸</span>
               <div>
                 <div className="flex items-center gap-2">
-                  <h1 className="text-3xl font-bold md:text-4xl">SAM.gov</h1>
-                  <Badge>지원</Badge>
+                  <h1 className="text-3xl font-bold text-white md:text-4xl">SAM.gov</h1>
+                  <Badge className="bg-[#5E6AD2]/10 border border-[#5E6AD2]/20 text-[#7C8AEA]">
+                    지원
+                  </Badge>
                 </div>
-                <p className="text-muted-foreground">System for Award Management</p>
+                <p className="text-zinc-400">System for Award Management</p>
               </div>
             </div>
-            <p className="text-muted-foreground mb-8 max-w-2xl text-xl">
+            <p className="mb-8 max-w-2xl text-xl text-zinc-400">
               미국 연방정부 공공조달 포털인 SAM.gov의 모든 계약 기회를 Qetta에서 관리하세요. 미국
               정부 조달 시장 진출의 파트너가 되겠습니다.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" asChild>
+              <Button
+                size="lg"
+                asChild
+                className="bg-gradient-to-r from-[#5E6AD2] to-[#4B56C8] text-white hover:opacity-90"
+              >
                 <Link href="/signup">무료로 시작하기</Link>
               </Button>
-              <Button size="lg" variant="outline" asChild>
+              <Button
+                size="lg"
+                variant="outline"
+                asChild
+                className="border-white/[0.06] bg-white/[0.04] text-white hover:bg-white/[0.08]"
+              >
                 <Link href="https://sam.gov" target="_blank">
                   SAM.gov 방문 →
                 </Link>
@@ -105,13 +116,13 @@ export default function SamgovPage() {
       </section>
 
       {/* Stats */}
-      <section className="bg-muted/30 py-12">
+      <section className="bg-[#0A0A0A] py-12">
         <div className="container mx-auto px-4">
           <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-4">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
-                <p className="text-2xl font-bold text-primary">{stat.value}</p>
-                <p className="text-muted-foreground text-sm">{stat.label}</p>
+                <p className="text-2xl font-bold text-[#7C8AEA]">{stat.value}</p>
+                <p className="text-sm text-zinc-400">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -121,15 +132,18 @@ export default function SamgovPage() {
       {/* Features */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <h2 className="mb-12 text-center text-3xl font-bold">연동 기능</h2>
+          <h2 className="mb-12 text-center text-3xl font-bold text-white">연동 기능</h2>
           <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-2 lg:grid-cols-4">
             {features.map((feature) => (
-              <div key={feature.title} className="bg-card rounded-xl border p-6">
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
-                  <feature.icon className="h-6 w-6 text-primary" />
+              <div
+                key={feature.title}
+                className="rounded-xl bg-white/[0.04] backdrop-blur-xl border border-white/[0.06] p-6"
+              >
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-[#5E6AD2]/10">
+                  <feature.icon className="h-6 w-6 text-[#7C8AEA]" />
                 </div>
-                <h3 className="mb-2 font-semibold">{feature.title}</h3>
-                <p className="text-muted-foreground text-sm">{feature.description}</p>
+                <h3 className="mb-2 font-semibold text-white">{feature.title}</h3>
+                <p className="text-sm text-zinc-400">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -137,16 +151,20 @@ export default function SamgovPage() {
       </section>
 
       {/* Agencies */}
-      <section className="bg-muted/30 py-20">
+      <section className="bg-[#0A0A0A] py-20">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
-            <h2 className="mb-4 text-center text-3xl font-bold">주요 연방 기관</h2>
-            <p className="text-muted-foreground mb-12 text-center">
+            <h2 className="mb-4 text-center text-3xl font-bold text-white">주요 연방 기관</h2>
+            <p className="mb-12 text-center text-zinc-400">
               미국 연방정부의 모든 기관 공고를 수집합니다
             </p>
             <div className="flex flex-wrap justify-center gap-2">
               {agencies.map((agency) => (
-                <Badge key={agency} variant="outline" className="px-3 py-1.5 text-sm">
+                <Badge
+                  key={agency}
+                  variant="outline"
+                  className="px-3 py-1.5 text-sm border-white/[0.06] bg-white/[0.04] text-zinc-300"
+                >
                   {agency}
                 </Badge>
               ))}
@@ -159,18 +177,21 @@ export default function SamgovPage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
-            <h2 className="mb-4 text-center text-3xl font-bold">Set-Aside 프로그램</h2>
-            <p className="text-muted-foreground mb-12 text-center">
+            <h2 className="mb-4 text-center text-3xl font-bold text-white">Set-Aside 프로그램</h2>
+            <p className="mb-12 text-center text-zinc-400">
               다양한 Set-Aside 프로그램별 필터링을 지원합니다
             </p>
             <div className="grid gap-4 md:grid-cols-3">
               {setAsideTypes.map((item) => (
-                <div key={item.type} className="bg-card rounded-lg border p-4">
+                <div
+                  key={item.type}
+                  className="rounded-lg bg-white/[0.04] backdrop-blur-xl border border-white/[0.06] p-4"
+                >
                   <div className="flex items-center gap-3">
-                    <Check className="h-5 w-5 flex-shrink-0 text-neutral-700" />
+                    <Check className="h-5 w-5 flex-shrink-0 text-[#7C8AEA]" />
                     <div>
-                      <h4 className="font-medium">{item.type}</h4>
-                      <p className="text-muted-foreground text-sm">{item.description}</p>
+                      <h4 className="font-medium text-white">{item.type}</h4>
+                      <p className="text-sm text-zinc-400">{item.description}</p>
                     </div>
                   </div>
                 </div>
@@ -181,15 +202,20 @@ export default function SamgovPage() {
       </section>
 
       {/* CTA */}
-      <section className="text-primary-foreground bg-primary py-20">
+      <section className="bg-gradient-to-r from-[#5E6AD2] to-[#4B56C8] py-20">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="mb-4 text-2xl font-bold md:text-3xl">미국 연방 조달 시장에 진출하세요</h2>
-          <p className="mb-8 opacity-90">14일 무료 체험으로 SAM.gov 공고를 확인하세요.</p>
-          <Button size="lg" variant="secondary" asChild>
+          <h2 className="mb-4 text-2xl font-bold text-white md:text-3xl">미국 연방 조달 시장에 진출하세요</h2>
+          <p className="mb-8 text-white/80">14일 무료 체험으로 SAM.gov 공고를 확인하세요.</p>
+          <Button
+            size="lg"
+            variant="secondary"
+            asChild
+            className="bg-white text-[#5E6AD2] hover:bg-white/90"
+          >
             <Link href="/signup">무료 체험 시작</Link>
           </Button>
         </div>
       </section>
-    </>
+    </div>
   );
 }

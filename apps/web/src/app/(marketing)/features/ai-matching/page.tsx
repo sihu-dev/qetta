@@ -51,31 +51,31 @@ const benefits = [
 
 export default function AiMatchingPage() {
   return (
-    <>
+    <div className="bg-[#0D0D0F] min-h-screen">
       {/* Hero */}
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
             <div className="mb-6 flex items-center gap-4">
-              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10">
-                <Sparkles className="h-8 w-8 text-primary" />
+              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#5E6AD2]/10">
+                <Sparkles className="h-8 w-8 text-[#7C8AEA]" />
               </div>
-              <Badge variant="secondary">AI 기능</Badge>
+              <Badge className="bg-[#5E6AD2]/10 border border-[#5E6AD2]/20 text-[#7C8AEA]">AI 기능</Badge>
             </div>
-            <h1 className="mb-6 text-4xl font-bold tracking-tight md:text-5xl">
+            <h1 className="mb-6 text-4xl font-bold tracking-tight text-white md:text-5xl">
               AI 기반
               <br />
               매칭 분석
             </h1>
-            <p className="text-muted-foreground mb-8 max-w-2xl text-xl">
+            <p className="text-zinc-400 mb-8 max-w-2xl text-xl">
               Claude AI가 귀사 제품과 공고 요구사항을 분석하여 적합도를 자동으로 평가하고 점수를
               매깁니다. 어떤 공고에 집중해야 할지 AI가 알려드립니다.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" asChild>
+              <Button size="lg" asChild className="bg-gradient-to-r from-[#5E6AD2] to-[#4B56C8] text-white hover:opacity-90">
                 <Link href="/signup">무료로 시작하기</Link>
               </Button>
-              <Button size="lg" variant="outline" asChild>
+              <Button size="lg" variant="outline" asChild className="border-white/[0.1] text-white hover:bg-white/[0.04]">
                 <Link href="/features">모든 기능 보기</Link>
               </Button>
             </div>
@@ -84,19 +84,19 @@ export default function AiMatchingPage() {
       </section>
 
       {/* Matching Process */}
-      <section className="bg-muted/30 py-16">
+      <section className="bg-[#0A0A0A] py-16">
         <div className="container mx-auto px-4">
-          <h2 className="mb-12 text-center text-3xl font-bold">매칭 프로세스</h2>
+          <h2 className="mb-12 text-center text-3xl font-bold text-white">매칭 프로세스</h2>
           <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-4">
             {matchingProcess.map((item, index) => (
               <div key={item.step} className="relative">
-                <div className="bg-card h-full rounded-xl border p-6">
-                  <span className="text-4xl font-bold text-primary/20">{item.step}</span>
-                  <h3 className="mb-2 mt-2 text-lg font-semibold">{item.title}</h3>
-                  <p className="text-muted-foreground text-sm">{item.description}</p>
+                <div className="bg-white/[0.04] backdrop-blur-xl border border-white/[0.06] h-full rounded-xl p-6">
+                  <span className="text-4xl font-bold text-[#5E6AD2]/20">{item.step}</span>
+                  <h3 className="mb-2 mt-2 text-lg font-semibold text-white">{item.title}</h3>
+                  <p className="text-zinc-400 text-sm">{item.description}</p>
                 </div>
                 {index < matchingProcess.length - 1 && (
-                  <ArrowRight className="text-muted-foreground absolute -right-3 top-1/2 hidden h-6 w-6 -translate-y-1/2 md:block" />
+                  <ArrowRight className="text-zinc-600 absolute -right-3 top-1/2 hidden h-6 w-6 -translate-y-1/2 md:block" />
                 )}
               </div>
             ))}
@@ -110,18 +110,18 @@ export default function AiMatchingPage() {
           <div className="mx-auto max-w-5xl">
             <div className="grid items-start gap-12 lg:grid-cols-2">
               <div>
-                <h2 className="mb-6 text-3xl font-bold">분석 항목</h2>
-                <p className="text-muted-foreground mb-8">
+                <h2 className="mb-6 text-3xl font-bold text-white">분석 항목</h2>
+                <p className="text-zinc-400 mb-8">
                   AI가 다양한 항목을 종합적으로 분석하여 정확한 매칭 점수를 산출합니다.
                 </p>
                 <div className="grid gap-4">
                   {analysisItems.map((item) => (
-                    <div key={item.label} className="bg-card rounded-lg border p-4">
+                    <div key={item.label} className="bg-white/[0.04] backdrop-blur-xl border border-white/[0.06] rounded-lg p-4">
                       <div className="flex items-center gap-3">
-                        <Target className="h-5 w-5 text-primary" />
+                        <Target className="h-5 w-5 text-[#7C8AEA]" />
                         <div>
-                          <h4 className="font-medium">{item.label}</h4>
-                          <p className="text-muted-foreground text-sm">{item.description}</p>
+                          <h4 className="font-medium text-white">{item.label}</h4>
+                          <p className="text-zinc-500 text-sm">{item.description}</p>
                         </div>
                       </div>
                     </div>
@@ -129,26 +129,26 @@ export default function AiMatchingPage() {
                 </div>
               </div>
               <div className="lg:sticky lg:top-24">
-                <div className="rounded-2xl border bg-gradient-to-br from-primary/5 to-primary/10 p-8">
+                <div className="rounded-2xl bg-white/[0.04] backdrop-blur-xl border border-white/[0.06] p-8 bg-gradient-to-br from-[#5E6AD2]/5 to-[#5E6AD2]/10">
                   <div className="mb-6 text-center">
-                    <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-primary/20">
-                      <Brain className="h-10 w-10 text-primary" />
+                    <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-[#5E6AD2]/20">
+                      <Brain className="h-10 w-10 text-[#7C8AEA]" />
                     </div>
-                    <h3 className="text-2xl font-bold">Claude AI</h3>
-                    <p className="text-muted-foreground">Powered by Anthropic</p>
+                    <h3 className="text-2xl font-bold text-white">Claude AI</h3>
+                    <p className="text-zinc-500">Powered by Anthropic</p>
                   </div>
                   <div className="space-y-3 text-sm">
-                    <div className="bg-background flex justify-between rounded-lg p-3">
-                      <span>정확도</span>
-                      <span className="font-medium">95%+</span>
+                    <div className="bg-[#0D0D0F] flex justify-between rounded-lg p-3">
+                      <span className="text-zinc-400">정확도</span>
+                      <span className="font-medium text-white">95%+</span>
                     </div>
-                    <div className="bg-background flex justify-between rounded-lg p-3">
-                      <span>분석 속도</span>
-                      <span className="font-medium">~3초/건</span>
+                    <div className="bg-[#0D0D0F] flex justify-between rounded-lg p-3">
+                      <span className="text-zinc-400">분석 속도</span>
+                      <span className="font-medium text-white">~3초/건</span>
                     </div>
-                    <div className="bg-background flex justify-between rounded-lg p-3">
-                      <span>지원 언어</span>
-                      <span className="font-medium">한/영</span>
+                    <div className="bg-[#0D0D0F] flex justify-between rounded-lg p-3">
+                      <span className="text-zinc-400">지원 언어</span>
+                      <span className="font-medium text-white">한/영</span>
                     </div>
                   </div>
                 </div>
@@ -159,19 +159,19 @@ export default function AiMatchingPage() {
       </section>
 
       {/* Benefits */}
-      <section className="bg-muted/30 py-20">
+      <section className="bg-[#0A0A0A] py-20">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl text-center">
-            <TrendingUp className="mx-auto mb-6 h-12 w-12 text-primary" />
-            <h2 className="mb-8 text-3xl font-bold">기대 효과</h2>
+            <TrendingUp className="mx-auto mb-6 h-12 w-12 text-[#7C8AEA]" />
+            <h2 className="mb-8 text-3xl font-bold text-white">기대 효과</h2>
             <div className="grid gap-4 sm:grid-cols-2">
               {benefits.map((benefit) => (
                 <div
                   key={benefit}
-                  className="bg-card flex items-center gap-3 rounded-lg border p-4"
+                  className="bg-white/[0.04] backdrop-blur-xl border border-white/[0.06] flex items-center gap-3 rounded-lg p-4"
                 >
-                  <Check className="h-5 w-5 flex-shrink-0 text-neutral-700" />
-                  <span>{benefit}</span>
+                  <Check className="h-5 w-5 flex-shrink-0 text-[#7C8AEA]" />
+                  <span className="text-zinc-300">{benefit}</span>
                 </div>
               ))}
             </div>
@@ -184,6 +184,6 @@ export default function AiMatchingPage() {
         prev={{ label: '공고 수집', href: '/features/collection' }}
         next={{ label: '제안서 생성', href: '/features/proposal' }}
       />
-    </>
+    </div>
   );
 }

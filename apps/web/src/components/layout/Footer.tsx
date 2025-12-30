@@ -43,13 +43,13 @@ const footerLinks = {
 
 export function Footer() {
   return (
-    <footer className="bg-muted/30 border-t">
+    <footer className="bg-[#0A0A0A] border-t border-white/[0.06]">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-2 gap-8 md:grid-cols-5">
           {/* Logo & Description */}
           <div className="col-span-2 md:col-span-1">
             <Logo showBeta={false} size="md" />
-            <p className="text-muted-foreground mt-4 text-sm">
+            <p className="text-zinc-500 mt-4 text-sm">
               제조업 SME를 위한
               <br />
               AI 입찰 자동화 플랫폼
@@ -59,13 +59,13 @@ export function Footer() {
           {/* Links */}
           {Object.entries(footerLinks).map(([key, section]) => (
             <div key={key}>
-              <h3 className="mb-3 text-sm font-semibold">{section.title}</h3>
+              <h3 className="mb-3 text-sm font-semibold text-white">{section.title}</h3>
               <ul className="space-y-2">
                 {section.links.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-muted-foreground hover:text-foreground text-sm transition-colors"
+                      className="text-zinc-500 hover:text-white text-sm transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -77,8 +77,8 @@ export function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t pt-8 md:flex-row">
-          <p className="text-muted-foreground text-sm">
+        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/[0.06] pt-8 md:flex-row">
+          <p className="text-zinc-500 text-sm">
             &copy; {new Date().getFullYear()} Qetta. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
@@ -86,7 +86,7 @@ export function Footer() {
               href="https://github.com/qetta"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="text-zinc-500 hover:text-white transition-colors"
               aria-label="GitHub"
             >
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
@@ -97,7 +97,7 @@ export function Footer() {
               href="https://twitter.com/qetta"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="text-zinc-500 hover:text-white transition-colors"
               aria-label="Twitter"
             >
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">

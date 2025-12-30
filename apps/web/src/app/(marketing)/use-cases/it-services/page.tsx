@@ -68,35 +68,35 @@ const serviceTypes = [
 
 export default function ItServicesPage() {
   return (
-    <>
+    <div className="min-h-screen bg-[#0D0D0F]">
       {/* Hero */}
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
             <Link
               href="/use-cases"
-              className="text-muted-foreground hover:text-foreground mb-6 inline-flex items-center gap-2 text-sm"
+              className="text-zinc-500 hover:text-zinc-300 mb-6 inline-flex items-center gap-2 text-sm transition-colors"
             >
               ← 활용 사례로 돌아가기
             </Link>
             <div className="mb-6 flex items-center gap-4">
-              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10">
-                <Laptop className="h-8 w-8 text-primary" />
+              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#5E6AD2]/10">
+                <Laptop className="h-8 w-8 text-[#7C8AEA]" />
               </div>
-              <Badge variant="secondary">IT 서비스</Badge>
+              <Badge className="bg-[#5E6AD2]/10 border border-[#5E6AD2]/20 text-[#7C8AEA]">IT 서비스</Badge>
             </div>
-            <h1 className="mb-6 text-4xl font-bold tracking-tight md:text-5xl">
+            <h1 className="mb-6 text-4xl font-bold tracking-tight text-white md:text-5xl">
               IT 서비스 입찰 자동화
             </h1>
-            <p className="text-muted-foreground mb-8 max-w-2xl text-xl">
+            <p className="text-zinc-400 mb-8 max-w-2xl text-xl">
               SI, 소프트웨어 개발, IT 인프라 분야를 위한 맞춤형 입찰 관리 솔루션. RFP 분석부터 기술
               제안서 작성까지 자동화합니다.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" asChild>
+              <Button size="lg" asChild className="bg-gradient-to-r from-[#5E6AD2] to-[#4B56C8] text-white hover:opacity-90">
                 <Link href="/signup">무료로 시작하기</Link>
               </Button>
-              <Button size="lg" variant="outline" asChild>
+              <Button size="lg" variant="outline" asChild className="border-white/[0.06] text-zinc-400 hover:bg-white/[0.04] hover:text-white">
                 <Link href="/contact">상담 요청</Link>
               </Button>
             </div>
@@ -105,17 +105,17 @@ export default function ItServicesPage() {
       </section>
 
       {/* Challenges */}
-      <section className="bg-muted/30 py-16">
+      <section className="bg-[#0A0A0A] py-16">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
-            <h2 className="mb-8 text-center text-3xl font-bold">IT 서비스업의 입찰 과제</h2>
+            <h2 className="mb-8 text-center text-3xl font-bold text-white">IT 서비스업의 입찰 과제</h2>
             <div className="grid gap-4 md:grid-cols-2">
               {challenges.map((challenge, index) => (
-                <div key={index} className="bg-card flex items-start gap-3 rounded-lg border p-4">
-                  <div className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-neutral-100 text-sm font-medium text-neutral-600">
+                <div key={index} className="bg-white/[0.04] backdrop-blur-xl border border-white/[0.06] flex items-start gap-3 rounded-lg p-4">
+                  <div className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#5E6AD2]/10 text-sm font-medium text-[#7C8AEA]">
                     {index + 1}
                   </div>
-                  <span>{challenge}</span>
+                  <span className="text-zinc-300">{challenge}</span>
                 </div>
               ))}
             </div>
@@ -124,21 +124,21 @@ export default function ItServicesPage() {
       </section>
 
       {/* Solutions */}
-      <section className="py-20">
+      <section className="py-20 bg-[#0D0D0F]">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
-            <h2 className="mb-4 text-center text-3xl font-bold">Qetta 솔루션</h2>
-            <p className="text-muted-foreground mb-12 text-center">
+            <h2 className="mb-4 text-center text-3xl font-bold text-white">Qetta 솔루션</h2>
+            <p className="text-zinc-400 mb-12 text-center">
               IT 서비스 특화 기능으로 입찰 업무를 혁신합니다
             </p>
             <div className="grid gap-6 md:grid-cols-2">
               {solutions.map((solution) => (
-                <div key={solution.title} className="bg-card rounded-xl border p-6">
+                <div key={solution.title} className="bg-white/[0.04] backdrop-blur-xl border border-white/[0.06] rounded-xl p-6">
                   <div className="flex items-start gap-3">
-                    <Check className="mt-0.5 h-5 w-5 flex-shrink-0 text-neutral-700" />
+                    <Check className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#7C8AEA]" />
                     <div>
-                      <h3 className="mb-2 font-semibold">{solution.title}</h3>
-                      <p className="text-muted-foreground text-sm">{solution.description}</p>
+                      <h3 className="mb-2 font-semibold text-white">{solution.title}</h3>
+                      <p className="text-zinc-400 text-sm">{solution.description}</p>
                     </div>
                   </div>
                 </div>
@@ -149,14 +149,14 @@ export default function ItServicesPage() {
       </section>
 
       {/* Results */}
-      <section className="text-primary-foreground bg-primary py-16">
+      <section className="bg-gradient-to-r from-[#5E6AD2] to-[#4B56C8] py-16">
         <div className="container mx-auto px-4">
-          <h2 className="mb-12 text-center text-3xl font-bold">도입 효과</h2>
+          <h2 className="mb-12 text-center text-3xl font-bold text-white">도입 효과</h2>
           <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-4">
             {results.map((result) => (
               <div key={result.label} className="text-center">
-                <p className="mb-2 text-4xl font-bold">{result.metric}</p>
-                <p className="text-sm opacity-80">{result.label}</p>
+                <p className="mb-2 text-4xl font-bold text-white">{result.metric}</p>
+                <p className="text-sm text-white/80">{result.label}</p>
               </div>
             ))}
           </div>
@@ -164,30 +164,30 @@ export default function ItServicesPage() {
       </section>
 
       {/* Case Study */}
-      <section className="py-20">
+      <section className="py-20 bg-[#0D0D0F]">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
-            <h2 className="mb-8 text-center text-3xl font-bold">고객 사례</h2>
-            <div className="bg-card rounded-2xl border p-8">
+            <h2 className="mb-8 text-center text-3xl font-bold text-white">고객 사례</h2>
+            <div className="bg-white/[0.04] backdrop-blur-xl border border-white/[0.06] rounded-2xl p-8">
               <div className="mb-6 flex items-start gap-4">
-                <Quote className="h-8 w-8 flex-shrink-0 text-primary" />
+                <Quote className="h-8 w-8 flex-shrink-0 text-[#7C8AEA]" />
                 <div>
-                  <p className="mb-4 text-lg italic">{caseStudy.quote}</p>
-                  <p className="font-medium">{caseStudy.person}</p>
-                  <p className="text-muted-foreground text-sm">
+                  <p className="mb-4 text-lg italic text-zinc-300">{caseStudy.quote}</p>
+                  <p className="font-medium text-white">{caseStudy.person}</p>
+                  <p className="text-zinc-500 text-sm">
                     {caseStudy.company} · {caseStudy.industry}
                   </p>
                 </div>
               </div>
-              <div className="border-t pt-6">
-                <h4 className="mb-4 flex items-center gap-2 font-semibold">
-                  <TrendingUp className="h-5 w-5 text-neutral-700" />
+              <div className="border-t border-white/[0.06] pt-6">
+                <h4 className="mb-4 flex items-center gap-2 font-semibold text-white">
+                  <TrendingUp className="h-5 w-5 text-[#7C8AEA]" />
                   도입 성과
                 </h4>
                 <ul className="space-y-2">
                   {caseStudy.results.map((result) => (
-                    <li key={result} className="flex items-center gap-2">
-                      <Check className="h-4 w-4 text-neutral-700" />
+                    <li key={result} className="flex items-center gap-2 text-zinc-300">
+                      <Check className="h-4 w-4 text-[#7C8AEA]" />
                       <span>{result}</span>
                     </li>
                   ))}
@@ -199,13 +199,13 @@ export default function ItServicesPage() {
       </section>
 
       {/* Service Types */}
-      <section className="bg-muted/30 py-16">
+      <section className="bg-[#0A0A0A] py-16">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl text-center">
-            <h2 className="mb-6 text-2xl font-bold">지원 서비스 분야</h2>
+            <h2 className="mb-6 text-2xl font-bold text-white">지원 서비스 분야</h2>
             <div className="flex flex-wrap justify-center gap-2">
               {serviceTypes.map((type) => (
-                <Badge key={type} variant="outline" className="px-3 py-1.5 text-sm">
+                <Badge key={type} variant="outline" className="px-3 py-1.5 text-sm border-white/[0.06] text-zinc-400">
                   {type}
                 </Badge>
               ))}
@@ -215,19 +215,19 @@ export default function ItServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20">
+      <section className="py-20 bg-[#0D0D0F]">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="mb-4 text-2xl font-bold md:text-3xl">
+          <h2 className="mb-4 text-2xl font-bold text-white md:text-3xl">
             IT 서비스 입찰 자동화를 시작하세요
           </h2>
-          <p className="text-muted-foreground mb-8">
+          <p className="text-zinc-400 mb-8">
             14일 무료 체험으로 Qetta의 가치를 직접 확인해보세요.
           </p>
           <div className="flex flex-col justify-center gap-4 sm:flex-row">
-            <Button size="lg" asChild>
+            <Button size="lg" asChild className="bg-gradient-to-r from-[#5E6AD2] to-[#4B56C8] text-white hover:opacity-90">
               <Link href="/signup">무료 체험 시작</Link>
             </Button>
-            <Button size="lg" variant="outline" asChild>
+            <Button size="lg" variant="outline" asChild className="border-white/[0.06] text-zinc-400 hover:bg-white/[0.04] hover:text-white">
               <Link href="/use-cases">
                 <ArrowLeft className="mr-2 h-4 w-4" /> 모든 산업 보기
               </Link>
@@ -235,6 +235,6 @@ export default function ItServicesPage() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }

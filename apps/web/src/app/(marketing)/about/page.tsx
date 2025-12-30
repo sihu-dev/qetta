@@ -72,15 +72,15 @@ export default function AboutPage() {
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
-            <Badge variant="secondary" className="mb-6">
+            <Badge className="mb-6 bg-[#5E6AD2]/10 border border-[#5E6AD2]/20 text-[#7C8AEA]">
               회사 소개
             </Badge>
-            <h1 className="text-4xl font-bold tracking-tight md:text-5xl">
+            <h1 className="text-4xl font-bold tracking-tight text-white md:text-5xl">
               입찰의 미래를
               <br />
               만들어갑니다
             </h1>
-            <p className="text-muted-foreground mt-6 text-lg">
+            <p className="text-zinc-400 mt-6 text-lg">
               Qetta는 AI 기술로 중소기업의 공공입찰 참여를 혁신합니다.
               <br />더 많은 기업이 공정한 기회를 얻을 수 있도록 돕습니다.
             </p>
@@ -89,13 +89,13 @@ export default function AboutPage() {
       </section>
 
       {/* Stats */}
-      <section className="text-primary-foreground bg-primary py-12">
+      <section className="bg-gradient-to-r from-[#5E6AD2] to-[#4B56C8] py-12">
         <div className="container mx-auto px-4">
           <div className="mx-auto grid max-w-4xl gap-8 text-center md:grid-cols-4">
             {stats.map((stat) => (
               <div key={stat.label}>
-                <p className="mb-2 text-4xl font-bold">{stat.value}</p>
-                <p className="text-sm opacity-80">{stat.label}</p>
+                <p className="mb-2 text-4xl font-bold text-white">{stat.value}</p>
+                <p className="text-sm text-white/80">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -108,25 +108,25 @@ export default function AboutPage() {
           <div className="mx-auto max-w-4xl">
             <div className="grid items-center gap-12 lg:grid-cols-2">
               <div>
-                <Badge className="mb-4">미션</Badge>
-                <h2 className="mb-6 text-3xl font-bold">
+                <Badge className="mb-4 bg-[#5E6AD2]/10 border border-[#5E6AD2]/20 text-[#7C8AEA]">미션</Badge>
+                <h2 className="mb-6 text-3xl font-bold text-white">
                   모든 기업에게
                   <br />
                   공정한 입찰 기회를
                 </h2>
-                <p className="text-muted-foreground mb-6">
+                <p className="text-zinc-400 mb-6">
                   대기업만의 전유물이었던 체계적인 입찰 관리를 중소기업도 누릴 수 있게 합니다. AI
                   기술로 시간과 비용의 벽을 허물고, 실력으로 경쟁할 수 있는 환경을 만듭니다.
                 </p>
-                <p className="text-muted-foreground">
+                <p className="text-zinc-400">
                   2023년 설립 이후, 500개 이상의 기업이 Qetta와 함께 입찰 업무를 혁신하고
                   있습니다.
                 </p>
               </div>
-              <div className="rounded-2xl border bg-gradient-to-br from-primary/5 to-primary/10 p-8">
-                <Globe className="mb-6 h-16 w-16 text-primary" />
-                <h3 className="mb-4 text-xl font-bold">글로벌 비전</h3>
-                <p className="text-muted-foreground">
+              <div className="rounded-2xl border border-white/[0.06] bg-gradient-to-br from-[#5E6AD2]/10 to-[#5E6AD2]/5 p-8">
+                <Globe className="mb-6 h-16 w-16 text-[#7C8AEA]" />
+                <h3 className="mb-4 text-xl font-bold text-white">글로벌 비전</h3>
+                <p className="text-zinc-400">
                   한국에서 시작해 전 세계 공공조달 시장으로 확장합니다. EU, 미국, UN까지 - 어디서든
                   Qetta와 함께 입찰에 도전하세요.
                 </p>
@@ -137,20 +137,20 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="bg-muted/30 py-20">
+      <section className="bg-[#0A0A0A] py-20">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
-            <h2 className="mb-12 text-center text-3xl font-bold">핵심 가치</h2>
+            <h2 className="mb-12 text-center text-3xl font-bold text-white">핵심 가치</h2>
             <div className="grid gap-6 md:grid-cols-2">
               {values.map((value) => (
-                <div key={value.title} className="bg-card rounded-xl border p-6">
+                <div key={value.title} className="bg-white/[0.04] backdrop-blur-xl border border-white/[0.06] rounded-xl p-6">
                   <div className="flex items-start gap-4">
-                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10">
-                      <value.icon className="h-6 w-6 text-primary" />
+                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-[#5E6AD2]/10">
+                      <value.icon className="h-6 w-6 text-[#7C8AEA]" />
                     </div>
                     <div>
-                      <h3 className="mb-2 font-semibold">{value.title}</h3>
-                      <p className="text-muted-foreground text-sm">{value.description}</p>
+                      <h3 className="mb-2 font-semibold text-white">{value.title}</h3>
+                      <p className="text-zinc-400 text-sm">{value.description}</p>
                     </div>
                   </div>
                 </div>
@@ -164,13 +164,13 @@ export default function AboutPage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl">
-            <h2 className="mb-12 text-center text-3xl font-bold">여정</h2>
+            <h2 className="mb-12 text-center text-3xl font-bold text-white">여정</h2>
             <div className="space-y-4">
               {milestones.map((milestone, index) => (
                 <div key={index} className="flex items-center gap-4">
-                  <span className="w-16 text-sm font-medium text-primary">{milestone.year}</span>
-                  <div className="h-3 w-3 rounded-full bg-primary" />
-                  <span className="flex-1">{milestone.event}</span>
+                  <span className="w-16 text-sm font-medium text-[#7C8AEA]">{milestone.year}</span>
+                  <div className="h-3 w-3 rounded-full bg-[#5E6AD2]" />
+                  <span className="flex-1 text-zinc-300">{milestone.event}</span>
                 </div>
               ))}
             </div>
@@ -179,22 +179,22 @@ export default function AboutPage() {
       </section>
 
       {/* Team */}
-      <section className="bg-muted/30 py-20">
+      <section className="bg-[#0A0A0A] py-20">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
-            <h2 className="mb-4 text-center text-3xl font-bold">리더십</h2>
-            <p className="text-muted-foreground mb-12 text-center">
+            <h2 className="mb-4 text-center text-3xl font-bold text-white">리더십</h2>
+            <p className="text-zinc-400 mb-12 text-center">
               다양한 분야의 전문가들이 함께합니다
             </p>
             <div className="grid gap-6 md:grid-cols-3">
               {team.map((member) => (
-                <div key={member.name} className="bg-card rounded-xl border p-6 text-center">
-                  <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-primary/10">
-                    <Users className="h-10 w-10 text-primary" />
+                <div key={member.name} className="bg-white/[0.04] backdrop-blur-xl border border-white/[0.06] rounded-xl p-6 text-center">
+                  <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-[#5E6AD2]/10">
+                    <Users className="h-10 w-10 text-[#7C8AEA]" />
                   </div>
-                  <h3 className="font-semibold">{member.name}</h3>
-                  <p className="mb-2 text-sm text-primary">{member.role}</p>
-                  <p className="text-muted-foreground text-sm">{member.description}</p>
+                  <h3 className="font-semibold text-white">{member.name}</h3>
+                  <p className="mb-2 text-sm text-[#7C8AEA]">{member.role}</p>
+                  <p className="text-zinc-400 text-sm">{member.description}</p>
                 </div>
               ))}
             </div>
@@ -206,19 +206,19 @@ export default function AboutPage() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-2xl text-center">
-            <Award className="mx-auto mb-6 h-12 w-12 text-primary" />
-            <h2 className="mb-8 text-2xl font-bold">수상 및 인증</h2>
+            <Award className="mx-auto mb-6 h-12 w-12 text-[#7C8AEA]" />
+            <h2 className="mb-8 text-2xl font-bold text-white">수상 및 인증</h2>
             <div className="flex flex-wrap justify-center gap-4">
-              <Badge variant="outline" className="px-4 py-2">
+              <Badge variant="outline" className="px-4 py-2 border-white/[0.06] text-zinc-300">
                 2024 중소벤처기업부 장관상
               </Badge>
-              <Badge variant="outline" className="px-4 py-2">
+              <Badge variant="outline" className="px-4 py-2 border-white/[0.06] text-zinc-300">
                 K-Startup 그랑프리
               </Badge>
-              <Badge variant="outline" className="px-4 py-2">
+              <Badge variant="outline" className="px-4 py-2 border-white/[0.06] text-zinc-300">
                 벤처기업 인증
               </Badge>
-              <Badge variant="outline" className="px-4 py-2">
+              <Badge variant="outline" className="px-4 py-2 border-white/[0.06] text-zinc-300">
                 ISO 27001 인증
               </Badge>
             </div>
@@ -227,12 +227,12 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="text-primary-foreground bg-primary py-20">
+      <section className="bg-gradient-to-r from-[#5E6AD2] to-[#4B56C8] py-20">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="mb-4 text-2xl font-bold md:text-3xl">함께 성장할 준비가 되셨나요?</h2>
-          <p className="mb-8 opacity-90">Qetta와 함께 입찰의 새로운 표준을 만들어가세요.</p>
+          <h2 className="mb-4 text-2xl font-bold text-white md:text-3xl">함께 성장할 준비가 되셨나요?</h2>
+          <p className="mb-8 text-white/90">Qetta와 함께 입찰의 새로운 표준을 만들어가세요.</p>
           <div className="flex flex-col justify-center gap-4 sm:flex-row">
-            <Button size="lg" variant="secondary" asChild>
+            <Button size="lg" variant="secondary" className="bg-white text-[#5E6AD2] hover:bg-white/90" asChild>
               <Link href="/signup">무료 체험 시작</Link>
             </Button>
             <Button

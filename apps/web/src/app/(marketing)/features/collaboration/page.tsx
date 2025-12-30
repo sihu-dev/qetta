@@ -63,27 +63,27 @@ const planLimits = [
 
 export default function CollaborationPage() {
   return (
-    <>
+    <div className="bg-[#0D0D0F] min-h-screen">
       {/* Hero */}
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
             <div className="mb-6 flex items-center gap-4">
-              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10">
-                <Users className="h-8 w-8 text-primary" />
+              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#5E6AD2]/10">
+                <Users className="h-8 w-8 text-[#7C8AEA]" />
               </div>
-              <Badge variant="secondary">협업 기능</Badge>
+              <Badge className="bg-[#5E6AD2]/10 border border-[#5E6AD2]/20 text-[#7C8AEA]">협업 기능</Badge>
             </div>
-            <h1 className="mb-6 text-4xl font-bold tracking-tight md:text-5xl">팀 협업</h1>
-            <p className="text-muted-foreground mb-8 max-w-2xl text-xl">
+            <h1 className="mb-6 text-4xl font-bold tracking-tight text-white md:text-5xl">팀 협업</h1>
+            <p className="text-zinc-400 mb-8 max-w-2xl text-xl">
               팀원과 공고를 공유하고 코멘트를 남겨 효율적으로 협업하세요. 역할 기반 권한 관리로
               안전하게 팀을 운영할 수 있습니다.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" asChild>
+              <Button size="lg" asChild className="bg-gradient-to-r from-[#5E6AD2] to-[#4B56C8] text-white hover:opacity-90">
                 <Link href="/signup">무료로 시작하기</Link>
               </Button>
-              <Button size="lg" variant="outline" asChild>
+              <Button size="lg" variant="outline" asChild className="border-white/[0.1] text-white hover:bg-white/[0.04]">
                 <Link href="/features">모든 기능 보기</Link>
               </Button>
             </div>
@@ -92,20 +92,20 @@ export default function CollaborationPage() {
       </section>
 
       {/* Features */}
-      <section className="bg-muted/30 py-16">
+      <section className="bg-[#0A0A0A] py-16">
         <div className="container mx-auto px-4">
-          <h2 className="mb-12 text-center text-3xl font-bold">협업 기능</h2>
+          <h2 className="mb-12 text-center text-3xl font-bold text-white">협업 기능</h2>
           <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-2 lg:grid-cols-4">
             {teamFeatures.map((feature) => (
-              <div key={feature.title} className="bg-card rounded-xl border p-6">
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
-                  <feature.icon className="h-6 w-6 text-primary" />
+              <div key={feature.title} className="bg-white/[0.04] backdrop-blur-xl border border-white/[0.06] rounded-xl p-6">
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-[#5E6AD2]/10">
+                  <feature.icon className="h-6 w-6 text-[#7C8AEA]" />
                 </div>
-                <h3 className="mb-2 font-semibold">{feature.title}</h3>
-                <p className="text-muted-foreground mb-4 text-sm">{feature.description}</p>
+                <h3 className="mb-2 font-semibold text-white">{feature.title}</h3>
+                <p className="text-zinc-400 mb-4 text-sm">{feature.description}</p>
                 <div className="flex gap-1">
                   {feature.plans.map((plan) => (
-                    <Badge key={plan} variant="outline" className="text-xs">
+                    <Badge key={plan} className="text-xs bg-white/[0.04] border border-white/[0.06] text-zinc-400">
                       {plan}
                     </Badge>
                   ))}
@@ -120,20 +120,20 @@ export default function CollaborationPage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
-            <h2 className="mb-4 text-center text-3xl font-bold">역할 및 권한</h2>
-            <p className="text-muted-foreground mb-12 text-center">
+            <h2 className="mb-4 text-center text-3xl font-bold text-white">역할 및 권한</h2>
+            <p className="text-zinc-400 mb-12 text-center">
               팀원별로 적절한 역할을 부여하세요
             </p>
             <div className="grid gap-6 md:grid-cols-3">
               {roles.map((role) => (
-                <div key={role.name} className="bg-card rounded-xl border p-6">
-                  <h3 className="mb-1 text-xl font-bold">{role.name}</h3>
-                  <p className="text-muted-foreground mb-4 text-sm">{role.description}</p>
+                <div key={role.name} className="bg-white/[0.04] backdrop-blur-xl border border-white/[0.06] rounded-xl p-6">
+                  <h3 className="mb-1 text-xl font-bold text-white">{role.name}</h3>
+                  <p className="text-zinc-500 mb-4 text-sm">{role.description}</p>
                   <ul className="space-y-2">
                     {role.permissions.map((permission) => (
                       <li key={permission} className="flex items-center gap-2 text-sm">
-                        <Check className="h-4 w-4 text-neutral-700" />
-                        <span>{permission}</span>
+                        <Check className="h-4 w-4 text-[#7C8AEA]" />
+                        <span className="text-zinc-300">{permission}</span>
                       </li>
                     ))}
                   </ul>
@@ -145,24 +145,24 @@ export default function CollaborationPage() {
       </section>
 
       {/* Plan Limits */}
-      <section className="bg-muted/30 py-20">
+      <section className="bg-[#0A0A0A] py-20">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
-            <h2 className="mb-4 text-center text-3xl font-bold">플랜별 팀원 수</h2>
-            <p className="text-muted-foreground mb-12 text-center">
+            <h2 className="mb-4 text-center text-3xl font-bold text-white">플랜별 팀원 수</h2>
+            <p className="text-zinc-400 mb-12 text-center">
               팀 규모에 맞는 플랜을 선택하세요
             </p>
             <div className="grid gap-6 md:grid-cols-3">
               {planLimits.map((item) => (
-                <div key={item.plan} className="bg-card rounded-xl border p-6 text-center">
-                  <h3 className="mb-2 text-lg font-semibold">{item.plan}</h3>
-                  <p className="mb-2 text-3xl font-bold text-primary">{item.members}</p>
-                  <p className="text-muted-foreground text-sm">{item.description}</p>
+                <div key={item.plan} className="bg-white/[0.04] backdrop-blur-xl border border-white/[0.06] rounded-xl p-6 text-center">
+                  <h3 className="mb-2 text-lg font-semibold text-white">{item.plan}</h3>
+                  <p className="mb-2 text-3xl font-bold text-[#7C8AEA]">{item.members}</p>
+                  <p className="text-zinc-500 text-sm">{item.description}</p>
                 </div>
               ))}
             </div>
             <div className="mt-8 text-center">
-              <Button asChild>
+              <Button asChild className="bg-gradient-to-r from-[#5E6AD2] to-[#4B56C8] text-white hover:opacity-90">
                 <Link href="/pricing">요금제 비교하기</Link>
               </Button>
             </div>
@@ -175,6 +175,6 @@ export default function CollaborationPage() {
         prev={{ label: '스프레드시트', href: '/features/spreadsheet' }}
         next={{ label: 'REST API', href: '/features/api' }}
       />
-    </>
+    </div>
   );
 }

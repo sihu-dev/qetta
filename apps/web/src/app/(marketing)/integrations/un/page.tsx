@@ -29,23 +29,30 @@ const agencies = ['UNDP', 'UNICEF', 'WHO', 'WFP', 'UNHCR', 'UNOPS', 'FAO', 'UNES
 
 export default function UNPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#0D0D0F]">
       {/* Hero */}
-      <section className="border-b">
+      <section className="border-b border-white/[0.06]">
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-3xl">
-            <Badge variant="secondary" className="mb-4">
+            <Badge className="mb-4 bg-[#5E6AD2]/10 border border-[#5E6AD2]/20 text-[#7C8AEA]">
               국제기구
             </Badge>
-            <h1 className="mb-4 text-4xl font-bold text-slate-900">UN Procurement 연동</h1>
-            <p className="mb-8 text-lg text-slate-600">
+            <h1 className="mb-4 text-4xl font-bold text-white">UN Procurement 연동</h1>
+            <p className="mb-8 text-lg text-zinc-400">
               유엔 및 산하 기관의 글로벌 조달 입찰 공고를 자동으로 수집하고 분석합니다.
             </p>
             <div className="flex gap-4">
-              <Button asChild>
+              <Button
+                asChild
+                className="bg-gradient-to-r from-[#5E6AD2] to-[#4B56C8] text-white hover:opacity-90"
+              >
                 <Link href="/signup">무료로 시작하기</Link>
               </Button>
-              <Button variant="outline" asChild>
+              <Button
+                variant="outline"
+                asChild
+                className="border-white/[0.06] bg-white/[0.04] text-white hover:bg-white/[0.08]"
+              >
                 <Link href="/integrations">다른 플랫폼 보기</Link>
               </Button>
             </div>
@@ -54,13 +61,13 @@ export default function UNPage() {
       </section>
 
       {/* 통계 */}
-      <section className="border-b bg-slate-50">
+      <section className="border-b border-white/[0.06] bg-[#0A0A0A]">
         <div className="container mx-auto px-4 py-12">
           <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
-                <div className="font-mono text-3xl font-bold text-slate-900">{stat.value}</div>
-                <div className="text-sm text-slate-500">{stat.label}</div>
+                <div className="font-mono text-3xl font-bold text-white">{stat.value}</div>
+                <div className="text-sm text-zinc-500">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -68,14 +75,17 @@ export default function UNPage() {
       </section>
 
       {/* 기능 */}
-      <section className="border-b">
+      <section className="border-b border-white/[0.06]">
         <div className="container mx-auto px-4 py-16">
-          <h2 className="mb-8 text-2xl font-bold text-slate-900">연동 기능</h2>
+          <h2 className="mb-8 text-2xl font-bold text-white">연동 기능</h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {features.map((item) => (
-              <div key={item.title} className="rounded-lg border p-6">
-                <h3 className="mb-2 font-semibold text-slate-900">{item.title}</h3>
-                <p className="text-sm text-slate-500">{item.desc}</p>
+              <div
+                key={item.title}
+                className="rounded-lg bg-white/[0.04] backdrop-blur-xl border border-white/[0.06] p-6"
+              >
+                <h3 className="mb-2 font-semibold text-white">{item.title}</h3>
+                <p className="text-sm text-zinc-400">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -83,16 +93,20 @@ export default function UNPage() {
       </section>
 
       {/* 기관 목록 */}
-      <section className="border-b bg-slate-50">
+      <section className="border-b border-white/[0.06] bg-[#0A0A0A]">
         <div className="container mx-auto px-4 py-16">
-          <h2 className="mb-8 text-2xl font-bold text-slate-900">지원 UN 기관</h2>
+          <h2 className="mb-8 text-2xl font-bold text-white">지원 UN 기관</h2>
           <div className="flex flex-wrap gap-2">
             {agencies.map((agency) => (
-              <Badge key={agency} variant="outline" className="px-3 py-1.5 text-sm">
+              <Badge
+                key={agency}
+                variant="outline"
+                className="px-3 py-1.5 text-sm border-white/[0.06] bg-white/[0.04] text-zinc-300"
+              >
                 {agency}
               </Badge>
             ))}
-            <Badge variant="secondary" className="px-3 py-1.5 text-sm">
+            <Badge className="px-3 py-1.5 text-sm bg-[#5E6AD2]/10 border border-[#5E6AD2]/20 text-[#7C8AEA]">
               +34 more
             </Badge>
           </div>
@@ -100,26 +114,26 @@ export default function UNPage() {
       </section>
 
       {/* 글로벌 진출 */}
-      <section className="border-b bg-slate-900 text-white">
+      <section className="border-b border-white/[0.06] bg-[#0A0A0A]">
         <div className="container mx-auto px-4 py-16">
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="mb-4 text-2xl font-bold">글로벌 시장 진출</h2>
-            <p className="mb-8 text-slate-400">
+            <h2 className="mb-4 text-2xl font-bold text-white">글로벌 시장 진출</h2>
+            <p className="mb-8 text-zinc-400">
               UN 조달 시장은 한국 기업의 글로벌 진출 첫 단계입니다. Qetta로 국제 입찰에 체계적으로
               접근하세요.
             </p>
             <div className="grid grid-cols-3 gap-4">
-              <div className="rounded-lg bg-slate-800 p-4">
-                <div className="font-mono text-2xl font-bold text-neutral-300">UNGM</div>
-                <div className="text-sm text-slate-400">Global Marketplace</div>
+              <div className="rounded-lg bg-white/[0.04] backdrop-blur-xl border border-white/[0.06] p-4">
+                <div className="font-mono text-2xl font-bold text-[#7C8AEA]">UNGM</div>
+                <div className="text-sm text-zinc-400">Global Marketplace</div>
               </div>
-              <div className="rounded-lg bg-slate-800 p-4">
-                <div className="font-mono text-2xl font-bold text-neutral-300">UNSPSC</div>
-                <div className="text-sm text-slate-400">표준 분류 체계</div>
+              <div className="rounded-lg bg-white/[0.04] backdrop-blur-xl border border-white/[0.06] p-4">
+                <div className="font-mono text-2xl font-bold text-[#7C8AEA]">UNSPSC</div>
+                <div className="text-sm text-zinc-400">표준 분류 체계</div>
               </div>
-              <div className="rounded-lg bg-slate-800 p-4">
-                <div className="font-mono text-2xl font-bold text-neutral-300">24/7</div>
-                <div className="text-sm text-slate-400">글로벌 모니터링</div>
+              <div className="rounded-lg bg-white/[0.04] backdrop-blur-xl border border-white/[0.06] p-4">
+                <div className="font-mono text-2xl font-bold text-[#7C8AEA]">24/7</div>
+                <div className="text-sm text-zinc-400">글로벌 모니터링</div>
               </div>
             </div>
           </div>
@@ -129,11 +143,15 @@ export default function UNPage() {
       {/* CTA */}
       <section>
         <div className="container mx-auto px-4 py-16 text-center">
-          <h2 className="mb-4 text-2xl font-bold text-slate-900">UN 조달 시장 진출하기</h2>
-          <p className="mb-6 text-slate-600">
+          <h2 className="mb-4 text-2xl font-bold text-white">UN 조달 시장 진출하기</h2>
+          <p className="mb-6 text-zinc-400">
             Enterprise 플랜에서 UN Procurement 연동을 이용할 수 있습니다.
           </p>
-          <Button asChild size="lg">
+          <Button
+            asChild
+            size="lg"
+            className="bg-gradient-to-r from-[#5E6AD2] to-[#4B56C8] text-white hover:opacity-90"
+          >
             <Link href="/contact">Enterprise 문의</Link>
           </Button>
         </div>
