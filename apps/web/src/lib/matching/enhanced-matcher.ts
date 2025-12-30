@@ -7,7 +7,7 @@ import { extractPipeSize, matchPipeSize } from './pipe-size-extractor';
 import { getOrganizationProductScore } from './organization-dictionary';
 
 /**
- * CMNTech 제품 정의
+ * 제품 정의
  */
 export interface Product {
   id: string;
@@ -24,9 +24,9 @@ export interface Product {
 }
 
 /**
- * CMNTech 5개 제품 카탈로그
+ * 샘플 제품 카탈로그 (데모용)
  */
-export const CMNTECH_PRODUCTS: Product[] = [
+export const SAMPLE_PRODUCTS: Product[] = [
   {
     id: 'UR-1000PLUS',
     name: '다회선 초음파 유량계',
@@ -267,7 +267,7 @@ export function matchBidToProducts(bid: BidAnnouncement): {
   allMatches: MatchResult[];
   recommendation: 'BID' | 'REVIEW' | 'SKIP';
 } {
-  const allMatches = CMNTECH_PRODUCTS.map((product) => matchProduct(bid, product));
+  const allMatches = SAMPLE_PRODUCTS.map((product) => matchProduct(bid, product));
 
   // 점수 기준 정렬
   allMatches.sort((a, b) => b.score - a.score);

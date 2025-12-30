@@ -5,11 +5,11 @@
 
 // 제품 카탈로그
 export {
-  CMNTECH_PRODUCTS,
+  DEMO_PRODUCTS,
   getProductById,
   getProductsByCategory,
   getConfidenceLevel,
-  type CMNTechProduct,
+  type DemoProduct,
 } from './products';
 
 // 입찰 목업 데이터

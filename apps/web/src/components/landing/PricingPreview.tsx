@@ -1,21 +1,22 @@
 /**
- * 요금제 미리보기 섹션 - 모노크롬
+ * Pricing Preview Section - HEPHAITOS Dark Theme
  */
 import Link from 'next/link';
 import { Check, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import { BG_COLORS, GLASS, BUTTON_STYLES } from '@/constants/design-tokens';
 
 const plans = [
   {
     name: 'Starter',
     price: '무료',
     period: '',
-    description: 'CMNTech 입찰 시작하기',
+    description: '입찰 자동화 시작하기',
     features: [
-      'CMNTech 3개 제품 등록',
+      '제품/서비스 3개 등록',
       '월 50건 공고 분석',
-      '=AI_SUMMARY() 함수만',
+      'AI 요약 기능',
       '나라장터 연동',
       '이메일 알림',
     ],
@@ -31,7 +32,7 @@ const plans = [
       '무제한 제품 등록',
       '무제한 공고 분석',
       '모든 AI 함수 (5종)',
-      'TED, SAM.gov, 한전 포함',
+      'TED, SAM.gov 연동',
       '제안서 자동 생성',
       'Slack 연동',
     ],
@@ -46,7 +47,7 @@ const plans = [
     features: [
       'Pro 모든 기능',
       '전용 AI 모델 학습',
-      '제품 카탈로그 연동',
+      'ERP/CRM 연동',
       '무제한 팀원',
       'SLA 보장',
       '온프레미스 옵션',
@@ -58,15 +59,18 @@ const plans = [
 
 export function PricingPreview() {
   return (
-    <section className="bg-neutral-50 py-24" id="pricing">
+    <section className={cn('py-24', BG_COLORS.primary)} id="pricing">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="mx-auto mb-16 max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-neutral-900 md:text-4xl">
+          <span className="mb-4 inline-block rounded-full bg-[#5E6AD2]/10 border border-[#5E6AD2]/20 px-3 py-1 text-xs font-medium uppercase tracking-wider text-[#7C8AEA]">
+            Pricing
+          </span>
+          <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
             심플한 요금제
           </h2>
-          <p className="mt-4 text-lg text-neutral-500">
-            CMNTech 제품 입찰 규모에 맞는 플랜을 선택하세요.
+          <p className="mt-4 text-lg text-zinc-400">
+            비즈니스 규모에 맞는 플랜을 선택하세요
           </p>
         </div>
 
@@ -76,30 +80,40 @@ export function PricingPreview() {
             <div
               key={plan.name}
               className={cn(
-                'relative rounded-2xl border bg-white p-8',
-                plan.highlighted ? 'scale-105 border-neutral-900 shadow-xl' : 'border-neutral-200'
+                'relative rounded-2xl p-8 transition-all',
+                plan.highlighted
+                  ? 'scale-105 bg-gradient-to-b from-[#5E6AD2]/10 to-transparent border-2 border-[#5E6AD2]/50 shadow-xl shadow-[#5E6AD2]/10'
+                  : GLASS.card
               )}
             >
               {plan.highlighted && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-neutral-900 px-4 py-1.5 text-xs font-medium text-white">
-                  인기
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-[#5E6AD2] to-[#4B56C8] px-4 py-1.5 text-xs font-medium text-white">
+                  추천
                 </div>
               )}
 
               <div className="mb-6">
-                <h3 className="text-xl font-semibold text-neutral-900">{plan.name}</h3>
-                <p className="mt-1 text-sm text-neutral-500">{plan.description}</p>
+                <h3 className="text-xl font-semibold text-white">{plan.name}</h3>
+                <p className="mt-1 text-sm text-zinc-500">{plan.description}</p>
               </div>
 
               <div className="mb-6">
-                <span className="text-4xl font-bold text-neutral-900">{plan.price}</span>
-                <span className="text-neutral-500">{plan.period}</span>
+                <span className={cn(
+                  'text-4xl font-bold',
+                  plan.highlighted ? 'text-[#7C8AEA]' : 'text-white'
+                )}>
+                  {plan.price}
+                </span>
+                <span className="text-zinc-500">{plan.period}</span>
               </div>
 
               <ul className="mb-8 space-y-3">
                 {plan.features.map((feature) => (
-                  <li key={feature} className="flex items-center gap-2 text-sm text-neutral-600">
-                    <Check className="h-4 w-4 flex-shrink-0 text-neutral-900" />
+                  <li key={feature} className="flex items-center gap-2 text-sm text-zinc-400">
+                    <Check className={cn(
+                      'h-4 w-4 flex-shrink-0',
+                      plan.highlighted ? 'text-[#5E6AD2]' : 'text-emerald-400'
+                    )} />
                     <span>{feature}</span>
                   </li>
                 ))}
@@ -107,10 +121,10 @@ export function PricingPreview() {
 
               <Button
                 className={cn(
-                  'w-full',
+                  'w-full rounded-xl',
                   plan.highlighted
-                    ? 'bg-neutral-900 text-white hover:bg-neutral-800'
-                    : 'border-neutral-300 hover:bg-neutral-50'
+                    ? BUTTON_STYLES.primary
+                    : BUTTON_STYLES.secondary
                 )}
                 variant={plan.highlighted ? 'default' : 'outline'}
                 asChild
@@ -125,7 +139,7 @@ export function PricingPreview() {
         <div className="mt-12 text-center">
           <Link
             href="/pricing"
-            className="inline-flex items-center gap-1 text-sm text-neutral-600 transition-colors hover:text-neutral-900"
+            className="inline-flex items-center gap-1 text-sm text-zinc-400 transition-colors hover:text-white"
           >
             요금제 자세히 보기
             <ArrowRight className="h-4 w-4" />

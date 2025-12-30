@@ -57,8 +57,8 @@ describe('PersanaService', () => {
         json: () =>
           Promise.resolve({
             company: {
-              name: 'CMNTech',
-              domain: 'cmntech.co.kr',
+              name: 'TestCompany',
+              domain: 'testcompany.co.kr',
               industry: 'Manufacturing',
               employees: 50,
               funding: {
@@ -71,10 +71,10 @@ describe('PersanaService', () => {
           }),
       });
 
-      const result = await service.enrichCompany({ domain: 'cmntech.co.kr' });
+      const result = await service.enrichCompany({ domain: 'testcompany.co.kr' });
 
       expect(result).not.toBeNull();
-      expect(result?.name).toBe('CMNTech');
+      expect(result?.name).toBe('TestCompany');
       expect(result?.employees).toBe(50);
     });
   });

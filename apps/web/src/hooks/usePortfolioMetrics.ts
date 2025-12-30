@@ -1,5 +1,5 @@
 /**
- * Mock usePortfolioMetrics hook for Qetta/CMNTECH
+ * Mock usePortfolioMetrics hook for Qetta
  */
 export function usePortfolioMetrics() {
   return {

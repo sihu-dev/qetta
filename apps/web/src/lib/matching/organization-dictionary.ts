@@ -10,7 +10,7 @@ export interface OrganizationEntry {
   aliases: string[];
   /** 기관 유형 */
   type: 'public_corp' | 'local_gov' | 'central_gov' | 'utility' | 'other';
-  /** CMNTech 제품 연관도 (제품 ID 배열) */
+  /** 제품 연관도 (제품 ID 배열) */
   relatedProducts: string[];
   /** 매칭 가중치 (기본 1.0) */
   weight: number;
@@ -18,7 +18,7 @@ export interface OrganizationEntry {
 
 /**
  * 기관 표준화 사전
- * CMNTech 제품과 관련된 주요 발주기관
+ * 주요 발주기관
  */
 export const ORGANIZATION_DICTIONARY: OrganizationEntry[] = [
   // ===== 수자원/상수도 (UR-1000PLUS, MF-1000C 주력) =====

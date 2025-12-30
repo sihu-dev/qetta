@@ -1,42 +1,47 @@
 /**
- * 작동 방식 섹션 - CMNTech 제품 매칭 버전
+ * HowItWorks Section - HEPHAITOS Dark Theme
  */
-import { Package, Sparkles, Trophy } from 'lucide-react';
+import { Search, Cpu, FileCheck } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { BG_COLORS, GLASS } from '@/constants/design-tokens';
 
 const steps = [
   {
-    icon: Package,
+    icon: Search,
     step: '01',
-    title: 'CMNTech 제품 등록',
+    title: '제품/서비스 등록',
     description:
-      'UR-1000PLUS, MF-1000C 등 5개 유량계/열량계 제품이 기본 등록되어 있습니다. 추가 제품도 등록 가능합니다.',
+      '귀사의 제품 또는 서비스 정보를 등록하세요. 사양, 키워드, 과거 수주 이력을 바탕으로 AI가 학습합니다.',
   },
   {
-    icon: Sparkles,
+    icon: Cpu,
     step: '02',
-    title: 'AI 공고 매칭',
+    title: 'AI 자동 매칭',
     description:
-      'AI가 매일 수백 개의 공고를 분석하여 초음파유량계, 비만관형 등 적합한 제품을 자동 매칭합니다.',
+      'AI가 45개 플랫폼의 공고를 실시간 분석하여 귀사에 적합한 입찰 기회를 자동으로 찾아 알려드립니다.',
   },
   {
-    icon: Trophy,
+    icon: FileCheck,
     step: '03',
     title: '입찰 준비 완료',
     description:
-      '매칭 점수, AI 요약, 갭 분석 결과로 빠르게 입찰 여부를 결정하고 제안서를 작성하세요.',
+      '매칭 점수, AI 요약, 마감일 알림으로 빠르게 입찰 여부를 결정하고 제안서까지 자동 생성하세요.',
   },
 ];
 
 export function HowItWorks() {
   return (
-    <section className="bg-neutral-50 py-24">
+    <section className={cn('py-24', BG_COLORS.secondary)}>
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="mx-auto mb-16 max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-neutral-900 md:text-4xl">
-            간단한 3단계로 시작하세요
+          <span className="mb-4 inline-block rounded-full bg-[#5E6AD2]/10 border border-[#5E6AD2]/20 px-3 py-1 text-xs font-medium uppercase tracking-wider text-[#7C8AEA]">
+            How It Works
+          </span>
+          <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
+            3단계로 시작하세요
           </h2>
-          <p className="mt-4 text-lg text-neutral-500">복잡한 설정 없이 바로 사용할 수 있습니다.</p>
+          <p className="mt-4 text-lg text-zinc-400">복잡한 설정 없이 바로 사용할 수 있습니다</p>
         </div>
 
         {/* Steps */}
@@ -45,19 +50,22 @@ export function HowItWorks() {
             <div key={item.step} className="relative text-center">
               {/* Connector Line */}
               {index < steps.length - 1 && (
-                <div className="absolute left-[60%] top-12 hidden h-px w-[80%] bg-neutral-300 md:block" />
+                <div className="absolute left-[60%] top-12 hidden h-px w-[80%] bg-white/[0.06] md:block" />
               )}
 
               {/* Step Number */}
-              <div className="relative mb-6 inline-flex h-24 w-24 items-center justify-center rounded-full border-2 border-neutral-200 bg-white shadow-sm">
-                <item.icon className="h-10 w-10 text-neutral-700" />
-                <span className="absolute -right-2 -top-2 flex h-8 w-8 items-center justify-center rounded-full bg-neutral-900 font-mono text-sm font-bold text-white">
+              <div className={cn(
+                'relative mb-6 inline-flex h-24 w-24 items-center justify-center rounded-full',
+                GLASS.cardRaised
+              )}>
+                <item.icon className="h-10 w-10 text-[#7C8AEA]" />
+                <span className="absolute -right-2 -top-2 flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-r from-[#5E6AD2] to-[#4B56C8] font-mono text-sm font-bold text-white">
                   {item.step}
                 </span>
               </div>
 
-              <h3 className="mb-2 text-xl font-semibold text-neutral-900">{item.title}</h3>
-              <p className="text-neutral-500">{item.description}</p>
+              <h3 className="mb-2 text-xl font-semibold text-white">{item.title}</h3>
+              <p className="text-zinc-400">{item.description}</p>
             </div>
           ))}
         </div>

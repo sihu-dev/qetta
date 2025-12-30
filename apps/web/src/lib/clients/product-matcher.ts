@@ -1,6 +1,6 @@
 /**
  * @module clients/product-matcher
- * @description 제품 매칭 로직 (씨엠엔텍 제품 기준)
+ * @description 제품 매칭 로직
  */
 
 import type { BidData, ProductMatch, MatchConfidence } from '@forge-labs/types/bidding';

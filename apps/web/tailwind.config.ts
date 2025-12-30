@@ -2,11 +2,11 @@ import type { Config } from 'tailwindcss';
 
 /**
  * Qetta Tailwind Configuration
- * Monochrome Design System
+ * HEPHAITOS Design System Integration
  *
- * Primary: #171717 (neutral-900)
- * Background: #FFFFFF / #FAFAFA
- * Clean, minimal, professional
+ * Primary: #5E6AD2 (Linear Purple)
+ * Background: #0D0D0F (Dark Mode)
+ * Glass Morphism + Dark Theme
  */
 
 const config: Config = {
@@ -18,55 +18,55 @@ const config: Config = {
   darkMode: 'class',
   theme: {
     extend: {
-      // Color Palette (Light Theme)
+      // Color Palette (HEPHAITOS Dark Theme)
       colors: {
-        // Primary Brand (Monochrome - Black/Gray)
+        // Primary Brand (Linear Purple - HEPHAITOS style)
         primary: {
-          DEFAULT: '#171717', // neutral-900
-          50: '#fafafa', // neutral-50
-          100: '#f5f5f5', // neutral-100
-          200: '#e5e5e5', // neutral-200
-          300: '#d4d4d4', // neutral-300
-          400: '#a3a3a3', // neutral-400
-          500: '#737373', // neutral-500
-          600: '#525252', // neutral-600
-          700: '#404040', // neutral-700
-          800: '#262626', // neutral-800
-          900: '#171717', // neutral-900
+          DEFAULT: '#5E6AD2', // Linear Purple
+          50: '#F0F1FA',
+          100: '#E1E3F5',
+          200: '#C3C7EB',
+          300: '#A5ABE1',
+          400: '#7C8AEA', // Accent
+          500: '#5E6AD2', // Main
+          600: '#4B56C8', // Hover
+          700: '#3A44A8',
+          800: '#2E3688',
+          900: '#232968',
         },
 
-        // Accent (Monochrome - Darker grays for highlights)
+        // Accent (Purple tints)
         accent: {
-          DEFAULT: '#525252', // neutral-600
-          light: '#737373', // neutral-500
-          dark: '#262626', // neutral-800
-          hover: '#404040', // neutral-700
-          muted: 'rgba(23, 23, 23, 0.08)', // neutral-900 8% opacity
+          DEFAULT: '#7C8AEA',
+          light: '#9BA6F0',
+          dark: '#4B56C8',
+          hover: '#6E7AE2',
+          muted: 'rgba(94, 106, 210, 0.1)',
         },
 
-        // Background (Light)
+        // Background (HEPHAITOS Dark)
         background: {
-          primary: '#FFFFFF',
-          secondary: '#FAFAFA',
-          tertiary: '#F5F5F5',
-          elevated: '#FFFFFF',
-          hover: '#F5F5F5',
+          primary: '#0D0D0F',    // Main dark background
+          secondary: '#0A0A0A',  // Section background
+          tertiary: '#111111',   // Card background
+          elevated: '#1A1A1A',   // Elevated elements
+          hover: '#141414',      // Hover state
         },
 
-        // Surface
+        // Surface (Glass Morphism)
         surface: {
-          DEFAULT: '#FFFFFF',
-          raised: '#FFFFFF',
-          overlay: 'rgba(0, 0, 0, 0.02)',
-          glass: 'rgba(255, 255, 255, 0.8)',
+          DEFAULT: 'rgba(255, 255, 255, 0.04)',
+          raised: 'rgba(255, 255, 255, 0.06)',
+          overlay: 'rgba(255, 255, 255, 0.02)',
+          glass: 'rgba(255, 255, 255, 0.04)',
         },
 
-        // Border (Light theme)
+        // Border (Dark theme)
         border: {
-          DEFAULT: '#E5E5E5',
-          light: '#F5F5F5',
-          medium: '#D4D4D4',
-          focus: '#4F46E5',
+          DEFAULT: 'rgba(255, 255, 255, 0.06)',
+          light: 'rgba(255, 255, 255, 0.04)',
+          medium: 'rgba(255, 255, 255, 0.08)',
+          focus: '#5E6AD2',
         },
 
         // Status
@@ -119,17 +119,21 @@ const config: Config = {
         '4xl': '2rem',
       },
 
-      // Box Shadow (Light Theme - Subtle)
+      // Box Shadow (HEPHAITOS Dark Theme - Glow effects)
       boxShadow: {
-        subtle: '0 1px 2px 0 rgba(0, 0, 0, 0.03)',
-        sm: '0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.03)',
-        md: '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.03)',
-        lg: '0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.03)',
-        xl: '0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03)',
-        'glow-primary': '0 0 20px rgba(23, 23, 23, 0.12)',
-        'glow-success': '0 0 20px rgba(16, 185, 129, 0.15)',
-        card: '0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02)',
-        'card-hover': '0 4px 12px rgba(0, 0, 0, 0.08)',
+        subtle: '0 1px 2px 0 rgba(0, 0, 0, 0.4)',
+        sm: '0 1px 3px 0 rgba(0, 0, 0, 0.5), 0 1px 2px -1px rgba(0, 0, 0, 0.4)',
+        md: '0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -2px rgba(0, 0, 0, 0.4)',
+        lg: '0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -4px rgba(0, 0, 0, 0.4)',
+        xl: '0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.4)',
+        '2xl': '0 25px 50px -12px rgba(0, 0, 0, 0.6)',
+        'glow-primary': '0 0 20px rgba(94, 106, 210, 0.2)',
+        'glow-primary-lg': '0 0 40px rgba(94, 106, 210, 0.3)',
+        'glow-success': '0 0 20px rgba(16, 185, 129, 0.2)',
+        'glow-error': '0 0 20px rgba(239, 68, 68, 0.2)',
+        card: '0 4px 20px rgba(0, 0, 0, 0.4)',
+        'card-hover': '0 8px 30px rgba(0, 0, 0, 0.5)',
+        glass: '0 8px 32px rgba(0, 0, 0, 0.4)',
       },
 
       // Backdrop Blur
@@ -191,8 +195,8 @@ const config: Config = {
           '100%': { backgroundPosition: '200% 0' },
         },
         glow: {
-          from: { boxShadow: '0 0 20px rgba(23, 23, 23, 0.08)' },
-          to: { boxShadow: '0 0 30px rgba(23, 23, 23, 0.15)' },
+          from: { boxShadow: '0 0 20px rgba(94, 106, 210, 0.15)' },
+          to: { boxShadow: '0 0 40px rgba(94, 106, 210, 0.25)' },
         },
         float: {
           '0%, 100%': { transform: 'translateY(0)' },

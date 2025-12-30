@@ -181,7 +181,7 @@ export class NaraJangtoClient {
   }
 
   /**
-   * 유량계/계측기 관련 입찰 검색 (씨엠엔텍 전용)
+   * 유량계/계측기 관련 입찰 검색
    */
   async searchFlowMeterBids(options?: Omit<SearchOptions, 'keywords'>): Promise<MappedBid[]> {
     const flowMeterKeywords = [

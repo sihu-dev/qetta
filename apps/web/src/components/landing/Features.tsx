@@ -4,7 +4,6 @@
  * 핵심 기능 섹션 - 동적 화이트라벨 버전
  */
 import { Search, Target, Sparkles, FileText, Bell, Cpu, type LucideIcon } from 'lucide-react';
-import { useTenant, useTenantProducts } from '@/contexts/TenantContext';
 
 // 아이콘 매핑
 const iconMap: Record<string, LucideIcon> = {
@@ -41,40 +40,10 @@ const DEFAULT_FEATURES = [
   },
 ];
 
-// CMNTech 전용 Features
-const CMNTECH_FEATURES = [
-  {
-    icon: 'Search',
-    title: '유량계 공고 자동 수집',
-    description:
-      '나라장터, TED, SAM.gov, 한전에서 유량계/열량계 관련 공고를 AI가 자동으로 찾아 분류합니다.',
-  },
-  {
-    icon: 'Target',
-    title: '5가지 제품 자동 매칭',
-    description:
-      'UR-1000PLUS, MF-1000C, UR-1010PLUS, SL-3000PLUS, EnerRay와 공고 요구사항을 자동 매칭합니다.',
-  },
-  {
-    icon: 'Sparkles',
-    title: 'AI 스마트 함수',
-    description: '=AI_SCORE(), =AI_MATCH() 등 스프레드시트에서 AI 분석을 수식처럼 바로 실행합니다.',
-  },
-  {
-    icon: 'FileText',
-    title: '맞춤 제안서 생성',
-    description: '매칭된 제품 정보와 공고 분석 결과를 바탕으로 제안서 초안을 자동 생성합니다.',
-  },
-];
 
 export function Features() {
-  const tenant = useTenant();
-  const products = useTenantProducts();
-
-  // 테넌트에 제품이 있으면 CMNTech 스타일, 없으면 범용
-  const features = products.length > 0 ? CMNTECH_FEATURES : DEFAULT_FEATURES;
-  const sectionTitle =
-    products.length > 0 ? `${tenant.branding.name} 제품 입찰 자동화` : '입찰 자동화의 핵심 기능';
+  const features = DEFAULT_FEATURES;
+  const sectionTitle = '입찰 자동화의 핵심 기능';
 
   return (
     <section className="bg-white py-24" id="features">

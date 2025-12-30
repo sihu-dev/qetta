@@ -391,7 +391,7 @@ export function calculateLabelingStats(entries: LabelingEntry[]): LabelingStats 
  * 라벨링 가이드라인
  */
 export const LABELING_GUIDELINES = `
-# CMNTech 제품 매칭 라벨링 가이드라인
+# 제품 매칭 라벨링 가이드라인
 
 ## 1. 목적
 - AI_MATCH 함수의 정확도 향상을 위한 Ground Truth 데이터 구축

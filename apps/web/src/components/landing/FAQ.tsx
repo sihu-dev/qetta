@@ -1,37 +1,38 @@
 /**
- * FAQ 섹션 - 모노크롬
+ * FAQ 섹션 - HEPHAITOS Dark Theme
  */
 'use client';
 
 import { useState } from 'react';
 import { Plus, Minus } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { BG_COLORS, GLASS } from '@/constants/design-tokens';
 
 const faqs = [
   {
-    question: 'CMNTech 5개 제품이 기본으로 등록되어 있나요?',
+    question: 'Qetta는 어떤 입찰 플랫폼을 지원하나요?',
     answer:
-      'UR-1000PLUS, MF-1000C, UR-1010PLUS, SL-3000PLUS, EnerRay 5개 제품이 기본 등록되어 있습니다. 각 제품의 사양, 적용 분야, 키워드가 사전 설정되어 바로 사용 가능합니다.',
+      '나라장터(G2B), TED(EU), SAM.gov(미국), 한전, 조달청 등 국내외 45개 이상의 입찰 플랫폼을 지원합니다. 신규 플랫폼은 지속적으로 추가되고 있습니다.',
   },
   {
     question: 'AI 매칭 점수는 어떻게 계산되나요?',
     answer:
-      '공고의 요구사양(구경, 정확도, 적용분야)과 제품 스펙을 비교하여 0-100% 점수를 산출합니다. 키워드 일치도, 발주기관 이력, 납품 조건도 반영됩니다.',
+      '공고의 요구사양과 귀사 제품/서비스 스펙을 비교하여 0-100% 점수를 산출합니다. 키워드 일치도, 과거 수주 이력, 납품 조건 등을 종합 분석합니다.',
   },
   {
-    question: '=AI_MATCH() 함수는 어떻게 사용하나요?',
+    question: '스프레드시트에서 AI 함수를 어떻게 사용하나요?',
     answer:
-      '스프레드시트에서 =AI_MATCH(공고ID)를 입력하면 가장 적합한 CMNTech 제품과 신뢰도를 반환합니다. =AI_SCORE(), =AI_SUMMARY() 등 5가지 AI 함수를 지원합니다.',
+      '=AI_SCORE(공고ID)로 매칭 점수, =AI_SUMMARY(공고ID)로 공고 요약, =AI_KEYWORDS(공고ID)로 핵심 키워드 추출 등 5가지 AI 함수를 수식처럼 사용할 수 있습니다.',
   },
   {
-    question: '추가 제품도 등록할 수 있나요?',
+    question: '우리 회사 제품/서비스도 등록할 수 있나요?',
     answer:
-      'Pro 플랜부터 무제한 제품 등록이 가능합니다. 제품명, 사양, 키워드를 입력하면 AI가 관련 공고를 자동 매칭합니다.',
+      'Pro 플랜부터 무제한 제품/서비스 등록이 가능합니다. 제품명, 사양, 키워드를 입력하면 AI가 관련 공고를 자동으로 매칭합니다.',
   },
   {
-    question: 'TED, SAM.gov 해외 입찰도 지원하나요?',
+    question: '데이터 보안은 어떻게 보장되나요?',
     answer:
-      'TED(EU), SAM.gov(미국), 한전 등 국내외 45개 이상의 입찰 플랫폼을 지원합니다. 해외 공고도 한국어로 AI 요약을 제공합니다.',
+      '모든 데이터는 암호화되어 저장되며, SOC 2 Type II 인증을 받은 클라우드 인프라를 사용합니다. 필요 시 온프레미스 설치도 가능합니다.',
   },
 ];
 
@@ -39,39 +40,47 @@ export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="bg-white py-24">
+    <section className={cn('py-24', BG_COLORS.secondary)} id="faq">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="mx-auto mb-16 max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-neutral-900 md:text-4xl">
+          <span className="mb-4 inline-block rounded-full bg-[#5E6AD2]/10 border border-[#5E6AD2]/20 px-3 py-1 text-xs font-medium uppercase tracking-wider text-[#7C8AEA]">
+            FAQ
+          </span>
+          <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
             자주 묻는 질문
           </h2>
-          <p className="mt-4 text-lg text-neutral-500">궁금한 점이 있으신가요?</p>
+          <p className="mt-4 text-lg text-zinc-400">궁금한 점이 있으신가요?</p>
         </div>
 
         {/* FAQ List */}
         <div className="mx-auto max-w-3xl">
           {faqs.map((faq, index) => (
-            <div key={index} className="border-b border-neutral-200">
+            <div key={index} className={cn(
+              'mb-4 overflow-hidden rounded-xl transition-all',
+              GLASS.card
+            )}>
               <button
-                className="group flex w-full items-center justify-between py-6 text-left"
+                className="group flex w-full items-center justify-between p-6 text-left"
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 aria-expanded={openIndex === index}
                 aria-controls={`faq-answer-${index}`}
               >
-                <span className="pr-8 font-medium text-neutral-900 transition-colors group-hover:text-neutral-600">
+                <span className="pr-8 font-medium text-white transition-colors group-hover:text-[#7C8AEA]">
                   {faq.question}
                 </span>
                 <div
                   className={cn(
-                    'flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full transition-colors',
-                    openIndex === index ? 'bg-neutral-900' : 'bg-neutral-100'
+                    'flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full transition-all',
+                    openIndex === index
+                      ? 'bg-gradient-to-r from-[#5E6AD2] to-[#4B56C8]'
+                      : 'bg-white/[0.06]'
                   )}
                 >
                   {openIndex === index ? (
-                    <Minus className="h-3.5 w-3.5 text-white" aria-hidden="true" />
+                    <Minus className="h-4 w-4 text-white" aria-hidden="true" />
                   ) : (
-                    <Plus className="h-3.5 w-3.5 text-neutral-600" aria-hidden="true" />
+                    <Plus className="h-4 w-4 text-zinc-400" aria-hidden="true" />
                   )}
                 </div>
               </button>
@@ -79,10 +88,10 @@ export function FAQ() {
                 id={`faq-answer-${index}`}
                 className={cn(
                   'overflow-hidden transition-all duration-300',
-                  openIndex === index ? 'max-h-96 pb-6' : 'max-h-0'
+                  openIndex === index ? 'max-h-96' : 'max-h-0'
                 )}
               >
-                <p className="leading-relaxed text-neutral-500">{faq.answer}</p>
+                <p className="px-6 pb-6 leading-relaxed text-zinc-400">{faq.answer}</p>
               </div>
             </div>
           ))}

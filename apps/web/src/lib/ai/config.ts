@@ -205,13 +205,13 @@ ${bid}
 } as const;
 
 // ============================================================================
-// Default Company Profile (CMNTech - 씨엠엔텍)
+// Default Company Profile (Demo)
 // ============================================================================
 
 export const DEFAULT_COMPANY_PROFILE: CompanyProfile = {
-  id: 'cmntech-001',
-  name: '씨엠엔텍 (CMNTech)',
-  industry: '계측기기 제조업',
+  id: 'demo-001',
+  name: 'Demo Company',
+  industry: '산업용 장비 제조업',
   products: [
     {
       id: 'fm-001',

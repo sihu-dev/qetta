@@ -1,5 +1,5 @@
 /**
- * Mock useRealtimePortfolio hook for Qetta/CMNTECH
+ * Mock useRealtimePortfolio hook for Qetta
  */
 export function useRealtimePortfolio() {
   return {

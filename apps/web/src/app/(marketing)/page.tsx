@@ -1,12 +1,13 @@
 /**
  * Qetta 랜딩 페이지
- * Google DeepMind-inspired Light Theme
+ * HEPHAITOS Dark Theme + Glass Morphism
  */
 import dynamic from 'next/dynamic';
 import { HeroV2 } from '@/components/landing/HeroV2';
 import { PainPoints } from '@/components/landing/PainPoints';
 import { FeaturesV2 } from '@/components/landing/FeaturesV2';
 import { HowItWorks } from '@/components/landing/HowItWorks';
+import { Stats } from '@/components/landing/Stats';
 import { Testimonials } from '@/components/landing/Testimonials';
 import { PricingPreview } from '@/components/landing/PricingPreview';
 import { FAQ } from '@/components/landing/FAQ';
@@ -20,10 +21,10 @@ const SpreadsheetDemo = dynamic(
     })),
   {
     loading: () => (
-      <div className="flex min-h-[600px] items-center justify-center bg-white py-24">
+      <div className="flex min-h-[600px] items-center justify-center bg-[#0D0D0F] py-24">
         <div className="flex flex-col items-center gap-3">
-          <div className="h-8 w-8 animate-spin rounded-full border-4 border-neutral-200 border-t-primary-500" />
-          <p className="text-sm text-neutral-500">AI 스프레드시트 로딩 중...</p>
+          <div className="h-8 w-8 animate-spin rounded-full border-4 border-white/10 border-t-[#5E6AD2]" />
+          <p className="text-sm text-zinc-500">AI 스프레드시트 로딩 중...</p>
         </div>
       </div>
     ),
@@ -33,13 +34,16 @@ const SpreadsheetDemo = dynamic(
 export default function LandingPage() {
   return (
     <>
-      {/* Hero - Pain Point Focus */}
+      {/* Hero */}
       <HeroV2 />
+
+      {/* Stats */}
+      <Stats />
 
       {/* Problem Definition */}
       <PainPoints />
 
-      {/* Core Features with Quantified Results */}
+      {/* Core Features */}
       <FeaturesV2 />
 
       {/* Interactive Demo */}

@@ -1,9 +1,9 @@
 /**
- * CMNTech 제품 카탈로그
- * 5가지 유량계/열량계 제품 정의
+ * 데모용 제품 카탈로그
+ * 랜딩 페이지 스프레드시트 데모에서 사용
  */
 
-export interface CMNTechProduct {
+export interface DemoProduct {
   id: string;
   name: string;
   fullName: string;
@@ -20,101 +20,70 @@ export interface CMNTechProduct {
   priority: 1 | 2 | 3;
 }
 
-export const CMNTECH_PRODUCTS: CMNTechProduct[] = [
+// 데모용 샘플 제품 (AI 매칭 데모 시연용)
+export const DEMO_PRODUCTS: DemoProduct[] = [
   {
-    id: 'UR-1000PLUS',
-    name: 'UR-1000PLUS',
-    fullName: 'UR-1000PLUS® 다회선 초음파 유량계',
-    category: '상수도',
-    description: '대구경 상수도관용 다회선 초음파 유량계',
-    keywords: ['초음파', '유량계', '만관', '상수도', '취수장', '정수장', '다회선'],
-    targetOrganizations: ['수자원공사', '상수도본부', '환경부', 'K-water', '상수도사업본부'],
+    id: 'PRODUCT-A',
+    name: '제품 A',
+    fullName: '산업용 측정장비 A형',
+    category: '산업설비',
+    description: '대규모 시설용 정밀 측정장비',
+    keywords: ['산업용', '측정', '대형', '정밀'],
+    targetOrganizations: ['공공기관', '대기업', '공단'],
     specifications: {
       pipeSize: { min: 100, max: 4000 },
       accuracy: '±0.5%',
-      applications: ['상수도', '취수장', '정수장', '관개수로', '공업용수'],
+      applications: ['산업시설', '공공시설'],
     },
     icon: 'Waves',
     priority: 1,
   },
   {
-    id: 'MF-1000C',
-    name: 'MF-1000C',
-    fullName: 'MF-1000C 일체형 전자 유량계',
-    category: '상거래',
-    description: '상거래용 일체형 전자 유량계',
-    keywords: ['전자', '유량계', '상거래', '공업용수', '일체형', '전자기'],
-    targetOrganizations: ['지자체', '산업단지', '농어촌공사', '지방상수도'],
+    id: 'PRODUCT-B',
+    name: '제품 B',
+    fullName: '소형 측정장비 B형',
+    category: '상업용',
+    description: '중소규모 시설용 측정장비',
+    keywords: ['소형', '상업용', '일체형'],
+    targetOrganizations: ['중소기업', '지자체'],
     specifications: {
       pipeSize: { min: 15, max: 2000 },
       accuracy: '±0.5%',
-      applications: ['상하수도', '공업용수', '농업용수', '상거래용'],
+      applications: ['상업시설', '중소규모'],
     },
     icon: 'Zap',
     priority: 2,
   },
   {
-    id: 'UR-1010PLUS',
-    name: 'UR-1010PLUS',
-    fullName: 'UR-1010PLUS 비만관형 유량계',
-    category: '하수처리',
-    description: '하수관로용 비만관형 초음파 유량계',
-    keywords: ['비만관', '하수', '우수', '복류수', '하수관로', '비만관형'],
-    targetOrganizations: ['하수도사업소', '환경공단', '하수처리장', '부산환경공단'],
+    id: 'PRODUCT-C',
+    name: '제품 C',
+    fullName: '특수환경용 장비 C형',
+    category: '특수환경',
+    description: '특수환경 전용 측정장비',
+    keywords: ['특수', '환경', '전용'],
+    targetOrganizations: ['환경부', '공단'],
     specifications: {
       pipeSize: { min: 200, max: 3000 },
-      accuracy: '±1.0%~2.0%',
-      applications: ['하수관로', '우수관로', '복류수', '하수처리장'],
+      accuracy: '±1.0%',
+      applications: ['특수환경', '처리시설'],
     },
     icon: 'Droplets',
     priority: 1,
-  },
-  {
-    id: 'SL-3000PLUS',
-    name: 'SL-3000PLUS',
-    fullName: 'SL-3000PLUS 개수로 유량계',
-    category: '하천/수로',
-    description: '개수로 및 하천용 비접촉식 유량계',
-    keywords: ['개수로', '하천', '방류', '농업용수', '수로', '비접촉'],
-    targetOrganizations: ['하천관리청', '농림부', '환경부', '농어촌공사', '수자원공사'],
-    specifications: {
-      pipeSize: null,
-      accuracy: '±3%~5%',
-      applications: ['하천', '개수로', '농업용수로', '방류구', '관개수로'],
-    },
-    icon: 'Activity',
-    priority: 2,
-  },
-  {
-    id: 'EnerRay',
-    name: 'EnerRay',
-    fullName: 'EnerRay 초음파 열량계',
-    category: '에너지',
-    description: '지역난방용 초음파 열량계',
-    keywords: ['열량계', '에너지', '난방', '냉난방', '지역난방', '열교환'],
-    targetOrganizations: ['지역난방공사', '열병합발전', '에너지공사', '한국전력', '발전소'],
-    specifications: {
-      pipeSize: { min: 15, max: 300 },
-      accuracy: 'Class 2 (EN 1434)',
-      applications: ['지역난방', '냉난방', '공장에너지', '열교환시스템'],
-    },
-    icon: 'Flame',
-    priority: 3,
   },
 ];
 
 /**
  * 제품 ID로 제품 정보 조회
  */
-export function getProductById(id: string): CMNTechProduct | undefined {
-  return CMNTECH_PRODUCTS.find((p) => p.id === id);
+export function getProductById(id: string): DemoProduct | undefined {
+  return DEMO_PRODUCTS.find((p) => p.id === id);
 }
 
 /**
  * 카테고리별 제품 필터링
  */
-export function getProductsByCategory(category: string): CMNTechProduct[] {
-  return CMNTECH_PRODUCTS.filter((p) => p.category === category);
+export function getProductsByCategory(category: string): DemoProduct[] {
+  return DEMO_PRODUCTS.filter((p) => p.category === category);
 }
 
 /**

@@ -44,11 +44,11 @@ const results = [
 ];
 
 const caseStudy = {
-  company: '씨엠엔텍',
-  industry: '유량계 제조',
+  company: 'A사',
+  industry: '산업용 장비 제조',
   quote:
     'Qetta 도입 후 입찰 관련 업무 시간이 80% 이상 줄었습니다. 이전에는 3명이 하루 종일 공고를 확인했는데, 지금은 1명이 1시간이면 충분합니다.',
-  person: '김영수 대표',
+  person: '도입 기업 담당자',
   results: ['월 50건 이상 공고 자동 수집', '입찰 참여율 3배 증가', '낙찰률 15%에서 32%로 향상'],
 };
 
