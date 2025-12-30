@@ -12,11 +12,8 @@ import {
   BuildingOfficeIcon,
   CalendarIcon,
   BanknotesIcon,
-  DocumentTextIcon,
   CheckBadgeIcon,
   SparklesIcon,
-  ClockIcon,
-  UserGroupIcon,
   GlobeAltIcon,
 } from '@heroicons/react/24/outline';
 
@@ -44,15 +41,7 @@ interface Bid {
   match_score: number;
   matched_keywords?: string[];
   leads_generated: number;
-  metadata?: any;
-  created_at: string;
-}
-
-interface Activity {
-  id: string;
-  type: string;
-  description: string;
-  metadata?: any;
+  metadata?: Record<string, unknown>;
   created_at: string;
 }
 
@@ -67,12 +56,10 @@ interface Lead {
 
 interface BidDetailViewProps {
   bid: Bid;
-  activities: Activity[];
   leads: Lead[];
-  userId: string;
 }
 
-export function BidDetailView({ bid, activities, leads, userId }: BidDetailViewProps) {
+export function BidDetailView({ bid, leads }: BidDetailViewProps) {
   const [isGeneratingLeads, setIsGeneratingLeads] = useState(false);
 
   const getStatusColor = (status: string) => {

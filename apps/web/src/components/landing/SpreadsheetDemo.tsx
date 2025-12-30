@@ -467,7 +467,7 @@ export function SpreadsheetDemo() {
 
 // Sub-components (memoized for performance)
 
-const SourceBadge = memo(function SourceBadge({ source, label }: { source: string; label: string }) {
+const SourceBadge = memo(function SourceBadge({ label }: { source: string; label: string }) {
   return (
     <span className="inline-flex items-center rounded bg-white/[0.06] px-2 py-0.5 text-xs font-medium text-zinc-400">
       {label}

@@ -65,7 +65,8 @@ export function BidFilters({
     }, 500);
 
     return () => clearTimeout(debounce);
-  }, [search]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [search, currentSearch]);
 
   return (
     <div className="rounded-lg border border-white/[0.06] bg-[#111113] p-4">

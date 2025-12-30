@@ -55,7 +55,7 @@ export default async function LeadsPage(props: {
     );
   }
 
-  const { data: leads, error } = await query;
+  const { data: leads } = await query;
 
   return (
     <div className="min-h-screen bg-[#0A0A0B] p-6">

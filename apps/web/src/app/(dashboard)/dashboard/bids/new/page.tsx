@@ -41,7 +41,7 @@ export default async function NewBidPage() {
       </div>
 
       {/* 폼 */}
-      <BidCreateForm userId={user.id} />
+      <BidCreateForm />
     </div>
   );
 }

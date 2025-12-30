@@ -7,18 +7,9 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import {
-  DocumentTextIcon,
-  BuildingOfficeIcon,
-  CalendarIcon,
-  BanknotesIcon,
-} from '@heroicons/react/24/outline';
+import { DocumentTextIcon, BuildingOfficeIcon } from '@heroicons/react/24/outline';
 
-interface BidCreateFormProps {
-  userId: string;
-}
-
-export function BidCreateForm({ userId }: BidCreateFormProps) {
+export function BidCreateForm() {
   const router = useRouter();
   const [isSubmitting, setIsSubmitting] = useState(false);
 

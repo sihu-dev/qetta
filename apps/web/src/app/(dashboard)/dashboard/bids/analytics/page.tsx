@@ -6,7 +6,7 @@
 import { createClient } from '@/lib/supabase/server';
 import { redirect } from 'next/navigation';
 import Link from 'next/link';
-import { ArrowLeftIcon, ChartBarIcon } from '@heroicons/react/24/outline';
+import { ChartBarIcon } from '@heroicons/react/24/outline';
 import { BidSourceChart } from '@/components/bids/analytics/BidSourceChart';
 import { BidTimelineChart } from '@/components/bids/analytics/BidTimelineChart';
 import { BudgetDistributionChart } from '@/components/bids/analytics/BudgetDistributionChart';

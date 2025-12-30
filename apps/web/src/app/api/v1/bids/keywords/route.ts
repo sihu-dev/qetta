@@ -8,7 +8,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { createClient } from '@/lib/supabase/server';
-import type { BidKeyword } from '@/lib/types/database.types';
+import type { BidKeyword, Database, KeywordCategory } from '@/lib/types/database.types';
 
 // ============================================================================
 // 요청 스키마
@@ -24,7 +24,7 @@ const CreateKeywordSchema = z.object({
 // GET Handler - 키워드 목록 조회
 // ============================================================================
 
-export async function GET(request: NextRequest) {
+export async function GET(_request: NextRequest) {
   try {
     const supabase = await createClient();
 
@@ -107,17 +107,22 @@ export async function POST(request: NextRequest) {
     }
 
     // 키워드 생성
-    const keywordData = {
+    const keywordData: Database['public']['Tables']['bid_keywords']['Insert'] = {
       user_id: user.id,
       keyword,
-      category: category || 'product',
+      category: (category || 'product') as KeywordCategory,
       priority,
       active: true,
     };
 
-    const { data: newKeywordData, error: createError } = await (
-      supabase.from('bid_keywords') as any
-    )
+    const bidKeywordsTable = supabase.from('bid_keywords') as unknown as {
+      insert: (data: typeof keywordData) => {
+        select: () => {
+          single: () => Promise<{ data: BidKeyword | null; error: Error | null }>;
+        };
+      };
+    };
+    const { data: newKeywordData, error: createError } = await bidKeywordsTable
       .insert(keywordData)
       .select()
       .single();

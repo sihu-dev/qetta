@@ -9,7 +9,6 @@ import {
   DocumentTextIcon,
   CheckCircleIcon,
   ClockIcon,
-  SparklesIcon,
   UserGroupIcon,
 } from '@heroicons/react/24/outline';
 

@@ -12,7 +12,6 @@ import {
   CalendarIcon,
   BanknotesIcon,
   CheckBadgeIcon,
-  SparklesIcon,
   UserGroupIcon,
 } from '@heroicons/react/24/outline';
 

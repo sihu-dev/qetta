@@ -39,14 +39,6 @@ export default async function BidDetailPage({ params }: BidDetailPageProps) {
     notFound();
   }
 
-  // 활동 내역 조회
-  const { data: activities } = await supabase
-    .from('bid_activities')
-    .select('*')
-    .eq('bid_id', id)
-    .order('created_at', { ascending: false })
-    .limit(50);
-
   // 생성된 리드 조회
   const { data: leads } = await supabase
     .from('leads')
@@ -55,7 +47,5 @@ export default async function BidDetailPage({ params }: BidDetailPageProps) {
     .order('created_at', { ascending: false })
     .limit(20);
 
-  return (
-    <BidDetailView bid={bid} activities={activities || []} leads={leads || []} userId={user.id} />
-  );
+  return <BidDetailView bid={bid} leads={leads || []} />;
 }
